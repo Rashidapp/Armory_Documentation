@@ -4,7 +4,7 @@ Click `Armory Project - Kode Studio` to open the bundled integrated development 
 
 Armory project can be launched directly from Kode Studio by pressing `F5`. Kode Studio contains debug support for Krom and lets you place breakpoints.
 
-![](/essentials/img/kode.png)
+![](essentials/img/kode.png)
 
 When compiling to one of the C targets, native project files are generated. This makes it easy to debug and profile Armory projects in Visual Studio or XCode IDE.
 

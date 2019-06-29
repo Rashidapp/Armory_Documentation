@@ -9,13 +9,13 @@ Aliasing has a big impact on the image quality. To fight it, Armory comes pre-eq
 - [Temporal AA](#taa)
 - [Super sampling](#super-sampling)
 
-![](/graphics/img/aa/noaa_taa.jpg)
+![](graphics/img/aa/noaa_taa.jpg)
 
 ### No AA
 
 Disabled anti-aliasing.
 
-![](/graphics/img/aa/noaa.jpg)
+![](graphics/img/aa/noaa.jpg)
 
 ### MSAA
 
@@ -23,16 +23,16 @@ MSAA can be utilized for Forward render path, or any custom path that renders di
 
 ### FXAA
 The fastest technique, at a cost of blurring.
-![](/graphics/img/aa/fxaa.jpg)
+![](graphics/img/aa/fxaa.jpg)
 
 ### Subpixel Morphological AA
 More advanced technique producing less blur.
-![](/graphics/img/aa/smaa.jpg)
+![](graphics/img/aa/smaa.jpg)
 
 ### Temporal AA
 For dynamic scenes, a velocity buffer is required for reprojection.
-![](/graphics/img/aa/taa_smaa.jpg)
+![](graphics/img/aa/taa_smaa.jpg)
 
 ### Super-sampling
 Costly method effectively rendering the scene at higher resolution.
-![](/graphics/img/aa/taa_smaa_2x.jpg)
+![](graphics/img/aa/taa_smaa_2x.jpg)

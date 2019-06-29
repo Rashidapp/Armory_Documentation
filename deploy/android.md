@@ -8,13 +8,13 @@ Create a new preset in `Properties - Render - Armory Exporter` and select Androi
 
 To proceed, install and run [Android Studio](https://developer.android.com/studio/index.html). Select `Open an existing Android Studio project`. The project is located at `blend_file_location/build_projectname/android-native-hl-build/projectname`.
 
-![](/deploy/img/android/0.jpg)
+![](deploy/img/android/0.jpg)
 
 Once the project is loaded, Android Studio will install required dependencies. Make sure to allow installing NDK. Afterwards, connect your device and press `Run`.
 
 *Note: Armory will target gles3 by default. If you require gles2 support, enable `Legacy Shaders` option in Armory add-on preferences.* 
 
-![](/deploy/img/android/1.jpg)
+![](deploy/img/android/1.jpg)
 
 ---
 

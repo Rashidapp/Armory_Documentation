@@ -42,7 +42,7 @@ The HashLink target is very similar to the C++ target of Kha and uses Kore for a
 
 ## Iron
 
-While Kha gives you a way to interact with low level graphics and input in a standardized way across all platforms, [Iron](https://armory3d.org/iron/#/) gives you a higher level interface to useful features for building games. Iron is a game engine built on top of Kha and implemented as a collection of Haxe libraries. From the website:
+While Kha gives you a way to interact with low level graphics and input in a standardized way across all platforms, [Iron](https://github.com/armory3d/iron) gives you a higher level interface to useful features for building games. Iron is a game engine built on top of Kha and implemented as a collection of Haxe libraries. From the website:
 
 > Iron handles render & content pipelines and lets you develop a custom visual engine on top of it.
 
@@ -72,4 +72,4 @@ Haxe traits allow you to tie any Haxe code to an object in the Blender interface
 
 #### Logic Nodes
 
-Logic nodes are another way to write traits in Armory. Armory has an ever growing list of logic nodes that allows you to build out logic in a graphical manner right inside of Blender without having to write code. When your game is exported, the logic nodes will be compiled to Haxe to build the traits. This means that logic nodes have no performance disadvantage to other game code. If the shipped logic nodes are not sufficient for a task, it is also very easy to [write your own](/dev/logicnodes) logic nodes.
+Logic nodes are another way to write traits in Armory. Armory has an ever growing list of logic nodes that allows you to build out logic in a graphical manner right inside of Blender without having to write code. When your game is exported, the logic nodes will be compiled to Haxe to build the traits. This means that logic nodes have no performance disadvantage to other game code. If the shipped logic nodes are not sufficient for a task, it is also very easy to [write your own](logicnodes) logic nodes.

@@ -7,4 +7,4 @@ To launch the 2D editor - switch to `Properties - Scene` tab in Blender and add 
 - Drag selected element with left mouse button
 - Hit save button before quitting the editor for changes to take effect
 
-![](/essentials/img/armory2d.png)
+![](essentials/img/armory2d.png)

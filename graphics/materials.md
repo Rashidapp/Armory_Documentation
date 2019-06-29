@@ -1,6 +1,6 @@
 # Materials
 
-![](/graphics/img/materials.jpg)
+![](graphics/img/materials.jpg)
 
 Materials are built with [Cycles nodes](https://docs.blender.org/manual/en/dev/render/cycles/nodes/index.html).
 

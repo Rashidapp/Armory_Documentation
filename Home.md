@@ -27,4 +27,4 @@ Armory is distributed under [zlib license](https://github.com/armory3d/armory/bl
 
 ### Contributing
 
-Any form of [contribution](/dev/contribute.md) is highly welcome! Please take a look at currently opened [issues](https://github.com/armory3d/armory/issues).
+Any form of [contribution](contribute) is highly welcome! Please take a look at currently opened [issues](https://github.com/armory3d/armory/issues).

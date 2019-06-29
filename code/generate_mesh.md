@@ -4,12 +4,12 @@ This page describes how to dynamically generate mesh object at runtime using a t
 
 Setup a simple scene with single plane in the center. Assign default material and create a static rigid body for the plane.
 
-![](/code/img/generate_mesh/0.jpg)
+![](code/img/generate_mesh/0.jpg)
 
 Now we can start writing a trait that will dynamically generate a mesh and spawn it in the scene. For this example Haxe is used.
 
 Create a new Script trait for the scene. Hit `New Script` and name it `BoxGenerator`.
-![](/code/img/generate_mesh/1.jpg)
+![](code/img/generate_mesh/1.jpg)
 
 Pressing `Edit Script` will open our new trait script in Kode Studio. Example code below will generate a simple box, attach a rigid body trait and spawn it on the plane after pressing a mouse button.
 

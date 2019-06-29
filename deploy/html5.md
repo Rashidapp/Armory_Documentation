@@ -10,9 +10,9 @@ Resulting files will be located at `blend_file_location/build_projectname/html5`
 
 *Note: Armory will target webgl2 by default. If you require webgl1 support, enable `Legacy Shaders` option in Armory add-on preferences.* 
 
-*Note: To further minimize export size, check [Optimize for size](https://armory3d.org/manual/#/essentials/optimize?id=optimize-for-size).* 
+*Note: To further minimize export size, check [Optimize for size](optimize?id=optimize-for-size).* 
 
-<div style="width:75%">![](/deploy/img/html5/0.jpg)</div>
+<div style="width:75%">![](deploy/img/html5/0.jpg)</div>
 
 ## Mobile browser
 

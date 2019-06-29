@@ -34,7 +34,7 @@ When working on Armory patches, it is useful to setup the SDK locally and apply 
 
 ### HaxeBullet
 
-- Setup and Update Guide [HaxeBullet Documentation](/dev/haxebullet.md)
+- Setup and Update Guide [HaxeBullet Documentation](haxebullet.md)
 
 #### Full SDK
 
@@ -42,14 +42,14 @@ Alternatively, you can clone the whole SDK at once.
 
 - Clone [armsdk](https://github.com/armory3d/armsdk) into `blend_location/armsdk`, it will automatically get picked up for that project - this lets you have a fully self-contained and portable project setup
 
-- You can also point Armory to use the armsdk [at specific location](https://armory3d.org/manual/#/dev/gitversion?id=manual-clone)
+- You can also point Armory to use the armsdk [at specific location](gitversion?id=manual-clone)
 
 ## Contributing docs
 
 Docs can be edited directly on GitHub. Open desired `.md` file at the [armory_docs](https://github.com/armory3d/armory_docs) repository and click the pencil icon to edit.
 
-![](/dev/img/pencil.png)
+![](dev/img/pencil.png)
 
 To edit docs locally, clone [armory_docs](https://github.com/armory3d/armory_docs) repository like described in the [Creating a pull request](https://armory3d.org/manual/#/dev/contribute?id=creating-a-pull-request) section. Afterwards, you can drag and drop `.md` files into KodeStudio which comes bundled with Armory SDK. Click `Open Preview to the Side (Ctrl + K V)` button to preview the changes.
 
-![](/dev/img/ks.png)
+![](dev/img/ks.png)

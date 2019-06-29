@@ -7,7 +7,7 @@ Armory bundle comes with everything you need.
 - Run Blender located in the unpacked SDK. *(On Windows, you may need to enable it for the first time by clicking **More info** - **Run anyway**. On Linux, open terminal in the extracted folder and type `./blender`. On macOS, see `instructions.txt` file.)*
 ---
 - To verify everything is working correctly, save your .blend file and hit `Play` (F5) button, located in the `Properties - Render - Armory Player` panel.
-- Continue to the [Playground tutorial](/getting_started/playground.md) to learn more.
+- Continue to the [Playground tutorial](getting_started/playground.md) to learn more.
 
 ## Troubleshooting
 
