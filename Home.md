@@ -13,8 +13,8 @@ Armory SDK can be used on **Windows**, **Linux** and **macOS**. Projects can be 
 ### Get Started
 
 - [Download SDK](http://armory3d.org/download.html)
-- [Setup](getting_started/setup.md)
-- [Tutorial](getting_started/playground.md)
+- [Setup](setup)
+- [Tutorial](playground)
 
 ### Essentials
 
