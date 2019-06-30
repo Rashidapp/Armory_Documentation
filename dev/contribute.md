@@ -47,3 +47,7 @@ Alternatively, you can clone the whole SDK at once.
 ## Contributing docs
 
 Docs can be edited directly on GitHub wiki!
+
+## Building API docs
+
+API docs are built using [dox](https://github.com/HaxeFoundation/dox). After building empty project with Krom target selected, follow the instructions at dox [readme](https://github.com/HaxeFoundation/dox#usage).
