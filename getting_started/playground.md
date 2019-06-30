@@ -8,7 +8,7 @@ This tutorial walks you through the Armory basics. We will create a playground-l
 
 ### Hello World
 
-Pick-up where we left in the [setup tutorial](getting_started/setup.md). Open Blender, save the project and press `Armory Player - Run` (F5) to play in window.
+Pick-up where we left in the [setup tutorial](setup). Open Blender, save the project and press `Armory Player - Run` (F5) to play in window.
 
 You can select a runtime in the `Armory Player` panel:
 - Select `Krom` to play in stand-alone player.
@@ -196,4 +196,4 @@ You can create multiple export presets, each specifying a target platform, graph
 
 <a href="">![](getting_started/img/playground/13.jpg)</a>
 
-- Continue to the [Tanks tutorial](getting_started/tanks.md)
+- Continue to the [Tanks tutorial](tanks)

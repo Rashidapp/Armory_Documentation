@@ -34,7 +34,7 @@ When working on Armory patches, it is useful to setup the SDK locally and apply 
 
 ### HaxeBullet
 
-- Setup and Update Guide [HaxeBullet Documentation](haxebullet.md)
+- Setup and Update Guide [HaxeBullet Documentation](haxebullet)
 
 #### Full SDK
 

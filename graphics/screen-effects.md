@@ -4,12 +4,12 @@ This page provides an overview of the graphical screen effects that Armory can p
 
 The full list of the various effects that is possible to use in Armory encompasses \(sorted alphabetically\):
 
-* [Anti-aliasing](antialiasing.md) _\[Separate Article\]_
+* [Anti-aliasing](antialiasing) _\[Separate Article\]_
 * [Auto Exposure](#auto-exposure) 
 * [Bloom](#bloom)
 * [Film Grain](#film-grain)
 * [Fish-Eye](#fish-eye)
-* [Global Illumination](global_illumination.md) _\[Separate Article\]_
+* [Global Illumination](global_illumination) _\[Separate Article\]_
 * [Lens Flares](#lens-flares)
 * [Lens Textures](#lens-textures)
 * [Letterboxing](#letterboxing)
