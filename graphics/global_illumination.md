@@ -6,7 +6,7 @@ Armory features a fully dynamic global illumination technique based on a combina
 
 - Get the teapots [.blend scene](https://github.com/armory3d/armory_examples/tree/master/voxelgi_teapots) (troll not included!).
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/8KavBpfLLtY?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+[![](http://img.youtube.com/vi/8KavBpfLLtY/0.jpg)](http://www.youtube.com/watch?v=8KavBpfLLtY "")
 
 ## Requirements
 

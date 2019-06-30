@@ -1,6 +1,6 @@
 # Tanks Game
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/5b97eR5_fQI?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+[![](http://img.youtube.com/vi/5b97eR5_fQI/0.jpg)](http://www.youtube.com/watch?v=5b97eR5_fQI "")
 
 Let's build a mini-game! It will consist of 2 players handling a tank and battling each other. We build a small playground with obstacles and two tanks models. Each object has a rigid body set. Some of the obstacles are animated on the timeline to make the game more dynamic. The lighting setup is based on the [Playground tutorial](getting_started/playground.md).
 

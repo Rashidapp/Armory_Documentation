@@ -1,6 +1,6 @@
 # Playground Tutorial
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/H5ylSfTfNg8?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+[![](http://img.youtube.com/vi/H5ylSfTfNg8/0.jpg)](http://www.youtube.com/watch?v=H5ylSfTfNg8 "")
 
 This tutorial walks you through the Armory basics. We will create a playground-like scene showcasing the essential features step-by-step.
 

@@ -46,10 +46,4 @@ Alternatively, you can clone the whole SDK at once.
 
 ## Contributing docs
 
-Docs can be edited directly on GitHub. Open desired `.md` file at the [armory_docs](https://github.com/armory3d/armory_docs) repository and click the pencil icon to edit.
-
-![](dev/img/pencil.png)
-
-To edit docs locally, clone [armory_docs](https://github.com/armory3d/armory_docs) repository like described in the [Creating a pull request](https://armory3d.org/manual/#/dev/contribute?id=creating-a-pull-request) section. Afterwards, you can drag and drop `.md` files into KodeStudio which comes bundled with Armory SDK. Click `Open Preview to the Side (Ctrl + K V)` button to preview the changes.
-
-![](dev/img/ks.png)
+Docs can be edited directly on GitHub wiki!
