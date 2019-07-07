@@ -108,9 +108,9 @@ void main() {
 	float metallic = 0.0;
 	float occlusion = 1.0;
 	float specular = 1.0;
-	float materialId = 0.0
+	uint materialId = 0;
 	// Store in gbuffer
-	fragColor[0] = vec4(n.xy, packFloat(metallic, roughness), materialId);
+	fragColor[0] = vec4(n.xy, roughness, packFloatInt16(metallic, materialId , 4));
 	fragColor[1] = vec4(basecol.rgb, packFloat2(occlusion, specular));
 }
 ```
