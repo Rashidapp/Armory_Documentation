@@ -36,7 +36,7 @@
   * [Machine Learning](machine_learning)
   * [Generate Mesh](generate_mesh)
   * [Transform](transform)
-  * [Find objects in scene](find_objects_in_scene)
+  * [Find objects in the scene](find_objects_in_the_scene)
 
 * Logic Nodes
 
