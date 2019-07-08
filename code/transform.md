@@ -55,4 +55,4 @@ var look = transform.look();    // Y axis
 ```
 
 Example:
-- https://github.com/armory3d/armory_examples/tree/master/script_transform
+- https://github.com/armory3d/armory_examples/tree/master/script_examples/script_transform
