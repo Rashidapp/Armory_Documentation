@@ -69,7 +69,7 @@ We will write a function that will search all objects in a family tree.
 
 To do so, we will outline the behaviour of this recursive function first:  
 
-> The functions receives an object an array of objects.
+> The functions receives an object and an array of objects.
 
 > Determine if the object we passed as a parameter to the function must be added to the array given a custom condition.
 
