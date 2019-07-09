@@ -100,7 +100,7 @@ function findObjs(obj:Object, group:Array<Object>):Array<Object>{
 }
 ```
 
-So we can simply replace condition for any simple or complex condition to get a list of objects in particular, like for example the invisible (render disabled) objects in the scene:
+So we can simply replace the condition for any simple or complex condition to get a list of objects in particular, like for example the invisible (render disabled) objects in the scene:
 
 ```haxe
 function findObjs(obj:Object, group:Array<Object>):Array<Object>{
