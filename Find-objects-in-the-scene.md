@@ -90,7 +90,7 @@ function findObjs(obj:Object, group:Array<Object>):Array<Object>{
     }
     for (ch in obj.children) {
         if (ch.children.length > 0) {
-            objsNotVisible(ch,group);
+            findObjs(ch,group);
         }
         else if (condition) {
             group.push(ch);
