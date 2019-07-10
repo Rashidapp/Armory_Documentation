@@ -167,4 +167,4 @@ With that general structure for the function we can write many other functions t
 Some of those functions are already available in the example found below:
 
 Example:
-- link
+- [https://github.com/armory3d/armory_examples/../FindObjects.hx](https://github.com/armory3d/armory_examples/blob/master/script_examples/script_find_objects_scene/Sources/arm/FindObjects.hx)
