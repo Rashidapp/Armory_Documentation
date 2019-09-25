@@ -32,7 +32,26 @@ Armory engine is distributed as a Blender add-on:
 
 ## Code Editor
 
+You can choose with which code editor Armory should open scripts.
+
+- In Blender, select `Edit - Preferences...` and navigate to the `Add-ons` tab.
+- Locate the Armory add-on.
+- Activate `Show Advanced`
+- Under `Code Editor` you can select the editor you want to use.
+
+### System default
+Armory tries to automatically select the correct editor. This works as follows:  
+If an environment variable `VISUAL` is set, the editor is selected from the path specified there. If `VISUAL` does not exist, the environment variable `EDITOR`, which is actually intended for console-based editors, is used instead.
+If both variables do not exist, the operating system tries to choose the correct editor itself.
+
+### VS Code | Kode Studio (recommended)
 - Download [Visual Studio Code](https://code.visualstudio.com/) + [Kha Extension pack](https://marketplace.visualstudio.com/items?itemName=kodetech.kha-extension-pack) or [Kode Studio](https://github.com/Kode/KodeStudio/releases).
-- In Blender, Select `Edit - Preferences...` and navigate to the `Add-ons` tab.
-- Locate Armory add-on.
-- Point `VS Code Path` to your installed copy.
+- Point `Code Editor Executable` to the executable file of your installed copy.
+
+### Sublime Text
+- Download [Sublime Text](https://www.sublimetext.com/) + (optional) [Haxe Bundle](https://packagecontrol.io/packages/Haxe) from Sublime's [PackageControl](https://packagecontrol.io/installation)
+- Point `Code Editor Executable` to the executable file of your installed copy.
+- Then, a basic _[project_name].sublime-project_ file gets created if it doesn't exist yet.
+
+### Custom
+- Point `Code Editor Executable` to the executable file of your custom editor.
