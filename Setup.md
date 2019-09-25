@@ -48,12 +48,12 @@ If both variables do not exist, the operating system tries to choose the correct
 ### VS Code | Kode Studio (recommended)
 - Download [Visual Studio Code](https://code.visualstudio.com/) + [Kha Extension pack](https://marketplace.visualstudio.com/items?itemName=kodetech.kha-extension-pack) or [Kode Studio](https://github.com/Kode/KodeStudio/releases).
 - Point `Code Editor Executable` to the executable file of your installed copy.
-- Inside vs code make sure your paths are setup properly for the extensions
-```
-"haxelib.executable": "ArmorySDK/Kha/Tools/haxe/haxe-linux64",
-"kha.khaPath": "ArmorySDK/Kha",
-"krom.kromPath": "ArmorySDK/Krom"
-``` 
+- Inside VS code, make sure your paths are setup properly for the extensions:
+  ```
+  "haxelib.executable": "ArmorySDK/Kha/Tools/haxe/haxe-linux64",
+  "kha.khaPath": "ArmorySDK/Kha",
+  "krom.kromPath": "ArmorySDK/Krom"
+  ``` 
 
 ### Sublime Text
 - Download [Sublime Text](https://www.sublimetext.com/) + (optional) [Haxe Bundle](https://packagecontrol.io/packages/Haxe) from Sublime's [PackageControl](https://packagecontrol.io/installation)
