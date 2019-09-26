@@ -50,7 +50,7 @@ If both variables do not exist, the operating system tries to choose the correct
 - Point `Code Editor Executable` to the executable file of your installed copy.
 - Inside VS code, make sure your paths are setup properly for the extensions:
   ```
-  "haxelib.executable": "ArmorySDK/Kha/Tools/haxe/haxe-linux64",
+  "haxe.executable": "ArmorySDK/Kha/Tools/haxe/haxe-linux64",
   "kha.khaPath": "ArmorySDK/Kha",
   "krom.kromPath": "ArmorySDK/Krom"
   ``` 
