@@ -6,6 +6,8 @@ If no navmesh is detected in the scene, Armory skips including the navmesh modul
 
 Adding a navmesh is as simple as: selecting an object, going the Object tab, and then in Armory Traits click + to add a new trait, select Bundled, and then in class pick the "Navmesh".
 
+![](https://i.imgur.com/I4xyqWL.png)
+
 To generate a navmesh representation, you can click Generate Navmesh. 
 
 You can modify the settings to affect the navmesh generation for the visualization and the in-game version.
