@@ -19,7 +19,7 @@ Armory engine is distributed as a Blender add-on:
 
 ### Windows
 
-- To see error messages, press `Menu bar = Window - Toggle System Console` in Blender.
+- To see error messages, press `Menu bar - Window - Toggle System Console` in Blender.
 - `Type not found : Main` error - save your .blend file in a safe path like `C:\Users\user_name\Documents\test`, otherwise Windows may prevent writing the files. Do not save .blend file to the drive root.
 - If you get missing .dll errors, try installing [Visual C++ Redistributable for Visual Studio 2017](https://go.microsoft.com/fwlink/?LinkId=746572).
 
