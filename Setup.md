@@ -5,7 +5,6 @@ Armory engine is distributed as a Blender add-on:
 - Click `Install...` button.
 - Select `armory.py` file located in the extracted `ArmorySDK` folder.
 - Enable Armory add-on in Blender.
-- Point `SDK Path` property to the extracted `ArmorySDK` folder.
 ---
 - To verify everything is working correctly, save your .blend file and hit `Play` (F5) button, located in the `Properties - Render - Armory Player` panel.
 - Continue to the [Playground tutorial](playground) to learn more.
