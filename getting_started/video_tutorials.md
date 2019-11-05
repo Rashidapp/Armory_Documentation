@@ -21,3 +21,7 @@
 ## [Uniday Studio / portuguese](https://www.youtube.com/playlist?list=PLkei3LlusC-GUZBiDEg6NcrOHVq99fIcP)
 
 [![](http://img.youtube.com/vi/Hqd4sfraIO8/0.jpg)](http://www.youtube.com/watch?v=Hqd4sfraIO8 "")
+
+## [Daniel Sobrinho / portuguese](https://www.youtube.com/watch?v=uuT6hSKgqAs&list=PL5CQLH8_gQ-gBOvylD6pe6JOBaOv-lgF7&index=11)
+
+[![](https://img.youtube.com/vi/uuT6hSKgqAs/0.jpg)](https://www.youtube.com/watch?v=uuT6hSKgqAs&list=PL5CQLH8_gQ-gBOvylD6pe6JOBaOv-lgF7&index=11 "")
