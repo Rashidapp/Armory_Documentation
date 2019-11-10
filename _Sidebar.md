@@ -8,7 +8,7 @@
 
 * Essentials
 
-  * [Armory API](http://armory3d.org/manual/api)
+  * [Armory API](https://armory3d.org/api/index.html)
   * [Traits](traits)
   * [Multi-User](multiuser)
   * [Optimize](optimize)
