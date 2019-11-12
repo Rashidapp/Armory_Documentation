@@ -9,7 +9,7 @@ While the plan is to support all of the nodes, not all of them work yet. Current
 - ADD_SHADER (Add Shader)
 - BSDF_DIFFUSE (Diffuse BSDF)
 - BSDF_GLOSSY (Glossy BSDF)
-- EMISSION - (Emission) requires Voxel GI
+- EMISSION - (Emission) - as bloom only
 - BSDF_GLASS (Glass BSDF)
 - BSDF_TRANSLUCENT (Translucent BSDF)
 - BSDF_TRANSPARENT (Transparent BSDF)
