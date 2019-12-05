@@ -4,7 +4,7 @@ Armory engine is distributed as a Blender add-on:
 - In Blender, Select `Edit - Preferences...` and navigate to the `Add-ons` tab.
 - Click `Install...` button.
 - Select `armory.py` file located in the extracted `ArmorySDK` folder.
-- Enable Armory add-on in Blender.
+- Enable Armory add-on in Blender: Simply click the checkbox next to `Render: Armory` from within `Preferences: Add-ons`.
 ---
 - To verify everything is working correctly, save your .blend file and hit `Play` (F5) button, located in the `Properties - Render - Armory Player` panel.
 - Continue to the [Playground tutorial](playground) to learn more.
