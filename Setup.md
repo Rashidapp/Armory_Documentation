@@ -5,6 +5,8 @@ Armory engine is distributed as a Blender add-on:
 - Click `Install...` button.
 - Select `armory.py` file located in the extracted `ArmorySDK` folder.
 - Enable Armory add-on in Blender: Simply click the checkbox next to `Render: Armory` from within `Preferences: Add-ons`.
+- Pick SDK Directory : (Optional, only in case the auto detect for the SDK didn't work) still in the Armory add-on settings in Blender Preferences: fill the `SDK Path` field by clicking on the folder icon, then navigate to the location you have stored the Armory SDK folder (the SDK folder is the one that contains all the sub-folders: `armory`, `iron`, `Kha`, `Krom`, etc), and then click "Accept".
+
 ---
 - To verify everything is working correctly, save your .blend file and hit `Play` (F5) button, located in the `Properties - Render - Armory Player` panel.
 - Continue to the [Playground tutorial](playground) to learn more.
@@ -13,7 +15,7 @@ Armory engine is distributed as a Blender add-on:
 ## Troubleshooting
 
 - For old graphics cards, create a `Mobile` path in `Properties - Render - Armory Render Path`.
-- When naming folders/files, prefer unaccented alphabetical letters `A-Z`.
+- When naming folders/files, prefer only unaccented alphabetical letters `A-Z`, forbidden characters in folder and file names such as `[]` can cause issues too.
 - If you have any trouble setting things up, raise a [new issue](https://github.com/armory3d/armory/issues).
 
 ### Windows
