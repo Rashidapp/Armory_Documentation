@@ -4,7 +4,7 @@
   * [Setup](setup)
   * [Playground](playground)
   * [Tanks](tanks)
-  * [Video Tutorials](video_tutorials)
+  * [Video Tutorials](community_tutorials)
 
 * Essentials
 
