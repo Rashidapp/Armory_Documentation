@@ -4,6 +4,11 @@
 
 Materials are built with [Cycles nodes](https://docs.blender.org/manual/en/dev/render/cycles/nodes/index.html).
 
+## Transparency
+
+- Connect an alpha map to the Principled BSDF input of a material.
+- Material properties: Armory Props: Uncheck Alpha Test.
+
 ## Displacement
 
 Locate the `Armory Render Path - Renderer - Displacement` property:
