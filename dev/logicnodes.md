@@ -27,11 +27,8 @@ class TestNode(Node, ArmLogicTreeNode):
         self.inputs.new('ArmNodeSocketAction', 'In')
         self.outputs.new('ArmNodeSocketAction', 'Out')
 
-def register():
-    # Add custom nodes
-    add_node(TestNode, category='Action')
-    # Register newly added nodes
-    arm.nodes_logic.register_nodes()
+# Add custom nodes
+add_node(TestNode, category='Action')
 ```
 
 Restarting Blender and loading the project again, the new logic node is available for placement.
