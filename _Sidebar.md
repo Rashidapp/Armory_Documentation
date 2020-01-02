@@ -2,6 +2,7 @@
 * Getting Started
 
   * [Setup](setup)
+  * [Troubleshooting](troubleshooting)
   * [Playground](playground)
   * [Tanks](tanks)
   * [Tutorials by community](community_tutorials)
