@@ -1,7 +1,7 @@
 ## Troubleshooting
 
 - For old graphics cards, create a `Mobile` path in `Properties - Render - Armory Render Path`.
-- When naming folders/files, prefer only unaccented alphabetical letters `A-Z`, forbidden characters in folder and file names such as `[]` can cause issues too.
+- When naming folders/files for the SDK path and the individual projects files (.blend files), prefer only unaccented alphabetical letters `A-Z`, forbidden characters in folder and file names such as `[]` can cause issues too.
 - If you have any trouble setting things up, raise a [new issue](https://github.com/armory3d/armory/issues).
 
 ### Windows
