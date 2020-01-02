@@ -1,0 +1,19 @@
+## Troubleshooting
+
+- For old graphics cards, create a `Mobile` path in `Properties - Render - Armory Render Path`.
+- When naming folders/files, prefer only unaccented alphabetical letters `A-Z`, forbidden characters in folder and file names such as `[]` can cause issues too.
+- If you have any trouble setting things up, raise a [new issue](https://github.com/armory3d/armory/issues).
+
+### Windows
+
+- To see error messages, press `Menu bar - Window - Toggle System Console` in Blender.
+- `Type not found : Main` error - save your .blend file in a safe path like `C:\Users\user_name\Documents\test`, otherwise Windows may prevent writing the files. Do not save .blend file to the drive root.
+- If you get missing .dll errors, try installing [Visual C++ Redistributable for Visual Studio 2017](https://go.microsoft.com/fwlink/?LinkId=746572).
+
+### Linux
+
+- To see error messages, start Blender from terminal using `./blender`.
+
+### macOS
+
+- To see error messages, start Blender from terminal using `/blender.app/Contents/MacOS/blender`.
