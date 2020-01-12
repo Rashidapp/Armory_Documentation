@@ -29,6 +29,7 @@ Trait exposes events - this makes it possible to get notified about its life-cyc
 - `Trait.notifyOnRemove()` - object which this trait belongs to is removed from scene
 - `Trait.notifyOnUpdate()` - update game logic here
 - `Trait.notifyOnRender()` - update rendering here
+- `Trait.notifyOnRender2D()` - update 2D rendering here
 
 As the scene is being built asynchronously, `onInit` event can get called at a time when not all scene objects are present yet. If trait construction depends on other scene objects, use `Scene.active.notifyOnInit()` event which gets called as soon as the scene is fully constructed.
 
