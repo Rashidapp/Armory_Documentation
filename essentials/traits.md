@@ -43,20 +43,20 @@ Variables that should be visible in Blender have to be preceded with `@prop` [me
 ### Supported Property Types
 The following data types are supported:
 - Primitive:
-  - Int
-  - Float
-  - Boolean
-- String
+  - `Int`
+  - `Float`
+  - `Boolean`
+- `String`
 - Object data types
-  - [iron.object.Object](https://armory3d.org/api/iron/object/Object.html)
-  - [iron.object.CameraObject](https://armory3d.org/api/iron/object/CameraObject.html)
-  - [iron.object.LightObject](https://armory3d.org/api/iron/object/LightObject.html)
-  - [iron.object.MeshObject](https://armory3d.org/api/iron/object/MeshObject.html)
-  - [iron.object.SpeakerObject](https://armory3d.org/api/iron/object/SpeakerObject.html)
+  - [`iron.object.Object`](https://armory3d.org/api/iron/object/Object.html)
+  - [`iron.object.CameraObject`](https://armory3d.org/api/iron/object/CameraObject.html)
+  - [`iron.object.LightObject`](https://armory3d.org/api/iron/object/LightObject.html)
+  - [`iron.object.MeshObject`](https://armory3d.org/api/iron/object/MeshObject.html)
+  - [`iron.object.SpeakerObject`](https://armory3d.org/api/iron/object/SpeakerObject.html)
 - Float vectors:
-  - [iron.math.Vec2](https://armory3d.org/api/iron/math/Vec2.html)
-  - [iron.math.Vec3](https://armory3d.org/api/iron/math/Vec3.html)
-  - [iron.math.Vec4](https://armory3d.org/api/iron/math/Vec4.html)
+  - [`iron.math.Vec2`](https://armory3d.org/api/iron/math/Vec2.html)
+  - [`iron.math.Vec3`](https://armory3d.org/api/iron/math/Vec3.html)
+  - [`iron.math.Vec4`](https://armory3d.org/api/iron/math/Vec4.html)
 
 ### Properties Example
 ```haxe
