@@ -7,7 +7,7 @@
   - [Supported Property Types](#supported-property-types)
   - [Properties Example](#properties-example)
   - [Warnings](#warnings)
-- [Folder Organization](#folder-organization)
+- [Folder Organisation](#folder-organisation)
 
 ## Introduction
 Armory uses a trait(component) system to insert logic into Blender objects and make them interactive. Traits can be attached to scene objects or scenes itself. To inspect traits placed in the scene, switch to `Orphan Data` view in the `Outliner` and see Collections.
