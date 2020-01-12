@@ -46,7 +46,7 @@ Alternatively, you can clone the whole SDK at once.
 
 ## Contributing docs
 
-Docs can be edited directly on GitHub wiki!
+Docs can be edited directly on this GitHub wiki! Just click on `Edit` at the top of the article you want to edit. If you want to add or edit images, please open a pull request with the new/edited images [here](https://github.com/armory3d/armory_wiki_images) and embed them via link in your article. GitHub does not currently allow non-repository members to edit images in wiki articles.
 
 ## Building API docs
 
