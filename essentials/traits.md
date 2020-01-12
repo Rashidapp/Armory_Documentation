@@ -2,11 +2,11 @@
 
 ## Table of Content:
 - [Introduction](#introduction)
+- [Trait Events](#trait-events)
 - [Trait Properties](#trait-properties)
   - [Supported Property Types](#supported-property-types)
   - [Properties Example](#properties-example)
   - [Warnings](#warnings)
-- [Trait Events](#trait-events)
 - [Folder Organization](#folder-organization)
 
 ## Introduction
@@ -19,6 +19,18 @@ There are several trait types:
 - `Bundled` - handling common stuff like character controllers, bundled in Armory
 - `Nodes` - assembling logic visually
 - `UI` - working with canvas & user interface
+
+## Trait Events
+
+Trait exposes events - this makes it possible to get notified about its life-cycle.
+
+- `Trait.notifyOnAdd()` - trait is added to an object
+- `Trait.notifyOnInit()` - object which this trait belongs to is added to scene
+- `Trait.notifyOnRemove()` - object which this trait belongs to is removed from scene
+- `Trait.notifyOnUpdate()` - update game logic here
+- `Trait.notifyOnRender()` - update rendering here
+
+As the scene is being built asynchronously, `onInit` event can get called at a time when not all scene objects are present yet. If trait construction depends on other scene objects, use `Scene.active.notifyOnInit()` event which gets called as soon as the scene is fully constructed.
 
 ## Trait Properties
 
@@ -108,18 +120,6 @@ If Armory detects invalid `@prop` declarations, warnings will get displayed:
 - The property type must be supported (see [Supported property types](#supported-property-types))
 - The property must be syntactically correct
 - Static properties are allowed but not good style as multiple objects can write to the same static property, resulting in different results depending on the internal initialization order of the traits
-
-## Trait Events
-
-Trait exposes events - this makes it possible to get notified about its life-cycle.
-
-- `Trait.notifyOnAdd()` - trait is added to an object
-- `Trait.notifyOnInit()` - object which this trait belongs to is added to scene
-- `Trait.notifyOnRemove()` - object which this trait belongs to is removed from scene
-- `Trait.notifyOnUpdate()` - update game logic here
-- `Trait.notifyOnRender()` - update rendering here
-
-As the scene is being built asynchronously, `onInit` event can get called at a time when not all scene objects are present yet. If trait construction depends on other scene objects, use `Scene.active.notifyOnInit()` event which gets called as soon as the scene is fully constructed.
 
 ## Folder Organisation
 
