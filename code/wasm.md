@@ -1,6 +1,6 @@
 # WebAssembly
 
-![](code/img/wasm/0.jpg)
+![](https://github.com/armory3d/armory_wiki_images/raw/master/code/wasm/0.jpg)
 
 ## Intro
 
@@ -41,7 +41,7 @@ You can compile this `C` source into `Wasm` live at [webassembly.studio](https:/
 
 Select cube and navigate to `Properties - Object - Armory Traits`. Create a new `Wasm` trait and fill the `Module` property. Hit Play(`F5`) and watch the cube rotate!
 
-<a href="./code/img/wasm/1.jpg">![](code/img/wasm/1.jpg)</a>
+![](https://github.com/armory3d/armory_wiki_images/raw/master/code/wasm/1.jpg)
 
 - Example at [GitHub](https://github.com/armory3d/armory_examples/tree/master/web_assembly/c_trait)
 

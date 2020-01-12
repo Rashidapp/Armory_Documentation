@@ -33,7 +33,7 @@ add_node(TestNode, category='Action')
 
 Restarting Blender and loading the project again, the new logic node is available for placement.
 
-![](dev/img/logicnodes/0.png)
+![](https://github.com/armory3d/armory_wiki_images/raw/master/dev/logicnodes/0.png)
 
 ### Haxe
 

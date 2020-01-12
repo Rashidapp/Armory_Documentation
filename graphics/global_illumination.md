@@ -21,11 +21,11 @@ The cheapest way of utilizing voxels, usable for **ambient occlusion and shadows
 - Control the intensity using the `Occlusion` property.
 - Tweak tracing parameters using the `Step, Range, Offset` properties.
 
-![](graphics/img/gi/ao.jpg)
+![](https://github.com/armory3d/armory_wiki_images/raw/master/graphics/gi/ao.jpg)
 
 ## Voxel Volume Setup
 
-Locate `Armory Render Path - Voxel AO` panel to configure **voxelization volume**. 
+Locate `Armory Render Path - Voxel AO` panel to configure **voxelization volume**.
 
 - Adjust `Dimensions` to control the volume size. Objects placed out of this volume will not contribute to global illumination. By default, dimensions are set to 16 - meaning a volume of 16x16x16 blender units gets voxelized.
 - Set `Resolution` to specify amount of voxels used for the volume. For performance, keep this at 128 or below.

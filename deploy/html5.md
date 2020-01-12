@@ -8,17 +8,17 @@ Resulting files will be located at `blend_file_location/build_projectname/html5`
 
 *Note: To run the index.html you need to copy these files to a web server or start a local server. When playing HTML5 project from Blender, Armory starts a local server automatically.*
 
-*Note: Armory will target webgl2 by default. If you require webgl1 support, enable `Legacy Shaders` option in Armory add-on preferences.* 
+*Note: Armory will target webgl2 by default. If you require webgl1 support, enable `Legacy Shaders` option in Armory add-on preferences.*
 
-*Note: To further minimize export size, check [Optimize for size](optimize?id=optimize-for-size).* 
+*Note: To further minimize export size, check [Optimize for size](optimize?id=optimize-for-size).*
 
-<div style="width:75%">![](deploy/img/html5/0.jpg)</div>
+<div style="width:75%">![](https://github.com/armory3d/armory_wiki_images/raw/master/deploy/html5/0.jpg)</div>
 
 ## Mobile browser
 
 Create a `Mobile` path in `Properties - Render - Armory Render Path`. Afterwards, assign the mobile path to the `Render Path` slot in the `Armory Exporter`.
 
-*Note: Armory will target webgl2 by default. If you require webgl1 support, enable `Legacy Shaders` option in Armory add-on preferences.* 
+*Note: Armory will target webgl2 by default. If you require webgl1 support, enable `Legacy Shaders` option in Armory add-on preferences.*
 
 ## Embed
 

@@ -1,6 +1,6 @@
 # Materials
 
-![](graphics/img/materials.jpg)
+![](https://github.com/armory3d/armory_wiki_images/raw/master/graphics/materials.jpg)
 
 Materials are built with [Cycles nodes](https://docs.blender.org/manual/en/dev/render/cycles/nodes/index.html).
 

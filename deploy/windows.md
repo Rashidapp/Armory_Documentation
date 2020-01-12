@@ -8,7 +8,7 @@
 
 *Note: To change executable icon, use [resource hacker](http://www.angusj.com/resourcehacker/).*
 
-<div style="width:75%">![](deploy/img/windows/0.jpg)</div>
+<div style="width:75%">![](https://github.com/armory3d/armory_wiki_images/raw/master/deploy/windows/0.jpg)</div>
 
 ## HashLink (C)
 
@@ -16,18 +16,18 @@ Create a new preset in `Properties - Render - Armory Exporter` and select `Windo
 
 To proceed, install [Visual Studio](https://www.visualstudio.com/vs/community/). Make sure to install components for compiling C++ code. Once installed, open the project located at `blend_file_location/build_projectname/windows-hl-build/project_name.sln`.
 
-<div style="width:75%">![](deploy/img/windows/1.jpg)</div>
+<div style="width:75%">![](https://github.com/armory3d/armory_wiki_images/raw/master/deploy/windows/1.jpg)</div>
 
 Next, you can test, debug and profile your project in Visual Studio. When you are ready to export final binary, switch to Release mode and build the project.
 
-![](deploy/img/windows/2.jpg)
+![](https://github.com/armory3d/armory_wiki_images/raw/master/deploy/windows/2.jpg)
 
 Once the build process finishes, copy the resulting binary from `x64/Release` folder (in this case `untitled.exe`).
 
-<div style="width:75%">![](deploy/img/windows/3.jpg)</div>
+<div style="width:75%">![](https://github.com/armory3d/armory_wiki_images/raw/master/deploy/windows/3.jpg)</div>
 
 To the `blend_file_location/build_projectname/windows-hl` folder which also contains game assets.
 
-<div style="width:75%">![](deploy/img/windows/4.jpg)</div>
+<div style="width:75%">![](https://github.com/armory3d/armory_wiki_images/raw/master/deploy/windows/4.jpg)</div>
 
 You can now package and distribute this folder.
