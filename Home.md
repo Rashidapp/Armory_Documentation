@@ -1,6 +1,6 @@
 # Welcome
 
-![](getting_started/img/intro.jpg)
+![](https://github.com/armory3d/armory_wiki_images/raw/master/getting_started/intro.jpg)
 
 Build games in Blender - Armory is a game engine with full Blender integration, turning it into a complete game development tool.
 
@@ -12,7 +12,7 @@ Armory SDK can be used on **Windows**, **Linux** and **macOS**. Projects can be 
 
 ### Get Started
 
-- [Download SDK](http://armory3d.org/download.html)
+- [Download SDK](https://armory3d.org/download.html)
 - [Setup](setup)
 - [Tutorial](playground)
 
