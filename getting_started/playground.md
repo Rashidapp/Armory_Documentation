@@ -92,7 +92,7 @@ With Blender, we can easily import common asset formats.
 
 ### Logic Nodes
 
-Logic nodes provide a visual way of creating interactive scenes. When you build your project, created node trees are automatically compiled to scripts.
+Logic nodes provide a visual way of creating interactive scenes. When you build your project, created node trees are automatically compiled to scripts (this can lead to warnings depending on the node tree name. If you see such a warning, please refer to [this](https://github.com/armory3d/armory/wiki/troubleshooting#warning-trait-names-differ)).
 
 The system consists of 5 essential categories:
 - `Events` - nodes where execution starts, triggered by desired event
