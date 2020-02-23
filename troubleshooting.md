@@ -34,7 +34,7 @@
 ## Common Issues
 
 _To search for a particular error/warning message, press `Ctrl` + `F` (`Cmd` + `F` on macOS)._
-- ```Armory Warning: Logic node tree and generated trait names differ! Node tree: "[...]", trait: "[...]"```
+- ```Armory Warning: Logic node tree and generated trait names differ! Node tree: "[...]", trait: "[...]"``` <a name="warning-trait-names-differ"></a>
   
   This warning means that the specified node tree has a different name during runtime. Logic Nodes are converted to [Haxe classes](https://haxe.org/manual/types-class-instance.html) during project export and classes in Haxe must follow a set syntax. For example, class names must begin with an uppercase letter and must not contain dots. Node tree names in Blender do not have that restriction, so if a node tree name does not follow the Haxe syntax, it will be converted to a different, valid name.
 
