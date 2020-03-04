@@ -68,8 +68,8 @@ class BoxGenerator extends iron.Trait {
 		var indU32 = new Uint32Array(indices.length);
 		toU32(indU32, indices);
 
-		var pos:TVertexArray = { attrib: "pos", values: posI16 };
-		var nor:TVertexArray = { attrib: "nor", values: norI16 };
+		var pos:TVertexArray = { attrib: "pos", values: posI16, data: "short4norm" };
+		var nor:TVertexArray = { attrib: "nor", values: norI16, data: "short2norm" };
 		var ind:TIndexArray = { material: 0, values: indU32 };
 
 		var rawmeshData:TMeshData = {
