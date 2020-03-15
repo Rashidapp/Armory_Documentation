@@ -47,3 +47,4 @@ While the plan is to support all of the nodes, not all of them work yet. Current
 - TEX_VORONOI (Voronoi Texture)
 - MAPPING (Mapping)
 - PARTICLE_INFO (Particle Info) - GPU particles
+- VERTEX_COLOR (Vertex Color)
