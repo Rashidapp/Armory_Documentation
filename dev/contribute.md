@@ -1,5 +1,7 @@
 # Contribute
 
+Check out the excellent [Best practices for engine contributors](https://docs.godotengine.org/en/stable/community/contributing/best_practices_for_engine_contributors.html) document published by Godot engine.
+
 ## Creating a pull request
 
 - Install [Git](https://git-scm.com/download/win)
