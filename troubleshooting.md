@@ -45,3 +45,13 @@ _To search for a particular error/warning message, press `Ctrl` + `F` (`Cmd` + `
   In most cases, there is nothing to worry about when seeing this warning. It is important to know this fact when using the [`getTrait()`](https://armory3d.org/api/iron/Scene.html#getTrait) function in Haxe traits (e.g.) or when using a node that has a trait name input field, like [Get Trait](https://github.com/armory3d/armory/wiki/reference#get-trait). These functions/nodes will work with the converted names only.
 
   (_For more information on this, see [issue 1567](https://github.com/armory3d/armory/issues/1567))_
+
+- ```Armory Warning: skipping export of the object [...] (collection [...]) because it has the same export name as another object in the scene: [...]```<a name="warning-skipping-export-of-object"></a>
+
+  This is a rarely seen warning that is displayed if two objects in the scene have the same name at export time.
+
+  During export, Armory converts the scene data to a file that Iron (Armory's [engine core](https://github.com/armory3d/armory/wiki/architecture#iron)) can read. Currently, Iron does not handle multiple objects with the same name but because Blender does that (for example if those objects are in different collections or linked from different files), some objects have to be renamed to ensure that Iron works correcly. For detailed reference about the renaming process, please take a look at `asset_name(bdata)` in [blender/arm/utils.py](https://github.com/armory3d/armory/blob/master/blender/arm/utils.py).
+
+  Sometimes it can happen that the renamed object has the same name as an already existing object in the scene. If that is the case, that object (the order of exporting objects is not guaranteed!) is not exported to prevent obscure bugs from happening.
+
+  (_For more information on this, see [pull request 1595](https://github.com/armory3d/armory/pull/1595))_
