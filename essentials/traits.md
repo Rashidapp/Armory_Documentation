@@ -14,11 +14,19 @@ Armory uses a trait(component) system to insert logic into Blender objects and m
 
 ![](https://github.com/armory3d/armory_wiki_images/raw/master/essentials/traits_groups.png)
 
+### Trait Types
 There are several trait types:
 - `Haxe` - writing script from scratch in Haxe
 - `Bundled` - handling common stuff like character controllers, bundled in Armory
 - `Nodes` - assembling logic visually
 - `UI` - working with canvas & user interface
+
+### Fake User
+If a trait is not used by any object or scene, it will not be included in the exported game. To export the trait anyway, there is a `Fake User` option that works like the identically named option for Blender data types. If enabled, the trait will be exported even if it has no user object or scene.
+
+![Trait fake user setting](https://github.com/armory3d/armory_wiki_images/raw/master/essentials/traits_fake_user.jpg)
+
+When using nodes or functions that require a trait name, make sure that the trait is exported!
 
 ## Trait Events
 
