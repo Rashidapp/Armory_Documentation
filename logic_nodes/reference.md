@@ -443,7 +443,7 @@ Store string value.
 
 ### Trait
 
-Get reference of trait specified.
+Get reference of trait specified. If the trait was not found or was not exported, an error is thrown [(more information)](https://github.com/armory3d/armory/wiki/troubleshooting#trait-not-exported).
 
 ![](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/Trait.JPG)
 
