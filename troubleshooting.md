@@ -55,3 +55,11 @@ _To search for a particular error/warning message, press `Ctrl` + `F` (`Cmd` + `
   Sometimes it can happen that the renamed object has the same name as an already existing object in the scene. If that is the case, that object (the order of exporting objects is not guaranteed!) is not exported to prevent obscure bugs from happening.
 
   (_For more information on this, see [pull request 1595](https://github.com/armory3d/armory/pull/1595))_
+
+- ```No trait with the name [...] found, make sure that the trait is exported!```<a name="trait-not-exported"></a>
+
+  This error occurs when using the [`Trait`](https://github.com/armory3d/armory/wiki/reference#trait) node with a trait that is not exported. Either the trait does not exist or it does exist but there is no object or scene that is using that trait.
+
+  During export, only traits that are enabled on at least one user (scene or object) are exported and included in the game. If you need to access an trait that should not be activated at the start of the game, there is a [`Fake User`]() option. When enabled, the trait will be exported even if it has no user object or scene.
+
+  (_For more information on this, see [issue 1529](https://github.com/armory3d/armory/issues/1529))_
