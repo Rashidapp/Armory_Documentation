@@ -45,6 +45,6 @@ While the plan is to support all of the nodes, not all of them work yet. Current
 - TEX_NOISE (Noise Texture)
 - TEX_GRADIENT (Gradient Texture)
 - TEX_VORONOI (Voronoi Texture)
-- MAPPING (Mapping)
+- MAPPING (Mapping) - 'Normal' mapping type is not supported yet
 - PARTICLE_INFO (Particle Info) - GPU particles
 - VERTEX_COLOR (Vertex Color)
