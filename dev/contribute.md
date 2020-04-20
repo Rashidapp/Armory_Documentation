@@ -47,6 +47,8 @@ Thank you for contributing to Armory! Armory is an open source project and depen
 
 > You can also use a Git GUI client for the Git related tasks if you don't want to work from a command line. [Here](https://git-scm.com/downloads/guis) is a list of many clients.
 
+A more detailed explanation can be found here: https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request-from-a-fork
+
 ## Local Armory setup
 
 When working on Armory patches, it is useful to setup the SDK locally and apply your modification there.
