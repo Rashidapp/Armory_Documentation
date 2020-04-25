@@ -86,6 +86,38 @@ A tutorial about working with remotes can be found [here](https://git-scm.com/bo
 
 Each submodule of the Armory SDK can also point to different remotes, so you can easily keep track of all your forks across the Armory project structure.
 
+## Syntax examples
+
+For keeping code neat and tidy.
+
+* Using import.hx, if imports exist in multiple files: https://haxe.org/blog/importhx-intro/
+
+* Use new [array function syntax](https://github.com/HaxeFoundation/haxe/wiki/What%27s-new-in-Haxe-4#new-function-type-syntax) :
+```hx
+//Before:
+function lal(a:Int->Void){..}
+lal(function(a){..});
+//After:
+function lal(a:(a)->Void){..}
+lal((a)->{..});
+```
+
+* [Enums abstract without `@:`](https://github.com/HaxeFoundation/haxe/wiki/What%27s-new-in-Haxe-4#enum-abstract-without-)
+* [Auto-numbering of enums](https://github.com/HaxeFoundation/haxe/wiki/What%27s-new-in-Haxe-4#auto-numbering-for-enum-abstracts)
+* [Using Any type instead of Dynamic](https://haxe.org/manual/types-dynamic-any.html)
+
+* Use `?` syntax instead of `@:optional` for optional field:
+```hx
+//Before
+typedef lala = {
+  @:optional var a:Int;
+}
+//After
+typedef lala = {
+  var ?a:Int;
+}
+```
+
 ## Contributing docs
 
 Docs can be edited directly on this GitHub wiki! Just click on `Edit` at the top of the article you want to edit. If you want to add or edit images, please open a pull request with the new/edited images [here](https://github.com/armory3d/armory_wiki_images) and embed them via link in your article. GitHub does not currently allow non-repository members to edit images in wiki articles.
