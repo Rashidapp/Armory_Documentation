@@ -98,7 +98,7 @@ For keeping code neat and tidy.
 function lal(a:Int->Void){..}
 lal(function(a){..});
 //After:
-function lal(a:(a)->Void){..}
+function lal(a:Int->Void){..}
 lal((a)->{..});
 ```
 
