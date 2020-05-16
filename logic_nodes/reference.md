@@ -613,28 +613,28 @@ Note: Different between Pause Speaker and Stop Speaker, is that Pause speaker wi
 
 On activating this pause speaker(Object that is assigned to as speaker) from playing sound.
 
-![](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/pause-speaker.JPG)
+![](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/sound/pause_speaker.jpg)
 
 
 ### Play Sound
 
 On activated this play sound/music that is assigned to.
 
-![](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/play-sound.JPG)
+![](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/sound/play_sound.jpg)
 
 
 ### Play Speaker
 
 On activated this start speaker(Object that is assigned to as speaker) to play sound.
 
-![](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/play-speaker.JPG)
+![](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/sound/play_speaker.jpg)
 
 
 ### Stop Speaker
 
 On activated this stop speaker(Object that is assigned to as speaker) to stop playing sound.
 
-![](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/stop-speaker.JPG)
+![](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/sound/stop_speaker.jpg)
 
 
 ## Canvas
