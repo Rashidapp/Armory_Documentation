@@ -616,18 +616,39 @@ On activating this pause speaker(Object that is assigned to as speaker) from pla
 ![](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/sound/pause_speaker.jpg)
 
 
-### Play Sound
-
-On activated this play sound/music that is assigned to.
-
-![](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/sound/play_sound.jpg)
-
-
 ### Play Speaker
 
 On activated this start speaker(Object that is assigned to as speaker) to play sound.
 
 ![](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/sound/play_speaker.jpg)
+
+
+### Play Sound
+
+Plays a sound.
+
+![Screenshot: Play Sound node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/sound/play_sound.jpg)
+
+**Inputs**:
+- `Play`: Plays the sound, or if paused, resumes the playback. The exact behaviour depends on the `Retrigger` option (see below)
+- `Pause`: Pauses the playing sound. If no sound is playing, nothing happens
+- `Stop`: Stops the playing sound. If the playback is paused, this will reset the playback position to the start of the sound
+
+**Outputs**:
+- `Out`: activated when `Play` is activated
+- `Running`: activated while the playback is active
+- `Done`: activated when the playback has finished or was stopped manually
+
+**Options**:
+- `Sound`: The sound that will be played
+- `Loop`: Whether to loop the playback
+- `Retrigger`: If `true`, the playback position will be reset to the beginning on each activation of `Play`. If `false`, the playback will continue at the current position
+- **Overrides**:
+  - `Sample Rate`: Manually override the sample rate of the sound (this controls the pitch and the playback speed)
+
+**Sources**:
+- Python: [sound_play_sound.py](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/sound_play_sound.py)
+- Haxe: [PlaySoundRawNode.hx](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/PlaySoundRawNode.hx)
 
 
 ### Stop Speaker
