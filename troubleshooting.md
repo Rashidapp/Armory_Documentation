@@ -60,6 +60,6 @@ _To search for a particular error/warning message, press `Ctrl` + `F` (`Cmd` + `
 
   This error occurs when using the [`Trait`](https://github.com/armory3d/armory/wiki/reference#trait) node with a trait that is not exported. Either the trait does not exist or it does exist but there is no object or scene that is using that trait.
 
-  During export, only traits that are enabled on at least one user (scene or object) are exported and included in the game. If you need to access a trait that should not be activated at the start of the game, there is a [`Fake User`]() option. When enabled, the trait will be exported even if it has no user object or scene.
+  During export, only traits that are enabled on at least one user (scene or object) are exported and included in the game. If you need to access a trait that should not be activated at the start of the game, there is a [`Fake User`](https://github.com/armory3d/armory/wiki/traits#fake-user) option. When enabled, the trait will be exported even if it has no user object or scene.
 
   (_For more information on this, see [issue 1529](https://github.com/armory3d/armory/issues/1529))_
