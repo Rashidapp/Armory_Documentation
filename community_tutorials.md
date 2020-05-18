@@ -4,8 +4,6 @@
 
 ## [Armory's section in BG36-tutorials](https://blackgoku36.github.io/BG36-tutorials/)
 
-![](https://forums.armory3d.org/uploads/default/original/2X/b/beb3856fb6082af7b6562287d3fccb226ae5cee9.jpeg)
-
 # Video-based Tutorials
 
 ## [Armory Logic Nodes](https://www.youtube.com/playlist?list=PLCRDzlGnyXOOCrpCXlkezMTj9GTa7B0zu)
