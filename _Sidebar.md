@@ -67,6 +67,7 @@
   * [Project History](history)
   * [Supported Nodes](supported_nodes)
   * [Supported Particles](supported_particles)
+  * [Games made with Armory](Games-made-with-Armory)
 
 * Links
 
