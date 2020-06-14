@@ -10,13 +10,17 @@ This tutorial walks you through the Armory basics. We will create a playground-l
 
 Pick-up where we left in the [setup tutorial](setup). Open Blender, save the project and press `Armory Player - Run` (F5) to play in window.
 
-You can select a runtime in the `Armory Player` panel:
-- Select `Krom` to play in stand-alone player.
-- Select `Browser` for HTML5 deploy.
+Int the `Armory Player` panel you can:
+- Select the `Runtime` to use:
+  * `Krom` to play in stand-alone player.
+  * `Browser` for HTML5 deploy.
 
-You can also select camera mode in the `Armory Player` panel:
-- Select `Scene` to start the game from the point of active scene camera.
-- Select `Viewport` to start the game from the viewport view. This is useful for quick scene preview as it also lets you control the camera.
+- Select a `Camera` mode:
+  * `Scene` to start the game from the point of active scene camera.
+  * `Viewport` to start the game from the viewport view. This is useful for quick scene preview as it also lets you control the camera.
+
+- Specify a `Scene` to launch or leave blank to use the current active scene. 
+
 
 Additionally, you can tweak the `Dimensions` in the `Properties - Output` tab for window size. To run in fullscreen, select `Armory Project - Window - Mode - Fullscreen`.
 
