@@ -8,9 +8,10 @@ Armory engine is distributed as a Blender add-on:
 - Pick SDK Directory : (Optional, only in case the `SDK Path` is blank) still in the Armory add-on settings in Blender Preferences: fill the `SDK Path` field by clicking on the folder icon, then navigate to the location you have stored the Armory SDK folder (the SDK folder is the one that contains all the sub-folders: `armory`, `iron`, `Kha`, `Krom`, etc), and then click "Accept".
 
 ---
-Restart Blender if your add-on doesn't load right away.
 ---
 
+
+- Restart Blender if your add-on doesn't load right away.
 - To verify everything is working correctly, save your .blend file and hit `Play` (F5) button, located in the `Properties - Render - Armory Player` panel.
 - Continue to the [Playground tutorial](playground) to learn more.
 - Armory comes with a version of haxe and kha.
