@@ -11,7 +11,7 @@ Armory engine is distributed as a Blender add-on:
 ---
 
 
-- Restart Blender if your add-on doesn't load right away.
+- Click the Install & Setup SDK Button & Restart Blender.
 - To verify everything is working correctly, save your .blend file and hit `Play` (F5) button, located in the `Properties - Render - Armory Player` panel.
 - Continue to the [Playground tutorial](playground) to learn more.
 - Armory comes with a version of haxe and kha.
