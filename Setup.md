@@ -1,5 +1,5 @@
 Armory engine is distributed as a Blender add-on:
-- [Download](https://www.blender.org/download/) Blender 2.82.
+- [Download](https://www.blender.org/download/) Blender 2.83 LTS.
 - [Download](https://armory3d.org/download.html) and unpack Armory SDK.
 - In Blender, Select `Edit - Preferences...` and navigate to the `Add-ons` tab.
 - Click `Install...` button.
