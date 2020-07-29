@@ -243,5 +243,6 @@ Une fois terminé, appuyez sur Triangle - Ouvrir le dossier pour afficher les fi
 
 ![](https://raw.githubusercontent.com/armory3d/armory_wiki_images/master/getting_started/playground/13.jpg)
 
- * Continuer vers le [tutorial Tanks](https://github.com/armory3d/armory/wiki/tanks)
+ * Continuer vers le [tutorial Tanks](https://github.com/armory3d/armory/wiki/Jeux-de-tanks)
+
 
