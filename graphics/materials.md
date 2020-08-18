@@ -10,6 +10,7 @@ Materials are built with [Cycles nodes](https://docs.blender.org/manual/en/dev/r
 - [Transparency](#transparency)
 - [Material parameters](#material-parameters)
 - [Shader uniforms](#shader-uniforms)
+  - [Available uniforms](#available-uniforms)
 
 ## Displacement
 
@@ -51,7 +52,7 @@ It is possible to retrieve additional light and scene data via [uniforms](https:
 
 - **Using material nodes**:
 
-  It is possible to access uniform values with the [Attribute node](https://docs.blender.org/manual/en/latest/render/shader_nodes/input/attribute.html). To do this, write something in the form `<uniformType> <linkName>` into the string input field of the node. `<uniformType>` must be replaced with `vec2`, `vec3`, `vec4`, `int` or `float`, so only uniforms of those types are supported by the Attribute node. Replace `<linkName>` with the name of the link (e.g. `"_pointPosition"`) that can be found in the file linked below this section.
+  It is possible to access uniform values with the [Attribute node](https://docs.blender.org/manual/en/latest/render/shader_nodes/input/attribute.html). To do this, write something in the form `<uniformType> <linkName>` into the string input field of the node. `<uniformType>` must be replaced with `vec2`, `vec3`, `vec4`, `int` or `float`, so only uniforms of those types are supported by the Attribute node. Replace `<linkName>` with the name of the link (e.g. `"_pointPosition"`) that can be found in [Available uniforms](#available-uniforms).
 
   Please note that there is no viewport preview for uniform values!
 
@@ -69,8 +70,49 @@ It is possible to retrieve additional light and scene data via [uniforms](https:
       "type": "<uniformType>"
   }
   ```
-  Replace `<linkName>` with the name of the link (e.g. `"_pointPosition"`) that can be found in the file linked below this section and replace `<uniformName>` and `<uniformType>` according to your fragment shader.
+  Replace `<linkName>` with the name of the link (e.g. `"_pointPosition"`) that can be found in [Available uniforms](#available-uniforms) and replace `<uniformName>` and `<uniformType>` according to your fragment shader.
 
 
-**Available uniforms**:
-- https://github.com/armory3d/iron/blob/master/Sources/iron/object/Uniforms.hx
+### Available uniforms
+
+*(The following tables are not yet complete, please look into [Uniforms.hx](https://github.com/armory3d/iron/blob/master/Sources/iron/object/Uniforms.hx) for all available uniforms).*
+
+**Camera**:
+| Link name | Type | Description |
+| --- | --- | --- |
+| `_cameraPosition` | `vec3` | World position of the active camera |
+| `_cameraLook` | `vec3` | Normalized look vector of the active camera in world coordinates |
+| `_cameraUp` | `vec3` | Normalized up vector of the active camera in world coordinates |
+| `_cameraRight` | `vec3` | Normalized right vector of the active camera in world coordinates |
+| `_fieldOfView` | `vec3` | Field of view of the active camera |
+| `_viewMatrix` | `mat4` | View matrix of the active camera |
+| `_transposeViewMatrix` | `mat4` | View matrix of the active camera with rows and columns 0-2 (3x3) transposed |
+| `_projectionMatrix` | `mat4` | Projection matrix of the active camera |
+| `_inverseProjectionMatrix` | `mat4` | Inverse of the projection matrix of the active camera |
+| `_viewProjectionMatrix` | `mat4` | View matrix multiplied with the projection matrix of the active camera |
+| `_inverseViewProjectionMatrix` | `mat4` | View matrix multiplied with the projection matrix of the active camera and inversed |
+| `_prevViewProjectionMatrix` | `mat4` | `_viewProjectionMatrix` from the previous frame |
+
+**Lights**:
+| Link name | Type | Description |
+| --- | --- | --- |
+| `_lightDirection` | `vec3` |  |
+| `_lightPosition` | `vec3` |  |
+| `_pointPosition` | `vec3` |  |
+| `_pointColor` | `vec3` |  |
+| `_sunColor` | `vec3` |  |
+| `_sunDirection` | `vec3` |  |
+| `_spotDirection` | `vec3` |  |
+| `_lightArea0` - `_lightArea3` | `vec3` |  |
+
+**World**:
+| Link name | Type | Description |
+| --- | --- | --- |
+| `_backgroundCol` | `vec3` | The background color of the current world. `(0, 0, 0)` if not set |
+| `_envmapStrength` | `float` | The strength of the world background. `0` if the scene has no world  |
+
+**Other**:
+| Link name | Type | Description |
+| --- | --- | --- |
+| `_time` | `float` | The elapsed time since the beginning of the game |
+
