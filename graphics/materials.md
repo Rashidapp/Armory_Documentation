@@ -4,6 +4,13 @@
 
 Materials are built with [Cycles nodes](https://docs.blender.org/manual/en/dev/render/cycles/nodes/index.html).
 
+## Table of Content
+- [Displacement](#displacement)
+- [Blending](#blending)
+- [Transparency](#transparency)
+- [Material parameters](#material-parameters)
+- [Shader uniforms](#shader-uniforms)
+
 ## Displacement
 
 Locate the `Armory Render Path - Renderer - Displacement` property:
