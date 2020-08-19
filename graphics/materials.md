@@ -52,12 +52,12 @@ It is possible to retrieve additional light and scene data via [uniforms](https:
 
 - **Using material nodes**:
 
-  It is possible to access uniform values with the [Attribute node](https://docs.blender.org/manual/en/latest/render/shader_nodes/input/attribute.html). To do this, write something in the form `<uniformType> <linkName>` into the string input field of the node. `<uniformType>` must be replaced with `vec2`, `vec3`, `vec4`, `int` or `float`, so only uniforms of those types are supported by the Attribute node. Replace `<linkName>` with the name of the link (e.g. `"_pointPosition"`) that can be found in [Available uniforms](#available-uniforms).
+  It is possible to access uniform values with the [Shader Data node](https://github.com/armory3d/armory/wiki/supported_nodes). To do this, set the input type to `Uniform` and select the variable type (only uniforms of those data types are currently supported in node shaders). Then, look at [Available uniforms](#available-uniforms) and write the name of the link (e.g. `_pointPosition`) for the uniform into the `Variable Name` field.
 
-  Please note that there is no viewport preview for uniform values!
+  Please note that there is no viewport preview for the Shader Data node!
 
   **Example**:  
-  ![Example of the Attribute node with a shader uniform](https://github.com/armory3d/armory_wiki_images/raw/master/graphics/materials/attribute_node_uniforms.jpg)
+  ![Example of the Attribute node with a shader uniform](https://github.com/armory3d/armory_wiki_images/raw/master/graphics/materials/shaderdata_node_uniforms.jpg)
 
 - **Custom materials**:
 
