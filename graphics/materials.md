@@ -52,7 +52,7 @@ It is possible to retrieve additional light and scene data via [uniforms](https:
 
 - **Using material nodes**:
 
-  It is possible to access uniform values with the [Shader Data node](https://github.com/armory3d/armory/wiki/supported_nodes). To do this, set the input type to `Uniform` and select the variable type (only uniforms of those data types are currently supported in node shaders). Then, look at [Available uniforms](#available-uniforms) and write the name of the link (e.g. `_pointPosition`) for the uniform into the `Variable Name` field.
+  It is possible to access uniform values with the [Shader Data node](https://github.com/armory3d/armory/wiki/supported_nodes#armory-material-nodes). To do this, set the input type to `Uniform` and select the variable type (only uniforms of those data types are currently supported in node shaders). Then, look at [Available uniforms](#available-uniforms) and write the name of the link (e.g. `_pointPosition`) for the uniform into the `Variable Name` field.
 
   Please note that there is no viewport preview for the Shader Data node!
 
