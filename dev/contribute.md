@@ -71,7 +71,11 @@ When working on Armory patches, it is useful to setup the SDK locally and apply 
 
 Alternatively, you can clone the whole SDK at once.
 
-- Clone [armsdk](https://github.com/armory3d/armsdk) into `blend_location/armsdk`, it will automatically get picked up for that project - this lets you have a fully self-contained and portable project setup
+- Clone the [armsdk](https://github.com/armory3d/armsdk) recursively into `blend_location/armsdk`, it will automatically get picked up for that project - this lets you have a fully self-contained and portable project setup:
+  ```
+  cd blend_location
+  git clone https://github.com/armory3d/armsdk.git --recurse-submodules
+  ```
 
 - You can also point Armory to use the armsdk [at specific location](gitversion?id=manual-clone)
 
