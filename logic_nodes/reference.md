@@ -497,6 +497,26 @@ This node can be used to share Variables between different Traits. If the trait\
 
 ![](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/set-property.JPG)
 
+### Spawn Collection
+
+When activated, this node spawns a new instance of the selected collection. Each spawned instance has an empty owner object to control the instance as a whole (like Blender uses it for collection instances).
+
+![Screenshot: Spawn Collection node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/action/spawn_collection.jpg)
+
+**Inputs**:
+- `In`: activates the node.
+- `Transform`: the transformation of the instance that should be spawned. Please note that the collection's instance offset is also taken into account.
+
+**Outputs**:
+- `Out`: activated when a collection instance was spawned. It is not activated when no collection is selected.
+- `Top-Level Objects`: all objects in the last spawned collection that are direct children of the owner object of the collection's instance.
+- `All Objects`: all objects in the last spawned collection.
+- `Owner Object`: The owning object of the last spawned collection's instance.
+
+**Sources**:
+- Python: [action_spawn_collection.py](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/action_spawn_collection.py)
+- Haxe: [SpawnCollectionNode.hx](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/SpawnCollectionNode.hx)
+
 
 ## Physics
 
