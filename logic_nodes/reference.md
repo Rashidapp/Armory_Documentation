@@ -1,9 +1,9 @@
 # Reference
 
-## Table of Content
+## Node Categories
 - [Logic](#logic)
 - [Event](#event)
-- [Activators](#activators)
+- [Input](#input)
 - [States](#states)
 - [Values](#values)
 - [Variables](#variables)
@@ -171,28 +171,28 @@ It loops through each item assigned in an array."Value" give item specified by i
 
 Activates the node\(s\) being connected to Sent Event or Sent Global Event specified in other node\(s\) tree.
 
-![](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/on-event.JPG)
+![On Event node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/event/LNOnEventNode.jpg)
 
 
 ### On Init
 
 Activates the node\(s\) being connected to it on the first frame of the game.
 
-![](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/On-Init.JPG)
+![On Init node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/event/LNOnInitNode.jpg)
 
 
 ### On Timer
 
 Activates the node\(s\) being connected to after a Timer countdown on from the beginning of the game, repeatedly when box ticked.
 
-![](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/On-Timer.JPG)
+![On Timer node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/event/LNOnTimerNode.jpg)
 
 
 ### On Update
 
 Activates the node\(s\) being connected to it every frame.
 
-![](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/On-Update.JPG)
+![On Updates](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/event/LNOnTimerNode.jpg)
 
 
 ### On Volume Trigger
@@ -205,11 +205,10 @@ Leave-mode: Activates the connected nodes on the frame the object leaves the vol
 
 Overlap-mode: Activates the connected nodes on the frame the object overlaps with the volume, on all other frames it doesn't do that.
 
-![](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/on-volume-trigger.JPG)
+![On Volume Trigger node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/event/LNOnVolumeTriggerNode.jpg)
 
 
-## Activators
-
+## Input
 
 ### On Mouse
 
