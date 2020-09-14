@@ -14,25 +14,42 @@
 
 ## Logic
 
+Logic nodes are used to control execution flow using branching, loops, gates etc.
+
+
 ### Alternate
 
 Alternates between its activated outputs to pass through its input when it is being re-activated.
 
-![](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/Alternate.JPG)
-
-
-### Array loop
-
-It loops through each item assigned in an array."Value" give item specified by index's value."Done" calls connectors when it is done looping through the array.
-
-![](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/array-loop.JPG)
+![Alternate node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/logic/LNAlternateNode.jpg)
 
 
 ### Branch
 
 When activated, activates its "True" or "False" output, according to the state of the plugged-in boolean.
 
-![](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/Branch.JPG)
+![Branch node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/logic/LNBranchNode.jpg)
+
+
+### Call Function
+
+Calls a function that was created by the [`Function`](#function) node.
+
+![Call Function node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/logic/LNCallFunctionNode.jpg)
+
+
+### Function
+
+Creates a reusable function that can be called by the [`Call Function`](#call-function) node.
+
+![Function node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/logic/LNFunctionNode.jpg)
+
+
+### Function Output
+
+Set the return value for the specified function (see [`Function`](#function) node).
+
+![Function Output node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/logic/LNFunctionOutputNode.jpg)
 
 
 ### Gate
@@ -41,91 +58,98 @@ Logic nodes way to do "if" statements. When activated, it compares if its two in
 
 "And" and "Or" are being used for booleans only, and pass through the input when both bools are true \(and\) or at least one \(or\).
 
-![](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/Gate.JPG)
+![Gate node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/logic/LNGateNode.jpg)
 
 
 ### Inverse
 
 Bool will become opposite, True will become False, False will become True.
 
-![](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/Inverse.JPG)
+![Inverse node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/logic/LNInverseNode.jpg)
 
 
 ### Is True/False
 
 Passes through its activation only if the plugged in boolean is "True"/"False", according to the node.
 
-![](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/Is-true_false.JPG)
+![Is True node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/logic/LNIsTrueNode.jpg)
+![Is False node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/logic/LNIsFalseNode.jpg)
 
 
 ### Is None
 
 Give bool value of null i.e., If it is null then its output true(Doesn't have value), if it is not null then it outputs false(Have value).
 
-![](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/is-none.JPG)
+![Is None node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/logic/LNIsNoneNode.jpg)
 
 
 ### Is Not None
 
 Give opposite bool value of null i.e., If it is not null then its output true(Have value), if it is null then it output false(Doesn't have value).
 
-![](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/is-not-none.JPG)
+![Is Not None node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/logic/LNIsNotNoneNode.jpg)
 
 
 ### Loop
 
-It is basically for(i in from...to) loop. "Index" give value specified by the index value."Done" is called when it is done looping.
+Resembles a for-loop (`for (i in from...to)`). "Index" give value specified by the index value."Done" is called when it is done looping.
 
-![](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/Loop.JPG)
+![Loop node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/logic/LNLoopNode.jpg)
 
 
 ### Loop Break
 
 Loop Break terminates loop containing it.
 
-![](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/loop-break.JPG)
+![Loop Break node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/logic/LNLoopBreakNode.jpg)
 
 
 ### Merge
 
 The "New" button creates new inputs, the "X" one deletes the most bottom one. If it receives on activation from any of its inputs, it will activate its output.
 
-![](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/Merge.JPG)
+![Merge node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/logic/LNMergeNode.jpg)
 
+
+### None
+
+Outputs a `null` value.
+
+![None node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/logic/LNNoneNode.jpg)
 
 ### Not
 
 Inverts a plugged in boolean, so if its input is "true" it outputs "false".
 
-![](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/Not.JPG)
+![Not node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/logic/LNNotNode.jpg)
 
 
 ### Sequence
 
 Its call output in sequential order.
 
-![](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/Sequence.JPG)
+![Sequence node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/logic/LNSequenceNode.jpg)
 
 
 ### Switch
 
 Check the value on input “in”, When the input value matches Case1, Case 2 or Case 3 value, it will trigger the corresponding output Case 1, Case 2 or Case 3. Click "new" to add more Case Value.
 
-![](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/Switch.JPG)
+![Switch Node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/logic/LNSwitchNode.jpg)
 
 
 ### To Bool
 
 Is false when there is no event on input, true when there is an event on input.
 
-![](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/to-bool.JPG)
+![To Bool node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/logic/LNToBoolNode.jpg)
 
 
 ### While
 
-Its loop through as long as bool specified in "Condition" is same.(i.e., like  while(jumping == true){do domething}).
+Its loop through as long as bool specified in "Condition" is same.(i.e., like `while (jumping == true) {do domething}`).
 
-![](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/While.JPG)
+![While node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/logic/LNWhileNode.jpg)
 
 
 ### Sleep
@@ -133,6 +157,12 @@ Its loop through as long as bool specified in "Condition" is same.(i.e., like  w
 Activates the node connected with its output after the float value in seconds after it was activated itself.
 
 ![](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/sleep.JPG)
+
+### Array loop
+
+It loops through each item assigned in an array."Value" give item specified by index's value."Done" calls connectors when it is done looping through the array.
+
+![](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/array-loop.JPG)
 
 
 ## Event
