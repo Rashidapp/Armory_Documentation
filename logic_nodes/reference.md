@@ -210,42 +210,45 @@ Overlap-mode: Activates the connected nodes on the frame the object overlaps wit
 
 ## Input
 
-### On Mouse
+### Keyboard
+
+Activates the node\(s\) being connected to it when the set Keyboard-button is being started, held down or released, depending on settings.
+
+![Keyboard node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/input/LNMergedKeyboardNode.jpg)
+
+
+### Mouse
 
 Activates the node\(s\) being connected to it when the set Mouse-button is being started, held down or released, depending on settings.
 
-![](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/On-Mouse.JPG)
+![Mouse node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/input/LNMergedMouseNode.jpg)
 
 
 ### On Keyboard
 
+> This node is deprecated, please use the [Keyboard](#keyboard) node instead.
+
 Activates the node\(s\) being connected to it when the set Keyboard-button is being started, held down or released, depending on settings.
 
-![](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/On-Keyboard.JPG)
+![On Keyboard node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/input/LNOnKeyboardNode.jpg)
 
+
+### On Mouse
+
+> This node is deprecated, please use the [Mouse](#mouse) node instead.
+
+Activates the node\(s\) being connected to it when the set Mouse-button is being started, held down or released, depending on settings.
+
+![On Mouse node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/input/LNOnMouseNode.jpg)
 
 
 ## States
 
-### Mouse
-
-Outputs a bool if the set button is being currently started, hold down, released, moved \(true\) or not \(false\).
-
-![](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/Mouse.JPG)
-
-
-### Mouse Cords
+### Mouse Coords
 
 Outputs the X, Y location of the mouse of screen and its movement as Vector, and an integer if the scroll wheel es been moved up \(1\) or moved down \(-1\) this frame.
 
 ![](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/Mouse-Cords.JPG)
-
-
-### Keyboard
-
-Outputs a bool if the set button is being currently started, hold down, released, \(true\) or not \(false\).
-
-![](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/Keyboard.JPG)
 
 
 ### Get Transform
