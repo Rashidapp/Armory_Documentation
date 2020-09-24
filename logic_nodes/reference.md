@@ -1,16 +1,42 @@
 # Reference
 
 ## Node Categories
-- [Logic](#logic)
-- [Event](#event)
-- [Input](#input)
+- **Basic**
+  - [Logic](#logic)
+  - [Event](#event)
+  - [Input](#input)
+  - [Native](#native)
+- **Data**
+  - Camera
+  - Material
+  - Light
+  - Object
+  - Scene
+  - Trait
+- **Motion**
+  - Animation
+  - Navmesh
+  - Transform
+  - [Physics](#physics)
+- **Values**
+  - Array
+  - Math
+  - Random
+  - String
+  - Variable
+- **Graphics**
+  - [Canvas](#canvas)
+  - Postprocess
+  - Renderpath
+- **Sound**
+  - [Sound](#sound)
+- **Other**
+  - Miscellaneous
+  - Layout
 - [States](#states)
 - [Values](#values)
 - [Variables](#variables)
 - [Actions](#actions)
-- [Physics](#physics)
-- [Sound](#sound)
-- [Canvas](#canvas)
 
 ## Logic
 
@@ -240,6 +266,119 @@ Activates the node\(s\) being connected to it when the set Keyboard-button is be
 Activates the node\(s\) being connected to it when the set Mouse-button is being started, held down or released, depending on settings.
 
 ![On Mouse node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/input/LNOnMouseNode.jpg)
+
+
+## Native
+
+The Native category contains nodes which interact with the system (Input/Output functionality, etc.) or Haxe.
+
+### Call Haxe Static
+
+Todo
+
+![Call Haxe Static node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/native/LNCallHaxeStaticNode.jpg)
+
+
+### Expression
+
+Todo
+
+![Expression node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/native/LNExpressionNode.jpg)
+
+
+### Get Haxe Property
+
+Todo
+
+*See also: [`Set Haxe Property`](#set-haxe-property)*
+
+
+![Get Haxe Property node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/native/LNGetHaxePropertyNode.jpg)
+
+
+### Load URL
+
+Todo
+
+![Load URL node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/native/LNLoadUrlNode.jpg)
+
+
+### Print
+
+Prints the given value to the console.
+
+![Print node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/native/LNPrintNode.jpg)
+
+
+### Read File
+
+Todo
+
+![Read File node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/native/LNReadFileNode.jpg)
+
+
+### Read JSON
+
+Todo
+
+![Read JSON node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/native/LNReadJsonNode.jpg)
+
+
+### Read Storage
+
+Todo
+
+![Read Storage node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/native/LNReadStorageNode.jpg)
+
+
+### Script
+
+Todo
+
+![Script node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/native/LNScriptNode.jpg)
+
+
+### Set Haxe Property
+
+Todo
+
+*See also: [`Get Haxe Property`](#get-haxe-property)*
+
+![Set Haxe Property node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/native/LNGetHaxePropertyNode.jpg)
+
+
+### Shutdown
+
+Todo
+
+![Shutdown node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/native/LNShutdownNode.jpg)
+
+
+### Write File
+
+Todo
+
+*See also: [`Read File`](#read-file)*
+
+![Write File node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/native/LNWriteFileNode.jpg)
+
+
+### Write JSON
+
+Todo
+
+*See also: [`Read JSON`](#read-json)*
+
+![Write JSON node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/native/LNWriteJsonNode.jpg)
+
+
+### Write Storage
+
+Todo
+
+*See also: [`Read Storage`](#read-storage)*
+
+![Write Storage node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/native/LNWriteStorageNode.jpg)
 
 
 ## States
