@@ -84,14 +84,14 @@ There are a bunch of static methods that allow you to register nodes and create 
 - <br>
 
   ```python
-  def add_node(node_type: Type[bpy.types.Node], category: str, section: str = 'default', is_obselete: bool = False) -> None:
+  def add_node(node_type: Type[bpy.types.Node], category: str, section: str = 'default', is_obsolete: bool = False) -> None:
   ```
   Registers a logic node so that it is displayed in the add node menu.
 
   - `node_type`: The class of the node (see example code in the [Python](#python) section)
-  - `category`: The category this node belongs in (see example code in the [Python](#python) section)
+  - `category`: The category this node belongs in (see example code in the [Python](#python) section). If the category does not exist yet, it is created. If you pass `PKG_AS_CATEGORY` (defined in `arm_nodes.py`), the capitalized name of the Python package the node definition file is in is used as the category name. When you later rename a category, you don't have to change all calls to `add_node` when using this constant.
   - `section` (optional): Add this node into a sub-section of nodes in that given category. Node sections are visually grouped together in the menu. If the section does not exist yet, it is created.
-  - `is_obselete` (optional): Todo
+  - `is_obsolete` (optional): Todo
 
 - <br>
 
