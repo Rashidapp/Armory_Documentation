@@ -6,11 +6,15 @@
 
 We will make a new library to store the sources of custom logic nodes and keep them portable with no modifications to engine sources.
 
-Locate your blend file and create a new `Libraries` folder alongside it. Navigate to the `Libraries` folder and create a new `mynodes` folder in it.
+Locate your blend file and create a new `Libraries` folder alongside it. Navigate to the `Libraries` folder and create a new `mynodes` folder in it to place your new node.
 
 ### Python
 
-Start by creating the logic node definition for Blender. Create a file named `blender.py` in `Libraries/mynodes` folder. Armory automatically picks this file up once the library is loaded. Define a simple node with single in/out socket.
+Next, we will create the logic node definition for Blender. 
+
+To do so, we have to create a file named `blender.py` in `Libraries/mynodes` folder. Armory automatically picks this file up once the library is loaded. 
+
+Define a simple node with single in/out socket like the one in the example below.
 
 ```py
 from bpy.types import Node
@@ -37,7 +41,13 @@ Restarting Blender and loading the project again, the new logic node is availabl
 
 ### Haxe
 
-Before the project can be run, we need to implement the actual node logic in Haxe. When the node gets executed, we let it print a 'Hello, World!' string.
+Before the project can be run, we need to implement the actual node logic in Haxe. 
+
+Start by creating the folder structure `Sources/armory/logicnode/` in the same folder of `blender.py`.
+
+Next, create a `TestNode.hx` file inside the `logicnode` folder just created, and place the code from below in the file.
+
+When the node gets executed, we let it print a 'Hello, World!' string.
 
 ```haxe
 package armory.logicnode;
