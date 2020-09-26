@@ -218,7 +218,7 @@ Activates the node\(s\) being connected to after a Timer countdown on from the b
 
 Activates the node\(s\) being connected to it every frame.
 
-![On Updates](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/event/LNOnTimerNode.jpg)
+![On Updates](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/event/LNOnUpdateNode.jpg)
 
 
 ### On Volume Trigger
