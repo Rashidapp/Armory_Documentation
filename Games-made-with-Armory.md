@@ -7,6 +7,12 @@
 
 ---
 
+[![Snorkel Explorer](https://forums.armory3d.org/uploads/default/original/2X/4/4c2e587b6f42179d5db314ac55d88f66e5ead8b6.gif)](https://porchman.itch.io/snorkel-explorer)
+
+**Snorkel Explorer**, made by *porchman*: [itch.io](https://porchman.itch.io/snorkel-explorer) | [Forum post](https://forums.armory3d.org/t/snorkel-explorer-an-educational-interactive-experience-and-my-first-armory-release/4237)
+
+---
+
 [![Cubuesque](https://img.itch.zone/aW1hZ2UvNjUxODMzLzM1NDQ4MjYucG5n/original/wRAbGc.png)](https://mokauno.itch.io/cubuesque)
 
 **Cubuesque**, made by *mokauno*: [itch.io](https://mokauno.itch.io/cubuesque) | [Forum post](https://forums.armory3d.org/t/cubuesque-project/4057)
