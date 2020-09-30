@@ -7,7 +7,7 @@
 
 ---
 
-[![Snorkel Explorer](https://forums.armory3d.org/uploads/default/original/2X/4/4c2e587b6f42179d5db314ac55d88f66e5ead8b6.gif)](https://porchman.itch.io/snorkel-explorer)
+[![Snorkel Explorer](https://img.itch.zone/aW1nLzQwNTYxNTEucG5n/original/J8Qwh3.png)](https://porchman.itch.io/snorkel-explorer)
 
 **Snorkel Explorer**, made by *porchman*: [itch.io](https://porchman.itch.io/snorkel-explorer) | [Forum post](https://forums.armory3d.org/t/snorkel-explorer-an-educational-interactive-experience-and-my-first-armory-release/4237)
 
