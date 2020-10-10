@@ -107,23 +107,23 @@ Logic nodes way to do "if" statements. When activated, it compares if its two in
 
 **Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/logic/LN_gate.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/GateNode.hx)
 
-### Inverse Bool
+### Invert Bool
 
 Inverts a plugged in boolean, so if its input is `true` it outputs `false`.
 
 
-![Inverse Bool node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/logic/LNNotNode.jpg)
+![Invert Bool node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/logic/LNNotNode.jpg)
 
-**Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/logic/LN_inverse_bool.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/NotNode.hx)
+**Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/logic/LN_invert_bool.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/NotNode.hx)
 
-### Inverse Output
+### Invert Output
 
 Activates the output if the input is not active.
 
 
-![Inverse Output node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/logic/LNInverseNode.jpg)
+![Invert Output node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/logic/LNInverseNode.jpg)
 
-**Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/logic/LN_inverse_output.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/InverseNode.hx)
+**Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/logic/LN_invert_output.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/InverseNode.hx)
 
 ### Is False
 
@@ -507,15 +507,6 @@ Activates the output when there is a mouse button event.
 
 **Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/input/LN_mouse.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/MergedMouseNode.hx)
 
-### On Surface
-
-Deprecated. Is recommended to use Surface node instead.
-
-
-![On Surface node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/input/LNOnSurfaceNode.jpg)
-
-**Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/input/LN_on_surface.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/OnSurfaceNode.hx)
-
 ### On Swipe
 
 Activates the output when there is a swipe event.
@@ -533,15 +524,6 @@ Activates the output when there is a tap event.
 ![On Tap Screen node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/input/LNOnTapScreen.jpg)
 
 **Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/input/LN_on_tap_screen.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/OnTapScreen.hx)
-
-### On Virtual Button
-
-Deprecated. Is recommended to use 'Virtual Button' node instead.
-
-
-![On Virtual Button node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/input/LNOnVirtualButtonNode.jpg)
-
-**Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/input/LN_on_virtual_button.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/OnVirtualButtonNode.hx)
 
 ### Sensor Coords
 
@@ -582,15 +564,6 @@ Runs the output when the defined action over the screen is done.
 ![Surface node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/input/LNMergedSurfaceNode.jpg)
 
 **Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/input/LN_surface.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/MergedSurfaceNode.hx)
-
-### Surface Coords
-
-Deprecated. Is recommended to use 'Get Touch Location' and 'Get Touch Movement' node instead.
-
-
-![Surface Coords node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/input/LNSurfaceCoordsNode.jpg)
-
-**Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/input/LN_surface_coords.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/SurfaceCoordsNode.hx)
 
 ### Virtual Button
 
@@ -786,7 +759,7 @@ Use to store a content into a file.
 
 ## Camera
 
-### Get Active Camera
+### Get Camera Active
 
 Get the the active camera.
 
@@ -795,9 +768,9 @@ Get the the active camera.
 - *[`Set Active Camera`](#set-active-camera)*
 
 
-![Get Active Camera node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/camera/LNActiveCameraNode.jpg)
+![Get Camera Active node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/camera/LNActiveCameraNode.jpg)
 
-**Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/camera/LN_get_active_camera.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/ActiveCameraNode.hx)
+**Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/camera/LN_get_camera_active.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/ActiveCameraNode.hx)
 
 ### Get Camera FOV
 
@@ -812,7 +785,7 @@ Get the field of view (FOV) of a camera.
 
 **Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/camera/LN_get_camera_fov.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/GetCameraFovNode.hx)
 
-### Set Active Camera
+### Set Camera Active
 
 Set the active camera.
 
@@ -821,9 +794,9 @@ Set the active camera.
 - *[`Get Active Camera`](#get-active-camera)*
 
 
-![Set Active Camera node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/camera/LNSetCameraNode.jpg)
+![Set Camera Active node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/camera/LNSetCameraNode.jpg)
 
-**Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/camera/LN_set_active_camera.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/SetCameraNode.hx)
+**Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/camera/LN_set_camera_active.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/SetCameraNode.hx)
 
 ### Set Camera FOV
 
@@ -925,15 +898,6 @@ Use to set the strenght of a light.
 
 ## Object
 
-### Get Children
-
-Use to get the children of an object.
-
-
-![Get Children node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/object/LNGetChildrenNode.jpg)
-
-**Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/object/LN_get_children.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/GetChildrenNode.hx)
-
 ### Get Distance
 
 Get the euclidian distance between the two given objects.
@@ -965,6 +929,15 @@ Get the child of an object by the child object's name.
 ![Get Object Child node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/object/LNGetChildNode.jpg)
 
 **Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/object/LN_get_object_child.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/GetChildNode.hx)
+
+### Get Object Children
+
+Use to get the children of an object.
+
+
+![Get Object Children node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/object/LNGetChildrenNode.jpg)
+
+**Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/object/LN_get_object_children.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/GetChildrenNode.hx)
 
 ### Get Object Mesh
 
@@ -1167,15 +1140,6 @@ Use to create a collection.
 
 **Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/scene/LN_create_collection.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/AddGroupNode.hx)
 
-### Get Active Scene
-
-Get the active scene.
-
-
-![Get Active Scene node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/scene/LNActiveSceneNode.jpg)
-
-**Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/scene/LN_get_active_scene.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/ActiveSceneNode.hx)
-
 ### Get Collection
 
 Searches for a collection of objects with the given name and outputs the collection's objects as an array, if found.
@@ -1189,6 +1153,15 @@ Searches for a collection of objects with the given name and outputs the collect
 
 **Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/scene/LN_get_collection.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/GetGroupNode.hx)
 
+### Get Scene Active
+
+Get the active scene.
+
+
+![Get Scene Active node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/scene/LNActiveSceneNode.jpg)
+
+**Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/scene/LN_get_scene_active.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/ActiveSceneNode.hx)
+
 ### Get Scene Root
 
 The root object of the current scene.
@@ -1200,7 +1173,7 @@ The root object of the current scene.
 
 ### Global Object
 
-Gives access to a global object, which can be used to share information between different traits.
+Gives access to a global object which can be used to share information between different traits.
 
 
 ![Global Object node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/scene/LNGlobalObjectNode.jpg)
@@ -1234,14 +1207,14 @@ Holds a scene value.
 
 **Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/scene/LN_scene.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/SceneNode.hx)
 
-### Set Scene
+### Set Scene Active
 
 Set the active scene.
 
 
-![Set Scene node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/scene/LNSetSceneNode.jpg)
+![Set Scene Active node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/scene/LNSetSceneNode.jpg)
 
-**Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/scene/LN_set_scene.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/SetSceneNode.hx)
+**Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/scene/LN_set_scene_active.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/SetSceneNode.hx)
 
 ### Spawn Collection
 
@@ -1504,12 +1477,12 @@ TO DO.
 
 **Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/navmesh/LN_navigable_location.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/NavigableLocationNode.hx)
 
-### Pick Navmesh Location
+### Pick NavMesh Location
 
 Use to pick a location in a navmesh.
 
 
-![Pick Navmesh Location node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/navmesh/LNPickLocationNode.jpg)
+![Pick NavMesh Location node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/navmesh/LNPickLocationNode.jpg)
 
 **Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/navmesh/LN_pick_navmesh_location.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/PickLocationNode.hx)
 
@@ -1604,15 +1577,6 @@ Use to rotate an object.
 ![Rotate Object node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/transform/LNRotateObjectNode.jpg)
 
 **Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/transform/LN_rotate_object.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/RotateObjectNode.hx)
-
-### Scale Object
-
-Deprecated. 'Use Set Object Scale' instead.
-
-
-![Scale Object node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/transform/LNScaleObjectNode.jpg)
-
-**Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/transform/LN_scale_object.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/ScaleObjectNode.hx)
 
 ### Separate Quaternion
 
@@ -1817,7 +1781,7 @@ Use to apply torque impulse in a rigid body.
 
 **Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/physics/LN_apply_torque_impulse.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/ApplyTorqueImpulseNode.hx)
 
-### Get Contacts
+### Get RB Contacts
 
 Returns an array with all objects that are colliding with the given object.
 
@@ -1826,11 +1790,20 @@ Returns an array with all objects that are colliding with the given object.
 - *[`Get First Contact`](#get-first-contact)*
 
 
-![Get Contacts node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/physics/LNGetContactsNode.jpg)
+![Get RB Contacts node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/physics/LNGetContactsNode.jpg)
 
-**Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/physics/LN_get_contacts.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/GetContactsNode.hx)
+**Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/physics/LN_get_rb_contacts.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/GetContactsNode.hx)
 
-### Get First Contact
+### Get RB Data
+
+Use to get the data of a rigid body.
+
+
+![Get RB Data node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/physics/LNGetRigidBodyDataNode.jpg)
+
+**Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/physics/LN_get_rb_data.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/GetRigidBodyDataNode.hx)
+
+### Get RB First Contact
 
 Returns the first object that is colliding with the given object.
 
@@ -1839,27 +1812,18 @@ Returns the first object that is colliding with the given object.
 - *[`Get Contacts`](#get-contacts)*
 
 
-![Get First Contact node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/physics/LNGetFirstContactNode.jpg)
+![Get RB First Contact node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/physics/LNGetFirstContactNode.jpg)
 
-**Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/physics/LN_get_first_contact.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/GetFirstContactNode.hx)
+**Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/physics/LN_get_rb_first_contact.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/GetFirstContactNode.hx)
 
-### Get Rigid Body Data
-
-Use to get the data of a rigid body.
-
-
-![Get Rigid Body Data node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/physics/LNGetRigidBodyDataNode.jpg)
-
-**Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/physics/LN_get_rigid_body_data.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/GetRigidBodyDataNode.hx)
-
-### Get Rigid Body Velocity
+### Get RB Velocity
 
 Get the world velocity of a rigid body.
 
 
-![Get Rigid Body Velocity node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/physics/LNGetVelocityNode.jpg)
+![Get RB Velocity node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/physics/LNGetVelocityNode.jpg)
 
-**Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/physics/LN_get_rigid_body_velocity.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/GetVelocityNode.hx)
+**Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/physics/LN_get_rb_velocity.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/GetVelocityNode.hx)
 
 ### Get World Gravity
 
@@ -1959,34 +1923,52 @@ Casts a physics ray and returns the first object that is hit by this ray.
 
 **Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/physics/LN_ray_cast.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/CastPhysicsRayNode.hx)
 
-### Remove Rigid Body
+### Remove RB
 
 Use to delete a rigid body from an object.
 
 
-![Remove Rigid Body node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/physics/LNRemovePhysicsNode.jpg)
+![Remove RB node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/physics/LNRemovePhysicsNode.jpg)
 
-**Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/physics/LN_remove_rigid_body.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/RemovePhysicsNode.hx)
+**Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/physics/LN_remove_rb.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/RemovePhysicsNode.hx)
 
-### Set Activation State
+### Set RB Activation State
 
 Use to set the activation state of a rigid body.
 
 
-![Set Activation State node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/physics/LNSetActivationStateNode.jpg)
+![Set RB Activation State node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/physics/LNSetActivationStateNode.jpg)
 
-**Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/physics/LN_set_activation_state.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/SetActivationStateNode.hx)
+**Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/physics/LN_set_rb_activation_state.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/SetActivationStateNode.hx)
 
-### Set Friction
+### Set RB Friction
 
 Use to set the friction of a rigid body.
 
 
-![Set Friction node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/physics/LNSetFrictionNode.jpg)
+![Set RB Friction node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/physics/LNSetFrictionNode.jpg)
 
-**Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/physics/LN_set_friction.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/SetFrictionNode.hx)
+**Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/physics/LN_set_rb_friction.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/SetFrictionNode.hx)
 
-### Set Gravity
+### Set RB Gravity Enabled
+
+Use to set if the gravity is enabled for a rigid body.
+
+
+![Set RB Gravity Enabled node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/physics/LNSetGravityEnabledNode.jpg)
+
+**Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/physics/LN_set_rb_gravity_enabled.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/SetGravityEnabledNode.hx)
+
+### Set RB Velocity
+
+Set the velocity of a rigid body.
+
+
+![Set RB Velocity node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/physics/LNSetVelocityNode.jpg)
+
+**Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/physics/LN_set_rb_velocity.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/SetVelocityNode.hx)
+
+### Set World Gravity
 
 Set the world gravity.
 
@@ -1995,27 +1977,9 @@ Set the world gravity.
 - *[`Get World Gravity`](#get-world-gravity)*
 
 
-![Set Gravity node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/physics/LNSetGravityNode.jpg)
+![Set World Gravity node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/physics/LNSetGravityNode.jpg)
 
-**Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/physics/LN_set_gravity.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/SetGravityNode.hx)
-
-### Set Rigid Body Gravity
-
-Use to set if the gravity is enabled for a rigid body.
-
-
-![Set Rigid Body Gravity node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/physics/LNSetGravityEnabledNode.jpg)
-
-**Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/physics/LN_set_rigid_body_gravity.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/SetGravityEnabledNode.hx)
-
-### Set Rigid Body Velocity
-
-Set the velocity of a rigid body.
-
-
-![Set Rigid Body Velocity node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/physics/LNSetVelocityNode.jpg)
-
-**Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/physics/LN_set_rigid_body_velocity.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/SetVelocityNode.hx)
+**Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/physics/LN_set_world_gravity.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/SetGravityNode.hx)
 
 ### Volume Trigger
 
@@ -2290,6 +2254,15 @@ Use to interpolate between two values.
 
 **Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/math/LN_mix.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/MixNode.hx)
 
+### Mix Vector
+
+Use to interpolate between vectors.
+
+
+![Mix Vector node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/math/LNVectorMixNode.jpg)
+
+**Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/math/LN_mix_vector.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/VectorMixNode.hx)
+
 ### Rad to Deg
 
 Use to convert radians to degrees.
@@ -2315,7 +2288,7 @@ Use to split a color into RGB values.
 
 ![Separate RGB node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/math/LNSeparateColorNode.jpg)
 
-**Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/math/LN_separate_color.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/SeparateColorNode.hx)
+**Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/math/LN_separate_rgb.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/SeparateColorNode.hx)
 
 ### Separate XYZ
 
@@ -2324,7 +2297,7 @@ Use to split a vector into XYZ values.
 
 ![Separate XYZ node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/math/LNSeparateVectorNode.jpg)
 
-**Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/math/LN_separate_vector.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/SeparateVectorNode.hx)
+**Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/math/LN_separate_xyz.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/SeparateVectorNode.hx)
 
 ### Vector Clamp To Size
 
@@ -2343,15 +2316,6 @@ Use to operate vectors. You must check in the Wiki what each operator does, beca
 ![Vector Math node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/math/LNVectorMathNode.jpg)
 
 **Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/math/LN_vector_math.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/VectorMathNode.hx)
-
-### Vector Mix
-
-Use to interpolate between vectors.
-
-
-![Vector Mix node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/math/LNVectorMixNode.jpg)
-
-**Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/math/LN_vector_mix.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/VectorMixNode.hx)
 
 ### World To Screen Space
 
@@ -2553,12 +2517,12 @@ Set the value of a given variable.
 
 **Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/variable/LN_set_variable.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/SetVariableNode.hx)
 
-### Vector 3D
+### Vector
 
 Stores a three-dimensional vector as a variable.
 
 
-![Vector 3D node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/variable/LNVectorNode.jpg)
+![Vector node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/variable/LNVectorNode.jpg)
 
 **Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/variable/LN_vector.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/VectorNode.hx)
 
@@ -2829,6 +2793,15 @@ Use to get the bloom post-processing settings.
 
 **Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/postprocess/LN_get_bloom_settings.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/BloomGetNode.hx)
 
+### Get CA Settings
+
+Use to get the chromatic aberration post-processing settings.
+
+
+![Get CA Settings node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/postprocess/LNChromaticAberrationGetNode.jpg)
+
+**Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/postprocess/LN_get_ca_settings.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/ChromaticAberrationGetNode.hx)
+
 ### Get Camera Post Process
 
 Use to get the post-processing effects of a camera.
@@ -2837,15 +2810,6 @@ Use to get the post-processing effects of a camera.
 ![Get Camera Post Process node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/postprocess/LNCameraGetNode.jpg)
 
 **Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/postprocess/LN_get_camera_post_process.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/CameraGetNode.hx)
-
-### Get ChromaticAberration Settings
-
-Use to get the chromatic aberration post-processing settings.
-
-
-![Get ChromaticAberration Settings node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/postprocess/LNChromaticAberrationGetNode.jpg)
-
-**Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/postprocess/LN_get_chromatic_aberration_settings.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/ChromaticAberrationGetNode.hx)
 
 ### Get Lenstexture Settings
 
@@ -2883,6 +2847,15 @@ Use to set the bloom post-processing settings.
 
 **Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/postprocess/LN_set_bloom_settings.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/BloomSetNode.hx)
 
+### Set CA Settings
+
+Use to set the chromatic aberration post-processing settings.
+
+
+![Set CA Settings node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/postprocess/LNChromaticAberrationSetNode.jpg)
+
+**Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/postprocess/LN_set_ca_settings.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/ChromaticAberrationSetNode.hx)
+
 ### Set Camera Post Process
 
 User to set the post-processing effects of a camera.
@@ -2891,15 +2864,6 @@ User to set the post-processing effects of a camera.
 ![Set Camera Post Process node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/postprocess/LNCameraSetNode.jpg)
 
 **Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/postprocess/LN_set_camera_post_process.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/CameraSetNode.hx)
-
-### Set Chromatic Aberration Settings
-
-Use to set the chromatic aberration post-processing settings.
-
-
-![Set Chromatic Aberration Settings node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/postprocess/LNChromaticAberrationSetNode.jpg)
-
-**Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/postprocess/LN_set_chromatic_aberration_settings.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/ChromaticAberrationSetNode.hx)
 
 ### Set Lenstexture
 
