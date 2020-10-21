@@ -80,6 +80,7 @@ It is possible to retrieve additional light and scene data via [uniforms](https:
 **Camera**:
 | Link name | Type | Description |
 | --- | --- | --- |
+| `_cameraPlane` | `vec2` | x: camera near plane, y: camera far plane |
 | `_cameraPosition` | `vec3` | World position of the active camera |
 | `_cameraLook` | `vec3` | Normalized look vector of the active camera in world coordinates |
 | `_cameraUp` | `vec3` | Normalized up vector of the active camera in world coordinates |
@@ -105,14 +106,38 @@ It is possible to retrieve additional light and scene data via [uniforms](https:
 | `_spotDirection` | `vec3` |  |
 | `_lightArea0` - `_lightArea3` | `vec3` |  |
 
+**Objects**:
+| Link name | Type | Description |
+| --- | --- | --- |
+| `_uid` | `int` | The UID of the object |
+| `_objectInfoIndex` | `float` | The UID of the object |
+| `_objectInfoMaterialIndex` | `float` | The UID of the object's current material |
+| `_objectInfoRandom` | `float` | Random value that was assigned to the object during it's creation |
+| `_skinBones` | `float[]` | Dual Quaternion skinning buffer. Only available when `arm_skin` is defined. |
+
 **World**:
 | Link name | Type | Description |
 | --- | --- | --- |
 | `_backgroundCol` | `vec3` | The background color of the current world. `(0, 0, 0)` if not set |
-| `_envmapStrength` | `float` | The strength of the world background. `0` if the scene has no world  |
+| `_envmapStrength` | `float` | The strength of the world background. `0` if the scene has no world |
+| `_hosekSunDirection` | `vec3` | The direction of the sun. The z value is clamped below (and including) 0 for the night cycle. `(0, 0, 0)` if the scene has no world |
 
 **Other**:
 | Link name | Type | Description |
 | --- | --- | --- |
 | `_time` | `float` | The elapsed time since the beginning of the game |
-
+| `_vec2x` | `vec2` | Base vector for the x axis (`(1.0, 0.0)`) |
+| `_vec2xInv` | `vec2` | Base vector for the x axis divided by the current render target width |
+| `_vec2x2` | `vec2` | Base vector for the x axis multiplied by 2 (`(2.0, 0.0)`) |
+| `_vec2x2Inv` | `vec2` | Base vector for the x axis multiplied by 2 and divided by the current render target width |
+| `_vec2y` | `vec2` | Base vector for the y axis (`(0.0, 1.0)`) |
+| `_vec2yInv` | `vec2` | Base vector for the y axis divided by the current render target height |
+| `_vec2y2` | `vec2` | Base vector for the y axis multiplied by 2 (`(0.0, 2.0)`) |
+| `_vec2y2Inv` | `vec2` | Base vector for the y axis multiplied by 2 and divided by the current render target height |
+| `_vec2y3` | `vec2` | Base vector for the y axis multiplied by 3 (`(0.0, 3.0)`) |
+| `_vec2y3Inv` | `vec2` | Base vector for the y axis multiplied by 3 and divided by the current render target height |
+| `_windowSize` | `vec2` | Window size (x, y) in pixels |
+| `_screenSize` | `vec2` | Screen size (size of the renderpath's current render target) in pixels |
+| `_screenSizeInv` | `vec2` | Inverse of `_screenSize` (`1.0 / _screenSize`) |
+| `_aspectRatioF` | `float` | Aspect ratio of the current render target (width / height) |
+| `_aspectRatioWindowF` | `float` | Aspect ratio of the game window (width / height) |
