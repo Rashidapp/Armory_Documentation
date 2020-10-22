@@ -2,52 +2,100 @@
 
 While the plan is to support all of the nodes, not all of them work yet. Currently Armory implements the following ones.
 
-## Cycles material nodes
+> *The following tables are not yet complete, please look at [blender/arm/material/cycles_nodes](https://github.com/armory3d/armory/tree/master/blender/arm/material/cycles_nodes) for detailed information.*
 
-- BSDF_PRINCIPLED (Principled BSDF) - not all sockets yet
-- MIX_SHADER (Mix Shader)
-- ADD_SHADER (Add Shader)
-- BSDF_DIFFUSE (Diffuse BSDF)
-- BSDF_GLOSSY (Glossy BSDF)
-- EMISSION - (Emission) - as bloom only
-- BSDF_GLASS (Glass BSDF)
-- BSDF_TRANSLUCENT (Translucent BSDF)
-- BSDF_TRANSPARENT (Transparent BSDF)
-- SUBSURFACE_SCATTERING (Subsurface Scattering)
-- AMBIENT_OCCLUSION (Ambient Occlusion)
-- OUTPUT_MATERIAL (Material Output)
-- ATTRIBUTE (Attribute) - accessing vertex colors, UV maps and 'time'
-- RGB (RGB)
-- MIX_RGB (Mix)
-- COMBRGB (Combine RGB)
-- COMBXYZ (Combine XYZ)
-- SEPRGB (Separate RGB)
-- SEPXYZ (Separate XYZ)
-- VALTORGB - (Color Ramp)
-- BRIGHTCONTRAST (Bright Contrast)
-- TEX_IMAGE (Image Texture)
-- GAMMA (Gamma)
-- HUE_SAT (Hue/Saturation)
-- INVERT (Invert)
-- CAMERA (Camera Data)
-- NEW_GEOMETRY (Geometry)
-- OBJECT_INFO (Object Info)
-- TEX_COORD (Texture Coordinate) - UV socket only
-- NORMAL (Normal)
-- NORMAL_MAP (Normal Map)
-- VECT_MATH (Vector Math)
-- FRESNEL (Fresnel)
-- LAYER_WEIGHT (Layer Weight)
-- VALUE (Value)
-- MATH (Math)
-- RGBTOBW (RGB to BW)
-- TEX_CHECKER (Checker Texture)
-- TEX_NOISE (Noise Texture)
-- TEX_GRADIENT (Gradient Texture)
-- TEX_VORONOI (Voronoi Texture)
-- MAPPING (Mapping) - 'Normal' mapping type is not supported yet
-- PARTICLE_INFO (Particle Info) - GPU particles
-- VERTEX_COLOR (Vertex Color)
+✔ Full support 🔵 Not fully implemented ❌ Not supported/Will not be supported
+
+### Shader
+| Node name | Blender Identifier | Supported | Additional information |
+| --- | --- | --- | --- |
+| Principled BSDF | `BSDF_PRINCIPLED` | 🔵 | Not all sockets yet |
+| Mix Shader | `MIX_SHADER` | ✔ | |
+| Add Shader | `ADD_SHADER` | ✔ | |
+| Diffuse BSDF | `BSDF_DIFFUSE` | ✔ | |
+| Glossy BSDF | `BSDF_GLOSSY` | ✔ | |
+| Emission | `EMISSION` | ✔ | |
+| Glass BSDF | `BSDF_GLASS` | 🔵 | |
+| Holdout | `HOLDOUT` | ✔ | |
+| Translucent BSDF | `BSDF_TRANSLUCENT` | 🔵 | |
+| Transparent BSDF | `BSDF_TRANSPARENT` | ✔ | |
+| Velvet BSDF | `BSDF_VELVET` | 🔵 | |
+| Subsurface Scattering | `SUBSURFACE_SCATTERING` | 🔵 | |
+
+### Input
+| Node name | Blender Identifier | Supported | Additional information |
+| --- | --- | --- | --- |
+| Attribute | `ATTRIBUTE` | 🔵 | Doesn't support all of Blender's attributes. You can access vertex colors (using the color output), UV maps and `time`) |
+| Camera Data | `CAMERA` | ✔ | |
+| Fresnel | `FRESNEL` | ✔ | |
+| Geometry | `NEW_GEOMETRY` | 🔵 | All outputs supported except for `Pointiness` and `Random Per Island` |
+| Layer Weight | `LAYER_WEIGHT` | ✔ | |
+| Light Path | `LIGHT_PATH` | ❌ | Using preconfigured values (no raytracing) |
+| Object Info | `OBJECT_INFO` | 🔵 | All outputs supported except for `Color` |
+| Particle Info | `PARTICLE_INFO` | 🔵 | GPU Particles. All outputs supported except for `Random`, `Size` and `Angular Velocity` |
+| RGB | `RGB` | ✔ | |
+| Tangent | `TANGENT` | 🔵 | |
+| Texture Coordinate | `TEX_COORD` | 🔵 | All outputs supported except for `Camera`, `Reflection`. Also it is not possible to access other object's coordinates |
+| UV Map | `UVMAP` | ✔ | |
+| Value | `VALUE` | ✔ | |
+| Vertex Color | `VERTEX_COLOR` | ✔ | |
+
+### Output
+| Node name | Blender Identifier | Supported | Additional information |
+| --- | --- | --- | --- |
+| Material Output | `OUTPUT_MATERIAL` | 🔵 | `Volume` input not supported |
+| World Output | `OUTPUT_WORLD` | 🔵 | Currently only `Background` and `Emission` nodes can be directly connected to this node |
+
+### Converter
+| Node name | Blender Identifier | Supported | Additional information |
+| --- | --- | --- | --- |
+| Blackbody | `BLACKBODY` | ✔ | |
+| Clamp | `CLAMP` | ✔ | |
+| Color Ramp | `VALTORGB` | 🔵 | Only color output with constant or linear RGB interpolation |
+| Combine HSV | `COMBHSV` | ✔ | |
+| Combine RGB | `COMBRGB` | ✔ | |
+| Combine XYZ | `COMBXYZ` | ✔ | |
+| Math | `MATH` | 🔵 | Most operators are supported but some are still missing |
+| RGB to BW | `RGBTOBW` | ✔ | |
+| Separate RGB | `SEPBRGB` | ✔ | |
+| Separate XYZ | `SEPBXYZ` | ✔ | |
+| Vector Math | `VECT_MATH` | ✔ | Modulo operator behaves differently in Blender/Armory with negative numbers |
+| Wavelength | `WAVELENGTH` | ✔ | |
+
+### Color
+| Node name | Blender Identifier | Supported | Additional information |
+| --- | --- | --- | --- |
+| Bright Contrast | `BRIGHTCONTRAST` | ✔ | |
+| Gamma | `GAMMA` | ✔ | |
+| Hue/Saturation | `HUE_SAT ` | ✔ | |
+| Invert | `INVERT` | ✔ | |
+| MixRGB | `MIX_RGB` | 🔵 | Some blend types default to `Mix` |
+| RGB Curves | `CURVE_RGB` | 🔵 | |
+
+### Texture
+| Node name | Blender Identifier | Supported | Additional information |
+| --- | --- | --- | --- |
+| Brick Texture | `TEX_BRICK` | 🔵 | |
+| Checker Texture | `TEX_CHECKER` | ✔ | |
+| Environment Texture | `TEX_ENVIRONMENT` | ✔ | World shader only |
+| Gradient Texture | `TEX_GRADIENT` | 🔵 | |
+| Image Texture | `TEX_IMAGE` | ✔ | |
+| Magic Texture | `TEX_MAGIC` | 🔵 | |
+| Musgrave Texture | `TEX_MUSGRAVE` | 🔵 | |
+| Noise Texture | `TEX_NOISE` | ✔ | |
+| Sky Texture | `TEX_VORONOI` | 🔵 | World shader only |
+| Voronoi Texture | `TEX_VORONOI` | 🔵 | |
+| Wave Texture | `TEX_WAVE` | 🔵 | |
+
+### Vector
+| Node name | Blender Identifier | Supported | Additional information |
+| --- | --- | --- | --- |
+| Bump| `BUMP` | ✔ | |
+| Displacement | `DISPLACEMENT` | 🔵 | |
+| Normal | `NORMAL` | ✔ | |
+| Normal Map| `NORMAL_MAP` | ✔ | |
+| Mapping | `MAPPING` | 🔵 | 'Normal' mapping type is not supported yet |
+| Vector Curves| `CURVE_VEC` | ✔ | |
 
 ## Armory material nodes
 
