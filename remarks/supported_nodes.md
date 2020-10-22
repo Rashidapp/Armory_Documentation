@@ -4,6 +4,7 @@ While the plan is to support all of the nodes, not all of them work yet. Current
 
 > *The following tables are not yet complete, please look at [blender/arm/material/cycles_nodes](https://github.com/armory3d/armory/tree/master/blender/arm/material/cycles_nodes) for detailed information.*
 
+**Legend**:
 ✔ Full support 🔵 Not fully implemented ❌ Not supported/Will not be supported
 
 ### Shader
