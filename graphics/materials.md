@@ -2,7 +2,7 @@
 
 ![](https://github.com/armory3d/armory_wiki_images/raw/master/graphics/materials/materials.jpg)
 
-Materials are built with [Cycles nodes](https://docs.blender.org/manual/en/dev/render/cycles/nodes/index.html).
+Materials are built with [Cycles nodes](https://docs.blender.org/manual/en/dev/render/cycles/nodes/index.html). To see which nodes are supported, please have a look at the list of [supported nodes](https://github.com/armory3d/armory/wiki/supported_nodes).
 
 ## Table of Content
 - [Displacement](#displacement)
