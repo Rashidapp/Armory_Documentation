@@ -10,21 +10,26 @@
 - [Folder Organisation](#folder-organisation)
 
 ## Introduction
-Armory uses a trait(component) system to insert logic into Blender objects and make them interactive. Traits can be attached to scene objects or scenes itself. To inspect traits placed in the scene, switch to `Orphan Data` view in the `Outliner` and see Collections.
+Armory uses a trait (component) system to insert logic into Blender objects and make them interactive. Traits can be attached to scene objects or scenes itself. To inspect traits placed in the scene, switch to `Orphan Data` view in the `Outliner` and see Collections:
 
-![](https://github.com/armory3d/armory_wiki_images/raw/master/essentials/traits_groups.png)
+![](https://github.com/armory3d/armory_wiki_images/raw/master/essentials/traits/traits_groups.png)
 
 ### Trait Types
 There are several trait types:
-- `Haxe` - writing script from scratch in Haxe
-- `Bundled` - handling common stuff like character controllers, bundled in Armory
-- `Nodes` - assembling logic visually
+
+![Trait types in the UI](https://github.com/armory3d/armory_wiki_images/raw/master/essentials/traits/trait_types.png)
+
+- `Haxe` - writing scripts from scratch in Haxe
+- `Wasm` - see [WebAssembly](https://github.com/armory3d/armory/wiki/wasm)
 - `UI` - working with canvas & user interface
+- `Bundled` - pre-made/bundled Haxe scripts to handle common stuff like character controllers
+- `Nodes` - assembling logic visually in the Logic Node Editor ([reference](https://github.com/armory3d/armory/wiki/reference))
+
 
 ### Fake User
 If a trait is not used by any object or scene, it will not be included in the exported game. To export the trait anyway, there is a `Fake User` option that works like the identically named option for Blender data types. If enabled, the trait will be exported even if it has no user object or scene.
 
-![Trait fake user setting](https://github.com/armory3d/armory_wiki_images/raw/master/essentials/traits_fake_user.jpg)
+![Trait fake user setting](https://github.com/armory3d/armory_wiki_images/raw/master/essentials/traits/traits_fake_user.jpg)
 
 When using nodes or functions that require a trait name, make sure that the trait is exported!
 
@@ -119,12 +124,12 @@ class MyTrait extends iron.Trait {
 
 This example results in the following image:
 
-![Trait properties](https://github.com/armory3d/armory_wiki_images/raw/master/essentials/traits_props.png)
+![Trait properties](https://github.com/armory3d/armory_wiki_images/raw/master/essentials/traits/traits_props.png)
 
 ### Warnings
 If Armory detects invalid `@prop` declarations, warnings will get displayed:
 
-![Trait properties warnings](https://github.com/armory3d/armory_wiki_images/raw/master/essentials/traits_warnings.png)
+![Trait properties warnings](https://github.com/armory3d/armory_wiki_images/raw/master/essentials/traits/traits_warnings.png)
 - Every `@prop` statement must have a following variable declaration
 - The property type must be supported (see [Supported property types](#supported-property-types))
 - The property must be syntactically correct
