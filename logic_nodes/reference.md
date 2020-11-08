@@ -2,8 +2,6 @@
 
 *This document was generated automatically. Please do not edit this page directly, instead change the docstrings of the nodes in their [Python files](https://github.com/armory3d/armory/tree/master/blender/arm/logicnode) or the [generator script](https://github.com/armory3d/armory_tools/blob/master/make_node_reference.py) and [open a pull request](https://github.com/armory3d/armory/wiki/contribute#creating-a-pull-request). Thank you for contributing to this reference!*
 
-*This reference was built for **Armory 2020.11**.*
-
 ---
 ## Node Categories
 
@@ -12,6 +10,7 @@
   - [Event](#event)
   - [Input](#input)
   - [Native](#native)
+
 - **Data**
   - [Camera](#camera)
   - [Material](#material)
@@ -19,43 +18,49 @@
   - [Object](#object)
   - [Scene](#scene)
   - [Trait](#trait)
+
 - **Motion**
   - [Animation](#animation)
   - [Navmesh](#navmesh)
   - [Transform](#transform)
   - [Physics](#physics)
+
 - **Values**
   - [Array](#array)
   - [Math](#math)
   - [Random](#random)
   - [String](#string)
   - [Variable](#variable)
+
 - **Graphics**
   - [Canvas](#canvas)
   - [Postprocess](#postprocess)
   - [Renderpath](#renderpath)
+
 - **Sound**
   - [Sound](#sound)
+
 - **Misc**
   - [Miscellaneous](#miscellaneous)
   - [Layout](#layout)
+
 
 ## Logic
 
 Logic nodes are used to control execution flow using branching, loops, gates etc.
 
-### Alternate Output
+### Alternate
 
-Activates the outputs "0" and "1" alternating every time it is active.
+Runs the outputs 0 and 1 alternating every time it is activated.
 
 
-![Alternate Output node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/logic/LNAlternateNode.jpg)
+![Alternate node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/logic/LNAlternateNode.jpg)
 
-**Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/logic/LN_alternate_output.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/AlternateNode.hx)
+**Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/logic/LN_alternate.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/AlternateNode.hx)
 
 ### Branch
 
-Activates its `true` or `false` output, according to the state of the plugged-in boolean.
+When activated, activates its "True" or "False" output, according to the state of the plugged-in boolean.
 
 
 ![Branch node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/logic/LNBranchNode.jpg)
@@ -64,7 +69,7 @@ Activates its `true` or `false` output, according to the state of the plugged-in
 
 ### Call Function
 
-Calls the given function that was created by the [Function](#function) node.
+Calls a function that was created by the [Function](#function) node.
 
 
 ![Call Function node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/logic/LNCallFunctionNode.jpg)
@@ -82,7 +87,7 @@ Creates a reusable function that can be called by the [Call Function](#call-func
 
 ### Function Output
 
-Sets the return value for the given function.
+Set the return value for the specified function.
 
 **See also:**
 
@@ -102,14 +107,14 @@ Logic nodes way to do "if" statements. When activated, it compares if its two in
 
 **Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/logic/LN_gate.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/GateNode.hx)
 
-### Invert Boolean
+### Invert Bool
 
-Inverts the plugged-in boolean. If its input is `true` it outputs `false`.
+Inverts a plugged in boolean, so if its input is `true` it outputs `false`.
 
 
-![Invert Boolean node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/logic/LNNotNode.jpg)
+![Invert Bool node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/logic/LNNotNode.jpg)
 
-**Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/logic/LN_invert_boolean.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/NotNode.hx)
+**Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/logic/LN_invert_bool.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/NotNode.hx)
 
 ### Invert Output
 
@@ -122,7 +127,7 @@ Activates the output if the input is not active.
 
 ### Is False
 
-Passes through its activation only if the plugged-in boolean equals `false`.
+Passes through its activation only if the plugged in boolean equals `false`.
 
 **See also:**
 
@@ -133,35 +138,35 @@ Passes through its activation only if the plugged-in boolean equals `false`.
 
 **Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/logic/LN_is_false.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/IsFalseNode.hx)
 
-### Is Not Null
+### Is None
 
-Passes through its activation only if the plugged-in value is not `null`.
-
-**See also:**
-
-- *[`Is None`](#is-none)*
-
-
-![Is Not Null node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/logic/LNIsNotNoneNode.jpg)
-
-**Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/logic/LN_is_not_null.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/IsNotNoneNode.hx)
-
-### Is Null
-
-Passes through its activation only if the plugged-in value is `null` (no value).
+Passes through its activation only if the plugged in value is `null` (no value).
 
 **See also:**
 
 - *[`Is Not None`](#is-not-none)*
 
 
-![Is Null node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/logic/LNIsNoneNode.jpg)
+![Is None node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/logic/LNIsNoneNode.jpg)
 
-**Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/logic/LN_is_null.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/IsNoneNode.hx)
+**Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/logic/LN_is_none.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/IsNoneNode.hx)
+
+### Is Not None
+
+Passes through its activation only if the plugged in value is not `null`.
+
+**See also:**
+
+- *[`Is None`](#is-none)*
+
+
+![Is Not None node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/logic/LNIsNotNoneNode.jpg)
+
+**Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/logic/LN_is_not_none.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/IsNotNoneNode.hx)
 
 ### Is True
 
-Passes through its activation only if the plugged-in boolean equals `true`.
+Passes through its activation only if the plugged in boolean equals `true`.
 
 **See also:**
 
@@ -213,7 +218,7 @@ Terminates the currently executing loop (only one loop is executed at once).
 
 ### Merge
 
-Activates the output when any connected input is activated.
+Activates the output when any connected input is active.
 
 
 ![Merge node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/logic/LNMergeNode.jpg)
@@ -225,49 +230,49 @@ Activates the output when any connected input is activated.
 
 **Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/logic/LN_merge.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/MergeNode.hx)
 
-### Null
+### None
 
 A `null` value that can be used in comparisons and conditions.
 
 
-![Null node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/logic/LNNoneNode.jpg)
+![None node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/logic/LNNoneNode.jpg)
 
-**Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/logic/LN_null.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/NoneNode.hx)
+**Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/logic/LN_none.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/NoneNode.hx)
 
 ### Sequence
 
-Activates the outputs one by one sequentially and repeatedly.
+Runs the outputs one by one sequentially and repeatedly.
 
 
 ![Sequence node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/logic/LNSequenceNode.jpg)
 
 **Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/logic/LN_sequence.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/SequenceNode.hx)
 
-### Switch Output
+### Switch
 
-Activates the outputs depending of the value. If the "value" is equal to "case 1", the output "case 1" will be activated.
+Runs the outputs depending of the value. Example: If 'value' is equal to 'case 1', the output 'case 1' will run.
 
 
-![Switch Output node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/logic/LNSwitchNode.jpg)
+![Switch node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/logic/LNSwitchNode.jpg)
 
 **Outputs:**
 
 - `Default`: Activated if the input value does not match any case.
 
-**Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/logic/LN_switch_output.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/SwitchNode.hx)
+**Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/logic/LN_switch.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/SwitchNode.hx)
 
-### To Boolean
+### To Bool
 
 Converts a signal to a boolean value. If the input signal is active, the boolean is `true`; if not, the boolean is `false`.
 
 
-![To Boolean node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/logic/LNToBoolNode.jpg)
+![To Bool node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/logic/LNToBoolNode.jpg)
 
-**Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/logic/LN_to_boolean.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/ToBoolNode.hx)
+**Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/logic/LN_to_bool.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/ToBoolNode.hx)
 
 ### While
 
-Loops while the condition is `true`.
+Loops while the condition is `True`.
 
 **See also:**
 
@@ -292,7 +297,7 @@ Loops while the condition is `true`.
 
 ### On Application State
 
-Listens to different application state changes.
+Listen to different application state changes.
 
 
 ![On Application State node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/event/LNOnApplicationStateNode.jpg)
@@ -353,7 +358,7 @@ Activates the output on every frame.
 
 ### Send Event To Object
 
-Sends the given event to the given object.
+Send an event to an object.
 
 **See also:**
 
@@ -372,7 +377,7 @@ Sends the given event to the given object.
 
 ### Send Global Event
 
-Sends the given event to all objects in the scene.
+Send an event to all objects in the scene.
 
 **See also:**
 
@@ -414,7 +419,7 @@ Activates the output when there is a gamepad event.
 
 ### Gamepad Coords
 
-Returns the coordinates of the given gamepad.
+Get the coordinates of different gamepad sticks.
 
 **See also:**
 
@@ -431,7 +436,7 @@ Returns the coordinates of the given gamepad.
 
 ### Get Cursor Location
 
-Returns the mouse cursor location in screen coordinates (pixels).
+Get the mouse cursor location in screen coordinates (pixels).
 
 
 ![Get Cursor Location node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/input/LNGetCursorLocationNode.jpg)
@@ -440,7 +445,7 @@ Returns the mouse cursor location in screen coordinates (pixels).
 
 ### Get Cursor State
 
-Returns the state of the mouse cursor.
+Get the state of the mouse cursor.
 
 **See also:**
 
@@ -457,40 +462,18 @@ Returns the state of the mouse cursor.
 
 **Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/input/LN_get_cursor_state.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/GetCursorStateNode.hx)
 
-### Get Mouse Lock (Deprecated)
-
-> **DEPRECATED.** This node is deprecated and will be removed in future versions of Armory. Please use the following node(s) instead: [`Get Cursor State`](#get-cursor-state). 
-
-Deprecated. It is recommended to use the 'Get Cursor State' node instead.
-
-
-![Get Mouse Lock (Deprecated) node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/input/LNGetMouseLockNode.jpg)
-
-**Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/deprecated/LN_get_mouse_lock.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/GetMouseLockNode.hx)
-
 ### Get Mouse Movement
 
-Returns the movement coordinates of the mouse.
+Get the movement coordinates of the mouse.
 
 
 ![Get Mouse Movement node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/input/LNGetMouseMovementNode.jpg)
 
 **Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/input/LN_get_mouse_movement.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/GetMouseMovementNode.hx)
 
-### Get Mouse Visible (Deprecated)
-
-> **DEPRECATED.** This node is deprecated and will be removed in future versions of Armory. Please use the following node(s) instead: [`Get Cursor State`](#get-cursor-state). 
-
-Deprecated. It is recommended to use the 'Get Cursor State' node instead.
-
-
-![Get Mouse Visible (Deprecated) node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/input/LNGetMouseVisibleNode.jpg)
-
-**Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/deprecated/LN_get_mouse_visible.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/GetMouseVisibleNode.hx)
-
 ### Get Touch Location
 
-Returns the location of the last touch event in screen coordinates (pixels).
+Get the location of the last touch event in screen coordinates (pixels).
 
 
 ![Get Touch Location node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/input/LNGetTouchLocationNode.jpg)
@@ -499,7 +482,7 @@ Returns the location of the last touch event in screen coordinates (pixels).
 
 ### Get Touch Movement
 
-Returns the movement values of the current touch event.
+Get the movement values of the current touch event.
 
 
 ![Get Touch Movement node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/input/LNGetTouchMovementNode.jpg)
@@ -508,7 +491,7 @@ Returns the movement values of the current touch event.
 
 ### Keyboard
 
-Activates the output when the given keyboard action is done.
+Activates the output when there is a keyboard event.
 
 
 ![Keyboard node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/input/LNMergedKeyboardNode.jpg)
@@ -517,71 +500,16 @@ Activates the output when the given keyboard action is done.
 
 ### Mouse
 
-Activates the output when the given mouse action is done.
+Activates the output when there is a mouse button event.
 
 
 ![Mouse node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/input/LNMergedMouseNode.jpg)
 
 **Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/input/LN_mouse.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/MergedMouseNode.hx)
 
-### Mouse Coords (Deprecated)
-
-> **DEPRECATED.** This node is deprecated and will be removed in future versions of Armory. Please use the following node(s) instead: [`Get Cursor Location`](#get-cursor-location). 
-
-Deprecated. It is recommended to use 'Get Cursor Location' node and the 'Get Mouse Movement' node instead.
-
-
-![Mouse Coords (Deprecated) node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/input/LNMouseCoordsNode.jpg)
-
-**Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/deprecated/LN_mouse_coords.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/MouseCoordsNode.hx)
-
-### On Gamepad (Deprecated)
-
-> **DEPRECATED.** This node is deprecated and will be removed in future versions of Armory. Please use the following node(s) instead: [`Gamepad`](#gamepad). 
-
-Deprecated. It is recommended to use the 'Gamepad' node instead.
-
-
-![On Gamepad (Deprecated) node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/input/LNOnGamepadNode.jpg)
-
-**Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/deprecated/LN_on_gamepad.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/OnGamepadNode.hx)
-
-### On Keyboard (Deprecated)
-
-> **DEPRECATED.** This node is deprecated and will be removed in future versions of Armory. Please use the following node(s) instead: [`Keyboard`](#keyboard). 
-
-Deprecated. It is recommended to use the 'Keyboard' node instead.
-
-
-![On Keyboard (Deprecated) node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/input/LNOnKeyboardNode.jpg)
-
-**Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/deprecated/LN_on_keyboard.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/OnKeyboardNode.hx)
-
-### On Mouse (Deprecated)
-
-> **DEPRECATED.** This node is deprecated and will be removed in future versions of Armory. Please use the following node(s) instead: [`Mouse`](#mouse). 
-
-Deprecated. It is recommended to use the 'Mouse' node instead.
-
-
-![On Mouse (Deprecated) node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/input/LNOnMouseNode.jpg)
-
-**Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/deprecated/LN_on_mouse.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/OnMouseNode.hx)
-
-### On Surface (Deprecated)
-
-> **DEPRECATED.** This node is deprecated and will be removed in future versions of Armory. Please use the following node(s) instead: [`Surface`](#surface). 
-
-Deprecated. Is recommended to use the 'Surface' node instead.
-
-
-![On Surface (Deprecated) node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/input/LNOnSurfaceNode.jpg)
-
-**Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/deprecated/LN_on_surface.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/OnSurfaceNode.hx)
-
 ### On Swipe
 
-Activates the output when the given swipe action is done.
+Activates the output when there is a swipe event.
 
 
 ![On Swipe node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/input/LNOnSwipeNode.jpg)
@@ -590,23 +518,12 @@ Activates the output when the given swipe action is done.
 
 ### On Tap Screen
 
-Activates the output when the given tap action is done.
+Activates the output when there is a tap event.
 
 
 ![On Tap Screen node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/input/LNOnTapScreen.jpg)
 
 **Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/input/LN_on_tap_screen.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/OnTapScreen.hx)
-
-### On Virtual Button (Deprecated)
-
-> **DEPRECATED.** This node is deprecated and will be removed in future versions of Armory. Please use the following node(s) instead: [`Virtual Button`](#virtual-button). 
-
-Deprecated. Is recommended to use 'Virtual Button' node instead.
-
-
-![On Virtual Button (Deprecated) node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/input/LNOnVirtualButtonNode.jpg)
-
-**Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/deprecated/LN_on_virtual_button.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/OnVirtualButtonNode.hx)
 
 ### Sensor Coords
 
@@ -619,7 +536,7 @@ TO DO.
 
 ### Set Cursor State
 
-Sets the state of the mouse cursor.
+Set the state of the mouse cursor.
 
 **See also:**
 
@@ -639,51 +556,18 @@ Sets the state of the mouse cursor.
 
 **Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/input/LN_set_cursor_state.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/SetCursorStateNode.hx)
 
-### Set Mouse Lock (Deprecated)
-
-> **DEPRECATED.** This node is deprecated and will be removed in future versions of Armory. Please use the following node(s) instead: [`Set Cursor State`](#set-cursor-state). 
-
-Deprecated. It is recommended to use the 'Set Cursor State' node instead.
-
-
-![Set Mouse Lock (Deprecated) node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/input/LNSetMouseLockNode.jpg)
-
-**Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/deprecated/LN_set_mouse_lock.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/SetMouseLockNode.hx)
-
-### Set Mouse Visible (Deprecated)
-
-> **DEPRECATED.** This node is deprecated and will be removed in future versions of Armory. Please use the following node(s) instead: [`Set Cursor State`](#set-cursor-state). 
-
-Deprecated. It is recommended to use the 'Set Cursor State' node instead.
-
-
-![Set Mouse Visible (Deprecated) node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/input/LNShowMouseNode.jpg)
-
-**Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/deprecated/LN_set_mouse_visible.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/ShowMouseNode.hx)
-
 ### Surface
 
-Activates the output when the given action over the screen is done.
+Runs the output when the defined action over the screen is done.
 
 
 ![Surface node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/input/LNMergedSurfaceNode.jpg)
 
 **Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/input/LN_surface.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/MergedSurfaceNode.hx)
 
-### Surface Coords (Deprecated)
-
-> **DEPRECATED.** This node is deprecated and will be removed in future versions of Armory. Please use the following node(s) instead: [`Get Touch Movement`](#get-touch-movement), [`Get Touch Location`](#get-touch-location). 
-
-Deprecated. Is recommended to use 'Get Touch Location' and 'Get Touch Movement' node instead.
-
-
-![Surface Coords (Deprecated) node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/input/LNSurfaceCoordsNode.jpg)
-
-**Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/deprecated/LN_surface_coords.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/SurfaceCoordsNode.hx)
-
 ### Virtual Button
 
-Activates the output when the given action over the virtual button is done.
+Runs the output when the action over the virtual button is done.
 
 
 ![Virtual Button node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/input/LNMergedVirtualButtonNode.jpg)
@@ -696,7 +580,7 @@ The Native category contains nodes which interact with the system (Input/Output 
 
 ### Call Haxe Static
 
-Calls the given static Haxe function.
+Call a static haxe function.
 
 
 ![Call Haxe Static node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/native/LNCallHaxeStaticNode.jpg)
@@ -711,18 +595,9 @@ Calls the given static Haxe function.
 
 **Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/native/LN_call_haxe_static.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/CallHaxeStaticNode.hx)
 
-### Detect Mobile Browser
-
-Determines the mobile browser or not (works only for web browsers).
-
-
-![Detect Mobile Browser node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/native/LNDetectMobileBrowserNode.jpg)
-
-**Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/native/LN_detect_mobile_browser.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/DetectMobileBrowserNode.hx)
-
 ### Expression
 
-Evaluates a Haxe expression and returns its output.
+Evaluate a Haxe expression and get its output.
 
 
 ![Expression node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/native/LNExpressionNode.jpg)
@@ -735,7 +610,7 @@ Evaluates a Haxe expression and returns its output.
 
 ### Get Haxe Property
 
-Returns a property of an Haxe object (via the Reflection API).
+Get a property of an Haxe object (via the Reflection API).
 
 **See also:**
 
@@ -746,18 +621,9 @@ Returns a property of an Haxe object (via the Reflection API).
 
 **Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/native/LN_get_haxe_property.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/GetHaxePropertyNode.hx)
 
-### Get System Language
-
-Returns the language of the current system.
-
-
-![Get System Language node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/native/LNGetSystemLanguage.jpg)
-
-**Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/native/LN_get_system_language.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/GetSystemLanguage.hx)
-
 ### Get System Name
 
-Returns the name of the current system.
+Get System Name Node
 
 
 ![Get System Name node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/native/LNGetSystemName.jpg)
@@ -766,7 +632,7 @@ Returns the name of the current system.
 
 ### Load URL
 
-Load the given URL in a new tab (works only for web browsers).
+Load a URL in a new tab (works only for web browsers).
 
 
 ![Load URL node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/native/LNLoadUrlNode.jpg)
@@ -775,7 +641,7 @@ Load the given URL in a new tab (works only for web browsers).
 
 ### Print
 
-Print the given value to the console.
+Prints the given value to the console.
 
 
 ![Print node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/native/LNPrintNode.jpg)
@@ -784,7 +650,7 @@ Print the given value to the console.
 
 ### Read File
 
-Returns the content of the given file.
+Get the content of a file.
 
 **See also:**
 
@@ -797,7 +663,7 @@ Returns the content of the given file.
 
 ### Read JSON
 
-Returns the content of the given JSON file.
+Get the content of a JSON file.
 
 **See also:**
 
@@ -810,7 +676,7 @@ Returns the content of the given JSON file.
 
 ### Read Storage
 
-Reads a stored content.
+Use to read a stored content.
 
 **See also:**
 
@@ -823,7 +689,7 @@ Reads a stored content.
 
 ### Script
 
-Executes the given script.
+Use to execute a script.
 
 
 ![Script node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/native/LNScriptNode.jpg)
@@ -832,7 +698,7 @@ Executes the given script.
 
 ### Set Haxe Property
 
-Sets a property of an Haxe object (via the Reflection API).
+Set a property of an Haxe object (via the Reflection API).
 
 **See also:**
 
@@ -843,18 +709,9 @@ Sets a property of an Haxe object (via the Reflection API).
 
 **Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/native/LN_set_haxe_property.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/SetHaxePropertyNode.hx)
 
-### Set Vibrate
-
-Pulses the vibration hardware on the device for time in milliseconds, if such hardware exists.
-
-
-![Set Vibrate node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/native/LNSetVibrateNode.jpg)
-
-**Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/native/LN_set_vibrate.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/SetVibrateNode.hx)
-
 ### Shutdown
 
-Closes the application.
+Close the application.
 
 
 ![Shutdown node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/native/LNShutdownNode.jpg)
@@ -863,7 +720,7 @@ Closes the application.
 
 ### Write File
 
-Writes the given content in the given file.
+Use to write a content inside a file.
 
 **See also:**
 
@@ -876,7 +733,7 @@ Writes the given content in the given file.
 
 ### Write JSON
 
-Writes the given content in the given JSON file.
+Use to write the content of a JSON file.
 
 **See also:**
 
@@ -889,7 +746,7 @@ Writes the given content in the given JSON file.
 
 ### Write Storage
 
-Writes the given content in the given key.
+Use to store a content into a file.
 
 **See also:**
 
@@ -904,7 +761,7 @@ Writes the given content in the given key.
 
 ### Get Camera Active
 
-Returns the active camera.
+Get the the active camera.
 
 **See also:**
 
@@ -917,7 +774,7 @@ Returns the active camera.
 
 ### Get Camera FOV
 
-Returns the field of view (FOV) of the given camera.
+Get the field of view (FOV) of a camera.
 
 **See also:**
 
@@ -930,7 +787,7 @@ Returns the field of view (FOV) of the given camera.
 
 ### Set Camera Active
 
-Sets the active camera.
+Set the active camera.
 
 **See also:**
 
@@ -943,7 +800,7 @@ Sets the active camera.
 
 ### Set Camera FOV
 
-Sets the field of view (FOV) of the given camera.
+Set the field of view (FOV) of a camera.
 
 **See also:**
 
@@ -958,7 +815,7 @@ Sets the field of view (FOV) of the given camera.
 
 ### Get Object Material
 
-Returns the material of the given object.
+Use to get the material of an object.
 
 
 ![Get Object Material node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/material/LNGetMaterialNode.jpg)
@@ -967,7 +824,7 @@ Returns the material of the given object.
 
 ### Material
 
-Stores the given material as a variable.
+Use to hold a material as a variable.
 
 
 ![Material node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/material/LNMaterialNode.jpg)
@@ -1001,16 +858,14 @@ TO DO.
 
 **Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/material/LN_set_material_value_param.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/SetMaterialValueParamNode.hx)
 
-### Set Object Material (Deprecated)
+### Set Object Material
 
-> **DEPRECATED.** This node is deprecated and will be removed in future versions of Armory. Please use the following node(s) instead: [`Set Object Material Slot`](#set-object-material-slot). 
-
-Sets the material of the given object.
+Use to set the material of an object.
 
 
-![Set Object Material (Deprecated) node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/material/LNSetMaterialNode.jpg)
+![Set Object Material node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/material/LNSetMaterialNode.jpg)
 
-**Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/deprecated/LN_set_object_material.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/SetMaterialNode.hx)
+**Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/material/LN_set_object_material.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/SetMaterialNode.hx)
 
 ### Set Object Material Slot
 
@@ -1025,7 +880,7 @@ TO DO.
 
 ### Set Light Color
 
-Sets the color of the given light.
+Use to set the color of a light.
 
 
 ![Set Light Color node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/light/LNSetLightColorNode.jpg)
@@ -1034,7 +889,7 @@ Sets the color of the given light.
 
 ### Set Light Strength
 
-Sets the strenght of the given light.
+Use to set the strenght of a light.
 
 
 ![Set Light Strength node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/light/LNSetLightStrengthNode.jpg)
@@ -1045,7 +900,7 @@ Sets the strenght of the given light.
 
 ### Get Distance
 
-Returns the euclidian distance between the two given objects.
+Get the euclidian distance between the two given objects.
 
 **See also:**
 
@@ -1057,18 +912,18 @@ Returns the euclidian distance between the two given objects.
 
 **Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/object/LN_get_distance.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/GetDistanceNode.hx)
 
-### Get Object By Name
+### Get Object
 
-Searches for a object that uses the given name and returns it.
+Searches for an object by its name and returns it.
 
 
-![Get Object By Name node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/object/LNGetObjectNode.jpg)
+![Get Object node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/object/LNGetObjectNode.jpg)
 
-**Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/object/LN_get_object_by_name.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/GetObjectNode.hx)
+**Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/object/LN_get_object.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/GetObjectNode.hx)
 
 ### Get Object Child
 
-Returns the child of the given object by the child object's name.
+Get the child of an object by the child object's name.
 
 
 ![Get Object Child node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/object/LNGetChildNode.jpg)
@@ -1077,7 +932,7 @@ Returns the child of the given object by the child object's name.
 
 ### Get Object Children
 
-Returns the children of the given object.
+Use to get the children of an object.
 
 
 ![Get Object Children node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/object/LNGetChildrenNode.jpg)
@@ -1086,7 +941,7 @@ Returns the children of the given object.
 
 ### Get Object Mesh
 
-Returns the mesh of the given object.
+Use to get the mesh of an object.
 
 
 ![Get Object Mesh node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/object/LNGetMeshNode.jpg)
@@ -1095,7 +950,7 @@ Returns the mesh of the given object.
 
 ### Get Object Name
 
-Returns the name of the given object.
+Use to get the name of a object.
 
 
 ![Get Object Name node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/object/LNGetNameNode.jpg)
@@ -1104,7 +959,7 @@ Returns the name of the given object.
 
 ### Get Object Offscreen
 
-Returns if the given object is offscreen. Don't works if culling is disabled.
+Use to get if an object is offscreen. Don't works if culling is disabled.
 
 
 ![Get Object Offscreen node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/object/LNGetObjectOffscreenNode.jpg)
@@ -1113,7 +968,7 @@ Returns if the given object is offscreen. Don't works if culling is disabled.
 
 ### Get Object Parent
 
-Returns the direct parent (nearest in the hierarchy) of the given object.
+Returns the direct parent (nearest in the hierarchy) of an object.
 
 **See also:**
 
@@ -1126,7 +981,7 @@ Returns the direct parent (nearest in the hierarchy) of the given object.
 
 ### Get Object Property
 
-Returns the value of the given object property.
+Get the value of an object property.
 
 **See also:**
 
@@ -1139,7 +994,7 @@ Returns the value of the given object property.
 
 ### Get Object Visible
 
-Returns whether the given object or its visual components are visible.
+Returns whether a given object or its visual components are visible.
 
 **See also:**
 
@@ -1152,7 +1007,7 @@ Returns whether the given object or its visual components are visible.
 
 ### Mesh
 
-Stores the given mesh as a variable.
+Use to hold a mesh as a variable.
 
 
 ![Mesh node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/object/LNMeshNode.jpg)
@@ -1161,7 +1016,7 @@ Stores the given mesh as a variable.
 
 ### Object
 
-Stores the given object as a variable.
+Use to hold an object as a variable.
 
 
 ![Object node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/object/LNObjectNode.jpg)
@@ -1170,7 +1025,7 @@ Stores the given object as a variable.
 
 ### Remove Object
 
-Removes the given object from the scene.
+Use to delete an object from the scene.
 
 
 ![Remove Object node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/object/LNRemoveObjectNode.jpg)
@@ -1179,7 +1034,7 @@ Removes the given object from the scene.
 
 ### Remove Object Parent
 
-Removes the parent of the given object.
+Use to remove the parent of an object.
 
 
 ![Remove Object Parent node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/object/LNClearParentNode.jpg)
@@ -1188,7 +1043,7 @@ Removes the parent of the given object.
 
 ### Self Object
 
-Returns the object that owns the trait.
+Use to get the object that owns the current trait.
 
 
 ![Self Object node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/object/LNSelfNode.jpg)
@@ -1197,7 +1052,7 @@ Returns the object that owns the trait.
 
 ### Set Object Mesh
 
-Sets the mesh of the given object.
+Use to set the mesh of an object.
 
 
 ![Set Object Mesh node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/object/LNSetMeshNode.jpg)
@@ -1206,7 +1061,7 @@ Sets the mesh of the given object.
 
 ### Set Object Name
 
-Sets the name of the given object.
+Use to set the name of an object.
 
 
 ![Set Object Name node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/object/LNSetNameNode.jpg)
@@ -1215,7 +1070,7 @@ Sets the name of the given object.
 
 ### Set Object Parent
 
-Sets the direct parent (nearest in the hierarchy) of the given object.
+Set the direct parent (nearest in the hierarchy) of an object.
 
 **See also:**
 
@@ -1228,7 +1083,7 @@ Sets the direct parent (nearest in the hierarchy) of the given object.
 
 ### Set Object Property
 
-Sets the value of the given object property. This node can be used to share variables between different traits. If the trait(s) you want to access the variable with are on different objects, use the *[`Global Object`](#global-object)* node to store the data. Every trait can access this one.
+Set the value of an object property. This node can be used to share variables between different traits. If the trait(s) you want to access the variable with are on different objects, use the *[`Global Object`](#global-object)* node to store the data. Every trait can access this one.
 
 **See also:**
 
@@ -1241,7 +1096,7 @@ Sets the value of the given object property. This node can be used to share vari
 
 ### Set Object Visible
 
-Sets whether the given object is visible.
+Set the visibility of a given object.
 
 **See also:**
 
@@ -1254,7 +1109,7 @@ Sets whether the given object is visible.
 
 ### Spawn Object
 
-Spawns the given object. The spawned object has the same name of its instance, but they are threated as different objects.
+Use to spawn an object. The spawned object has the same name of its instance, but they are threated as different objects.
 
 
 ![Spawn Object node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/object/LNSpawnObjectNode.jpg)
@@ -1265,7 +1120,7 @@ Spawns the given object. The spawned object has the same name of its instance, b
 
 ### Collection
 
-Returns the objects of the given collection as an array.
+Returns the collection's objects as an array.
 
 **See also:**
 
@@ -1278,7 +1133,7 @@ Returns the objects of the given collection as an array.
 
 ### Create Collection
 
-Creates a collection.
+Use to create a collection.
 
 
 ![Create Collection node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/scene/LNAddGroupNode.jpg)
@@ -1300,7 +1155,7 @@ Searches for a collection of objects with the given name and outputs the collect
 
 ### Get Scene Active
 
-Returns the active scene.
+Get the active scene.
 
 
 ![Get Scene Active node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/scene/LNActiveSceneNode.jpg)
@@ -1309,7 +1164,7 @@ Returns the active scene.
 
 ### Get Scene Root
 
-Returns the root object of the current scene.
+The root object of the current scene.
 
 
 ![Get Scene Root node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/scene/LNSceneRootNode.jpg)
@@ -1325,27 +1180,27 @@ Gives access to a global object which can be used to share information between d
 
 **Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/scene/LN_global_object.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/GlobalObjectNode.hx)
 
+### Remove Active Scene
+
+Use to delete the active scene.
+
+
+![Remove Active Scene node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/scene/LNRemoveActiveSceneNode.jpg)
+
+**Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/scene/LN_remove_active_scene.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/RemoveActiveSceneNode.hx)
+
 ### Remove Collection
 
-Removes the given collection from the scene.
+Use to delete a collection from the scene.
 
 
 ![Remove Collection node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/scene/LNRemoveGroupNode.jpg)
 
 **Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/scene/LN_remove_collection.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/RemoveGroupNode.hx)
 
-### Remove Scene Active
-
-Removes the active scene.
-
-
-![Remove Scene Active node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/scene/LNRemoveActiveSceneNode.jpg)
-
-**Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/scene/LN_remove_scene_active.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/RemoveActiveSceneNode.hx)
-
 ### Scene
 
-Stores the given scene as a variable.
+Holds a scene value.
 
 
 ![Scene node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/scene/LNSceneNode.jpg)
@@ -1354,7 +1209,7 @@ Stores the given scene as a variable.
 
 ### Set Scene Active
 
-Sets the active scene.
+Set the active scene.
 
 
 ![Set Scene Active node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/scene/LNSetSceneNode.jpg)
@@ -1363,7 +1218,7 @@ Sets the active scene.
 
 ### Spawn Collection
 
-Spawns a new instance of the selected collection. Each spawned instance has an empty owner object to control the instance as a whole (like Blender uses it for collection instances).
+When activated, this node spawns a new instance of the selected collection. Each spawned instance has an empty owner object to control the instance as a whole (like Blender uses it for collection instances).
 
 
 ![Spawn Collection node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/scene/LNSpawnCollectionNode.jpg)
@@ -1384,7 +1239,7 @@ Spawns a new instance of the selected collection. Each spawned instance has an e
 
 ### Spawn Scene
 
-Spawns the given scene.
+Use to spawn a scene.
 
 
 ![Spawn Scene node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/scene/LNSpawnSceneNode.jpg)
@@ -1395,7 +1250,7 @@ Spawns the given scene.
 
 ### Add Trait To Object
 
-Adds trait to the given object.
+Use to add a trait to an object.
 
 
 ![Add Trait To Object node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/trait/LNAddTraitNode.jpg)
@@ -1411,76 +1266,45 @@ Searches for a trait with the specified name which is applied to the given objec
 
 **Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/trait/LN_get_object_trait.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/GetTraitNode.hx)
 
-### Get Object Traits
+### Pause Trait
 
-Returns all traits from the given object.
-
-
-![Get Object Traits node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/trait/LNGetObjectTraitsNode.jpg)
-
-**Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/trait/LN_get_object_traits.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/GetObjectTraitsNode.hx)
-
-### Get Trait Name
-
-Returns the name and the class type of the given trait.
+Use to pause a trait.
 
 
-![Get Trait Name node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/trait/LNGetTraitNameNode.jpg)
+![Pause Trait node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/trait/LNPauseTraitNode.jpg)
 
-**Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/trait/LN_get_trait_name.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/GetTraitNameNode.hx)
-
-### Pause Trait (Deprecated)
-
-> **DEPRECATED.** This node is deprecated and will be removed in future versions of Armory. Please use the following node(s) instead: [`Set Trait Paused`](#set-trait-paused). 
-
-Pauses the given trait.
-
-
-![Pause Trait (Deprecated) node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/trait/LNPauseTraitNode.jpg)
-
-**Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/deprecated/LN_pause_trait.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/PauseTraitNode.hx)
+**Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/trait/LN_pause_trait.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/PauseTraitNode.hx)
 
 ### Remove Trait
 
-Removes the given trait.
+Use to remove a trait.
 
 
 ![Remove Trait node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/trait/LNRemoveTraitNode.jpg)
 
 **Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/trait/LN_remove_trait.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/RemoveTraitNode.hx)
 
-### Resume Trait (Deprecated)
+### Resume Trait
 
-> **DEPRECATED.** This node is deprecated and will be removed in future versions of Armory. Please use the following node(s) instead: [`Set Trait Paused`](#set-trait-paused). 
-
-Resumes the given trait.
+Use to resume a trait.
 
 
-![Resume Trait (Deprecated) node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/trait/LNResumeTraitNode.jpg)
+![Resume Trait node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/trait/LNResumeTraitNode.jpg)
 
-**Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/deprecated/LN_resume_trait.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/ResumeTraitNode.hx)
+**Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/trait/LN_resume_trait.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/ResumeTraitNode.hx)
 
 ### Self Trait
 
-Returns the trait that owns this node.
+Use to get the trait that owns this node.
 
 
 ![Self Trait node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/trait/LNSelfTraitNode.jpg)
 
 **Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/trait/LN_self_trait.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/SelfTraitNode.hx)
 
-### Set Trait Paused
-
-Sets the paused state of the given trait.
-
-
-![Set Trait Paused node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/trait/LNSetTraitPausedNode.jpg)
-
-**Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/trait/LN_set_trait_paused.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/SetTraitPausedNode.hx)
-
 ### Trait
 
-Stores the given trait as a variable. If the trait was not found or was not exported, an error is thrown ([more information](https://github.com/armory3d/armory/wiki/troubleshooting#trait-not-exported)).
+Use to hold a trait as a variable. If the trait was not found or was not exported, an error is thrown ([more information](https://github.com/armory3d/armory/wiki/troubleshooting#trait-not-exported)).
 
 
 ![Trait node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/trait/LNTraitNode.jpg)
@@ -1491,16 +1315,25 @@ Stores the given trait as a variable. If the trait was not found or was not expo
 
 ### Action
 
-Stores the given action as a variable.
+Hold an action as a variable.
 
 
 ![Action node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/animation/LNAnimActionNode.jpg)
 
 **Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/animation/LN_action.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/AnimActionNode.hx)
 
+### Animation State
+
+Get information about the current animation of an object.
+
+
+![Animation State node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/animation/LNAnimationStateNode.jpg)
+
+**Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/animation/LN_animation_state.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/AnimationStateNode.hx)
+
 ### Blend Action
 
-Interpolates between the two given actions.
+Interpolate between two different actions.
 
 
 ![Blend Action node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/animation/LNBlendActionNode.jpg)
@@ -1509,7 +1342,7 @@ Interpolates between the two given actions.
 
 ### Bone FK
 
-Applies forward kinematics in the given object bone.
+Apply forward kinematics in an object bone.
 
 
 ![Bone FK node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/animation/LNBoneFKNode.jpg)
@@ -1518,76 +1351,52 @@ Applies forward kinematics in the given object bone.
 
 ### Bone IK
 
-Applies inverse kinematics in the given object bone.
+Apply inverse kinematics in an object bone.
 
 
 ![Bone IK node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/animation/LNBoneIKNode.jpg)
 
 **Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/animation/LN_bone_ik.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/BoneIKNode.hx)
 
-### Get Action State
-
-Returns the information about the current action of the given object.
-
-
-![Get Action State node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/animation/LNAnimationStateNode.jpg)
-
-**Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/animation/LN_get_action_state.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/AnimationStateNode.hx)
-
-### Get Tilesheet State
-
-Returns the information about the current tilesheet of the given object.
-
-
-![Get Tilesheet State node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/animation/LNGetTilesheetStateNode.jpg)
-
-**Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/animation/LN_get_tilesheet_state.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/GetTilesheetStateNode.hx)
-
 ### On Action Marker
 
-Activates the output when the object action reaches the action marker.
+Activates the output when the object action trespasses the action marker.
 
 
 ![On Action Marker node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/animation/LNOnActionMarkerNode.jpg)
 
 **Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/animation/LN_on_action_marker.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/OnActionMarkerNode.hx)
 
-### Pause Action (Deprecated)
+### Pause Action
 
-> **DEPRECATED.** This node is deprecated and will be removed in future versions of Armory. Please use the following node(s) instead: [`Set Action Paused`](#set-action-paused). 
-
-Pauses the given action.
+Pause an action.
 
 
-![Pause Action (Deprecated) node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/animation/LNPauseActionNode.jpg)
+![Pause Action node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/animation/LNPauseActionNode.jpg)
 
-**Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/deprecated/LN_pause_action.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/PauseActionNode.hx)
+**Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/animation/LN_pause_action.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/PauseActionNode.hx)
 
-### Pause Tilesheet (Deprecated)
+### Pause Tilesheet
 
-> **DEPRECATED.** This node is deprecated and will be removed in future versions of Armory. Please use the following node(s) instead: [`Set Tilesheet Paused`](#set-tilesheet-paused). 
-
-Pauses the given tilesheet action.
+Pause a tilesheet action.
 
 
-![Pause Tilesheet (Deprecated) node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/animation/LNPauseTilesheetNode.jpg)
+![Pause Tilesheet node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/animation/LNPauseTilesheetNode.jpg)
 
-**Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/deprecated/LN_pause_tilesheet.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/PauseTilesheetNode.hx)
+**Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/animation/LN_pause_tilesheet.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/PauseTilesheetNode.hx)
 
-### Play Action (Deprecated)
+### Play Action
 
-> **DEPRECATED.** This node is deprecated and will be removed in future versions of Armory. Please use the following node(s) instead: [`Play Action From`](#play-action-from). 
-
-Plays the given action.
+Play an action.
 
 
-![Play Action (Deprecated) node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/animation/LNPlayActionNode.jpg)
+![Play Action node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/animation/LNPlayActionNode.jpg)
 
-**Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/deprecated/LN_play_action.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/PlayActionNode.hx)
+**Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/animation/LN_play_action.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/PlayActionNode.hx)
 
 ### Play Action From
 
-Plays action starting from the given frame.
+Play an action from a defined frame.
 
 
 ![Play Action From node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/animation/LNPlayActionFromNode.jpg)
@@ -1596,47 +1405,34 @@ Plays action starting from the given frame.
 
 ### Play Tilesheet
 
-Plays the given tilesheet action.
+Play a tilesheet action.
 
 
 ![Play Tilesheet node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/animation/LNPlayTilesheetNode.jpg)
 
 **Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/animation/LN_play_tilesheet.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/PlayTilesheetNode.hx)
 
-### Resume Action (Deprecated)
+### Resume Action
 
-> **DEPRECATED.** This node is deprecated and will be removed in future versions of Armory. Please use the following node(s) instead: [`Set Action Paused`](#set-action-paused). 
-
-Resumes the given action.
+Resume an action.
 
 
-![Resume Action (Deprecated) node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/animation/LNResumeActionNode.jpg)
+![Resume Action node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/animation/LNResumeActionNode.jpg)
 
-**Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/deprecated/LN_resume_action.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/ResumeActionNode.hx)
+**Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/animation/LN_resume_action.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/ResumeActionNode.hx)
 
-### Resume Tilesheet (Deprecated)
+### Resume Tilesheet
 
-> **DEPRECATED.** This node is deprecated and will be removed in future versions of Armory. Please use the following node(s) instead: [`Set Tilesheet Paused`](#set-tilesheet-paused). 
-
-Resumes the given tilesheet action.
+Resume a tilesheet action.
 
 
-![Resume Tilesheet (Deprecated) node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/animation/LNResumeTilesheetNode.jpg)
+![Resume Tilesheet node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/animation/LNResumeTilesheetNode.jpg)
 
-**Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/deprecated/LN_resume_tilesheet.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/ResumeTilesheetNode.hx)
-
-### Set Action Paused
-
-Sets the action paused state of the given object.
-
-
-![Set Action Paused node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/animation/LNSetActionPausedNode.jpg)
-
-**Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/animation/LN_set_action_paused.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/SetActionPausedNode.hx)
+**Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/animation/LN_resume_tilesheet.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/ResumeTilesheetNode.hx)
 
 ### Set Action Speed
 
-Sets the current action playback speed of the given object.
+Set the current action playback speed.
 
 
 ![Set Action Speed node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/animation/LNSetActionSpeedNode.jpg)
@@ -1645,7 +1441,7 @@ Sets the current action playback speed of the given object.
 
 ### Set Parent Bone
 
-Sets the given object parent to the given bone.
+Use to set an object parent to a bone.
 
 
 ![Set Parent Bone node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/animation/LNSetParentBoneNode.jpg)
@@ -1654,27 +1450,18 @@ Sets the given object parent to the given bone.
 
 ### Set Particle Speed
 
-Sets the speed of the given particle source.
+Set the speed of a particle source.
 
 
 ![Set Particle Speed node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/animation/LNSetParticleSpeedNode.jpg)
 
 **Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/animation/LN_set_particle_speed.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/SetParticleSpeedNode.hx)
 
-### Set Tilesheet Paused
-
-Sets the tilesheet paused state of the given object.
-
-
-![Set Tilesheet Paused node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/animation/LNSetTilesheetPausedNode.jpg)
-
-**Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/animation/LN_set_tilesheet_paused.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/SetTilesheetPausedNode.hx)
-
 ## Navmesh
 
 ### Go To Location
 
-Makes a NavMesh agent go to location.
+Use to make a navmesh agent go to location.
 
 
 ![Go To Location node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/navmesh/LNGoToLocationNode.jpg)
@@ -1692,7 +1479,7 @@ TO DO.
 
 ### Pick NavMesh Location
 
-Pick a location coordinates in the given NavMesh.
+Use to pick a location in a navmesh.
 
 
 ![Pick NavMesh Location node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/navmesh/LNPickLocationNode.jpg)
@@ -1701,7 +1488,7 @@ Pick a location coordinates in the given NavMesh.
 
 ### Stop Agent
 
-Stops the given NavMesh agent.
+Use to stop a navmesh agent.
 
 
 ![Stop Agent node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/navmesh/LNStopAgentNode.jpg)
@@ -1712,7 +1499,7 @@ Stops the given NavMesh agent.
 
 ### Append Transform
 
-Appends transform to the given object.
+Use to append a transform to an object.
 
 
 ![Append Transform node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/transform/LNAppendTransformNode.jpg)
@@ -1757,7 +1544,7 @@ Returns the transformation of the given object. An object's transform consists o
 
 ### Get World Orientation
 
-Returns the world orientation of the given object.
+Use to get the world orientation of an object.
 
 
 ![Get World Orientation node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/transform/LNGetWorldNode.jpg)
@@ -1766,7 +1553,7 @@ Returns the world orientation of the given object.
 
 ### Look At
 
-TO DO.
+Use to make an object indicate to a specific location.
 
 
 ![Look At node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/transform/LNLookAtNode.jpg)
@@ -1775,7 +1562,7 @@ TO DO.
 
 ### Quaternion
 
-TO DO.
+Stores a quaternion value.
 
 
 ![Quaternion node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/transform/LNQuaternionNode.jpg)
@@ -1784,38 +1571,16 @@ TO DO.
 
 ### Rotate Object
 
-Rotates the given object.
+Use to rotate an object.
 
 
 ![Rotate Object node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/transform/LNRotateObjectNode.jpg)
 
 **Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/transform/LN_rotate_object.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/RotateObjectNode.hx)
 
-### Rotate Object Around Axis (Deprecated)
-
-> **DEPRECATED.** This node is deprecated and will be removed in future versions of Armory. Please use the following node(s) instead: [`Rotate Object`](#rotate-object). 
-
-Deprecated. It is recommended to use the 'Rotate Object' node instead.
-
-
-![Rotate Object Around Axis (Deprecated) node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/transform/LNRotateObjectAroundAxisNode.jpg)
-
-**Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/deprecated/LN_rotate_object_around_axis.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/RotateObjectAroundAxisNode.hx)
-
-### Scale Object (Deprecated)
-
-> **DEPRECATED.** This node is deprecated and will be removed in future versions of Armory. Please use the following node(s) instead: [`Set Object Scale`](#set-object-scale). 
-
-Deprecated. 'Use Set Object Scale' instead.
-
-
-![Scale Object (Deprecated) node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/transform/LNScaleObjectNode.jpg)
-
-**Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/deprecated/LN_scale_object.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/ScaleObjectNode.hx)
-
 ### Separate Quaternion
 
-TO DO.
+Use to separate a transform.
 
 
 ![Separate Quaternion node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/transform/LNSeparateQuaternionNode.jpg)
@@ -1824,7 +1589,7 @@ TO DO.
 
 ### Separate Transform
 
-Separates the transform of the given object.
+Separate transform node
 
 
 ![Separate Transform node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/transform/LNSeparateTransformNode.jpg)
@@ -1833,7 +1598,7 @@ Separates the transform of the given object.
 
 ### Set Object Location
 
-Sets the location of the given object.
+Use to set the location of an object.
 
 
 ![Set Object Location node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/transform/LNSetLocationNode.jpg)
@@ -1842,7 +1607,7 @@ Sets the location of the given object.
 
 ### Set Object Rotation
 
-Sets the rotation of the given object.
+Use to set the rotation of an object.
 
 
 ![Set Object Rotation node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/transform/LNSetRotationNode.jpg)
@@ -1851,7 +1616,7 @@ Sets the rotation of the given object.
 
 ### Set Object Scale
 
-Sets the scale of the given object.
+Use to set the scale of an object.
 
 
 ![Set Object Scale node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/transform/LNSetScaleNode.jpg)
@@ -1860,7 +1625,7 @@ Sets the scale of the given object.
 
 ### Set Object Transform
 
-Sets the transform of the given object.
+Use to set the transform of an object.
 
 
 ![Set Object Transform node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/transform/LNSetTransformNode.jpg)
@@ -1869,7 +1634,7 @@ Sets the transform of the given object.
 
 ### Transform
 
-Stores the location, rotation and scale values as a transform.
+Stores location, rotation, scale values in vector form.
 
 
 ![Transform node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/transform/LNTransformNode.jpg)
@@ -1878,7 +1643,7 @@ Stores the location, rotation and scale values as a transform.
 
 ### Transform Math
 
-Operates the two given transform values.
+Use to operate transform values.
 
 
 ![Transform Math node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/transform/LNTransformMathNode.jpg)
@@ -1887,7 +1652,7 @@ Operates the two given transform values.
 
 ### Translate Object
 
-Translates (moves) the given object using the given vector in world coordinates.
+Translates (moves) a given object by a specified vector in world coordinates.
 
 
 ![Translate Object node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/transform/LNTranslateObjectNode.jpg)
@@ -1896,7 +1661,7 @@ Translates (moves) the given object using the given vector in world coordinates.
 
 ### Translate On Local Axis
 
-Translates (moves) the given object using the given vector in the local coordinates.
+Use to translate an object in the local axis.
 
 
 ![Translate On Local Axis node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/transform/LNTranslateOnLocalAxisNode.jpg)
@@ -1905,32 +1670,18 @@ Translates (moves) the given object using the given vector in the local coordina
 
 ### Vector From Transform
 
-Returns vector from the given transform.
+Use to get a vector from a transform.
 
 
 ![Vector From Transform node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/transform/LNVectorFromTransformNode.jpg)
 
 **Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/transform/LN_vector_from_transform.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/VectorFromTransformNode.hx)
 
-### Vector To Object Orientation
-
-Converts a world oriented vector to a given object oriented vector. Works similarly to 'On Local Axis' checkboxes.
-
-**See also:**
-
-- *[`Get World Orientation`](#get-world-orientation)*
-- *[`Vector From Transform`](#vector-from-transform)*
-
-
-![Vector To Object Orientation node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/transform/LNVectorToObjectOrientationNode.jpg)
-
-**Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/transform/LN_vector_to_object_orientation.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/VectorToObjectOrientationNode.hx)
-
 ## Physics
 
 ### Apply Force
 
-Applies force in the given rigid body.
+Applies a specified force to a given rigid body.
 
 **See also:**
 
@@ -1950,7 +1701,7 @@ Applies force in the given rigid body.
 
 ### Apply Force At Location
 
-Applies force in the given rigid body at the given position.
+Applies a force to a rigid body at a specified position.
 
 **See also:**
 
@@ -1972,7 +1723,7 @@ Applies force in the given rigid body at the given position.
 
 ### Apply Impulse
 
-Applies impulse in the given rigid body.
+Applies a specified impulse to a given rigid body.
 
 **See also:**
 
@@ -1992,7 +1743,7 @@ Applies impulse in the given rigid body.
 
 ### Apply Impulse At Location
 
-Applies impulse in the given rigid body at the given position.
+Applies an impulse to a rigid body at a specified position.
 
 **See also:**
 
@@ -2014,7 +1765,7 @@ Applies impulse in the given rigid body at the given position.
 
 ### Apply Torque
 
-Applies torque to the given rigid body.
+Use to apply torque to a rigid body.
 
 
 ![Apply Torque node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/physics/LNApplyTorqueNode.jpg)
@@ -2023,7 +1774,7 @@ Applies torque to the given rigid body.
 
 ### Apply Torque Impulse
 
-Applies torque impulse in the given rigid body.
+Use to apply torque impulse in a rigid body.
 
 
 ![Apply Torque Impulse node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/physics/LNApplyTorqueImpulseNode.jpg)
@@ -2045,7 +1796,7 @@ Returns an array with all objects that are colliding with the given object.
 
 ### Get RB Data
 
-Returns the data of the given rigid body.
+Use to get the data of a rigid body.
 
 
 ![Get RB Data node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/physics/LNGetRigidBodyDataNode.jpg)
@@ -2067,7 +1818,7 @@ Returns the first object that is colliding with the given object.
 
 ### Get RB Velocity
 
-Returns the world velocity of the given rigid body.
+Get the world velocity of a rigid body.
 
 
 ![Get RB Velocity node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/physics/LNGetVelocityNode.jpg)
@@ -2089,7 +1840,7 @@ Returns the world gravity.
 
 ### Has Contact
 
-Returns whether the given rigid body has contact with another given rigid body.
+Returns whether a rigid body has contact with another rigid body.
 
 
 ![Has Contact node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/physics/LNHasContactNode.jpg)
@@ -2098,7 +1849,7 @@ Returns whether the given rigid body has contact with another given rigid body.
 
 ### Has Contact Array
 
-Returns whether the given rigid body has contact with other given rigid bodies.
+Use to get if a rigid body has contact with other rigid bodies.
 
 
 ![Has Contact Array node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/physics/LNHasContactArrayNode.jpg)
@@ -2122,7 +1873,7 @@ Activates the output when the rigid body make contact with another rigid body.
 
 ### On Contact Array
 
-Activates the output when the given rigid body make contact with other given rigid bodies.
+Runs the output when the rigid body make contact with other rigid bodies.
 
 
 ![On Contact Array node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/physics/LNOnContactArrayNode.jpg)
@@ -2131,21 +1882,21 @@ Activates the output when the given rigid body make contact with other given rig
 
 ### On Volume Trigger
 
-Activates the output when the given rigid body enter, overlap or leave the given trigger.
+Runs the output when the object enter, overlap or leave the trigger.
 
 
 ![On Volume Trigger node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/physics/LNOnVolumeTriggerNode.jpg)
 
 **Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/physics/LN_on_volume_trigger.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/OnVolumeTriggerNode.hx)
 
-### Pick RB
+### Pick Rigid Body
 
-Pickes the rigid body in the given location using the screen coordinates (2D).
+Use to pick the rigid body in a location using the screen coordinates (only x/y values are used).
 
 
-![Pick RB node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/physics/LNPickObjectNode.jpg)
+![Pick Rigid Body node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/physics/LNPickObjectNode.jpg)
 
-**Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/physics/LN_pick_rb.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/PickObjectNode.hx)
+**Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/physics/LN_pick_rigid_body.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/PickObjectNode.hx)
 
 ### Ray Cast
 
@@ -2174,7 +1925,7 @@ Casts a physics ray and returns the first object that is hit by this ray.
 
 ### Remove RB
 
-Removes the rigid body from the given object.
+Use to delete a rigid body from an object.
 
 
 ![Remove RB node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/physics/LNRemovePhysicsNode.jpg)
@@ -2183,7 +1934,7 @@ Removes the rigid body from the given object.
 
 ### Set RB Activation State
 
-Sets the activation state of the given rigid body.
+Use to set the activation state of a rigid body.
 
 
 ![Set RB Activation State node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/physics/LNSetActivationStateNode.jpg)
@@ -2192,7 +1943,7 @@ Sets the activation state of the given rigid body.
 
 ### Set RB Friction
 
-Sets the friction of the given rigid body.
+Use to set the friction of a rigid body.
 
 
 ![Set RB Friction node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/physics/LNSetFrictionNode.jpg)
@@ -2201,7 +1952,7 @@ Sets the friction of the given rigid body.
 
 ### Set RB Gravity Enabled
 
-Sets whether the gravity is enabled for the given rigid body.
+Use to set if the gravity is enabled for a rigid body.
 
 
 ![Set RB Gravity Enabled node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/physics/LNSetGravityEnabledNode.jpg)
@@ -2210,7 +1961,7 @@ Sets whether the gravity is enabled for the given rigid body.
 
 ### Set RB Velocity
 
-Sets the velocity of the given rigid body.
+Set the velocity of a rigid body.
 
 
 ![Set RB Velocity node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/physics/LNSetVelocityNode.jpg)
@@ -2219,7 +1970,7 @@ Sets the velocity of the given rigid body.
 
 ### Set World Gravity
 
-Sets the world gravity.
+Set the world gravity.
 
 **See also:**
 
@@ -2232,7 +1983,7 @@ Sets the world gravity.
 
 ### Volume Trigger
 
-Returns `true` if the given rigid body enters, overlaps or leaves the given volume trigger.
+Returns `true` if a rigid body enters, overlaps or leaves the given volume object.
 
 
 ![Volume Trigger node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/physics/LNVolumeTriggerNode.jpg)
@@ -2248,7 +1999,7 @@ Returns `true` if the given rigid body enters, overlaps or leaves the given volu
 
 ### Array Add
 
-Adds the given value to the given array.
+Add a value to an array.
 
 
 ![Array Add node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/array/LNArrayAddNode.jpg)
@@ -2263,7 +2014,7 @@ Adds the given value to the given array.
 
 ### Array Boolean
 
-Stores an array of boolean elements as a variable.
+Use to make an array of boolean elements.
 
 
 ![Array Boolean node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/array/LNArrayBooleanNode.jpg)
@@ -2272,7 +2023,7 @@ Stores an array of boolean elements as a variable.
 
 ### Array Color
 
-Stores an array of color elements as a variable.
+Use to make an array of color elements.
 
 
 ![Array Color node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/array/LNArrayColorNode.jpg)
@@ -2281,7 +2032,7 @@ Stores an array of color elements as a variable.
 
 ### Array Contains
 
-Returns whether the given array contains the given value.
+Get if an array contains a specific value.
 
 
 ![Array Contains node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/array/LNArrayInArrayNode.jpg)
@@ -2290,7 +2041,7 @@ Returns whether the given array contains the given value.
 
 ### Array Dynamic
 
-Stores the given array as a variable.
+Use to hold an array as a variable.
 
 
 ![Array Dynamic node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/array/LNArrayNode.jpg)
@@ -2299,7 +2050,7 @@ Stores the given array as a variable.
 
 ### Array Float
 
-Stores an array of float elements as a variable.
+Use to make an array of float elements.
 
 
 ![Array Float node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/array/LNArrayFloatNode.jpg)
@@ -2308,7 +2059,7 @@ Stores an array of float elements as a variable.
 
 ### Array Get
 
-Returns the value of the given array at the given index.
+Get the value of an array at the specified index.
 
 
 ![Array Get node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/array/LNArrayGetNode.jpg)
@@ -2317,7 +2068,7 @@ Returns the value of the given array at the given index.
 
 ### Array Integer
 
-Stores an array of integer elements as a variable.
+Use to make an array of integer elements.
 
 
 ![Array Integer node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/array/LNArrayIntegerNode.jpg)
@@ -2326,7 +2077,7 @@ Stores an array of integer elements as a variable.
 
 ### Array Length
 
-Returns the length of the given array.
+Use to get the length of an array.
 
 
 ![Array Length node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/array/LNArrayLengthNode.jpg)
@@ -2335,7 +2086,7 @@ Returns the length of the given array.
 
 ### Array Loop
 
-Loops through each item of the given array.
+Loop through each item of the given array.
 
 
 ![Array Loop node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/array/LNArrayLoopNode.jpg)
@@ -2344,7 +2095,7 @@ Loops through each item of the given array.
 
 ### Array Object
 
-Stores an array of object elements as a variable.
+Use to make an array of object elements.
 
 
 ![Array Object node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/array/LNArrayObjectNode.jpg)
@@ -2353,7 +2104,7 @@ Stores an array of object elements as a variable.
 
 ### Array Pop
 
-Removes the last element of the given array.
+Remove the last element of an array.
 
 **See also:**
 
@@ -2366,7 +2117,7 @@ Removes the last element of the given array.
 
 ### Array Remove By Index
 
-Removes the element from the given array by its index.
+Remove an element from an array by its index.
 
 **See also:**
 
@@ -2379,7 +2130,7 @@ Removes the element from the given array by its index.
 
 ### Array Remove By Value
 
-Removes the element from the given array by its value.
+Remove an element from an array by its value.
 
 **See also:**
 
@@ -2392,7 +2143,7 @@ Removes the element from the given array by its value.
 
 ### Array Set
 
-Sets the value of the given array at the given index.
+Set the value of an array at the specified index.
 
 
 ![Array Set node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/array/LNArraySetNode.jpg)
@@ -2401,7 +2152,7 @@ Sets the value of the given array at the given index.
 
 ### Array Shift
 
-Removes the first element of the given array.
+Use to remove the first element of an array.
 
 **See also:**
 
@@ -2427,7 +2178,7 @@ Creates a shallow copy of the given array in the specified range.
 
 ### Array Splice
 
-Removes the given amount of elements from the given array.
+Removes a specified amount of elements from the given array.
 
 **See also:**
 
@@ -2440,7 +2191,7 @@ Removes the given amount of elements from the given array.
 
 ### Array String
 
-Stores an array of string elements as a variable.
+Use to make an array of string elements.
 
 
 ![Array String node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/array/LNArrayStringNode.jpg)
@@ -2449,7 +2200,7 @@ Stores an array of string elements as a variable.
 
 ### Array Vector
 
-Stores an array of vector elements as a variable.
+Use to make an array of vector elements.
 
 
 ![Array Vector node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/array/LNArrayVectorNode.jpg)
@@ -2460,7 +2211,7 @@ Stores an array of vector elements as a variable.
 
 ### Compare
 
-Compares values.
+Use to compare values.
 
 
 ![Compare node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/math/LNCompareNode.jpg)
@@ -2469,7 +2220,7 @@ Compares values.
 
 ### Deg to Rad
 
-Converts degrees to radians.
+Use to convert degrees to radians.
 
 
 ![Deg to Rad node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/math/LNDegToRadNode.jpg)
@@ -2478,7 +2229,7 @@ Converts degrees to radians.
 
 ### Math
 
-Operates values. Some operations uses only the first input.
+Use to operate values. You must check in the Wiki what each operator does, because some of them uses only the first input.
 
 
 ![Math node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/math/LNMathNode.jpg)
@@ -2487,7 +2238,7 @@ Operates values. Some operations uses only the first input.
 
 ### Matrix Math
 
-Multiplies matrices.
+Use to multiply matrices.
 
 
 ![Matrix Math node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/math/LNMatrixMathNode.jpg)
@@ -2496,7 +2247,7 @@ Multiplies matrices.
 
 ### Mix
 
-Interpolates between the two given values.
+Use to interpolate between two values.
 
 
 ![Mix node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/math/LNMixNode.jpg)
@@ -2505,7 +2256,7 @@ Interpolates between the two given values.
 
 ### Mix Vector
 
-Interpolates between the two given vectors.
+Use to interpolate between vectors.
 
 
 ![Mix Vector node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/math/LNVectorMixNode.jpg)
@@ -2514,7 +2265,7 @@ Interpolates between the two given vectors.
 
 ### Rad to Deg
 
-Converts radians to degrees.
+Use to convert radians to degrees.
 
 
 ![Rad to Deg node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/math/LNRadToDegNode.jpg)
@@ -2523,7 +2274,7 @@ Converts radians to degrees.
 
 ### Screen To World Space
 
-Transforms the given screen coordinates into world coordinates.
+Use to convert screen coordinates to world coordinates.
 
 
 ![Screen To World Space node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/math/LNScreenToWorldSpaceNode.jpg)
@@ -2532,7 +2283,7 @@ Transforms the given screen coordinates into world coordinates.
 
 ### Separate RGB
 
-Splits the given color into RGB values.
+Use to split a color into RGB values.
 
 
 ![Separate RGB node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/math/LNSeparateColorNode.jpg)
@@ -2541,7 +2292,7 @@ Splits the given color into RGB values.
 
 ### Separate XYZ
 
-Splits the given vector into XYZ values.
+Use to split a vector into XYZ values.
 
 
 ![Separate XYZ node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/math/LNSeparateVectorNode.jpg)
@@ -2550,7 +2301,7 @@ Splits the given vector into XYZ values.
 
 ### Vector Clamp To Size
 
-Keeps the vector value inside the given range.
+Use to keep the vector value inside the defined range.
 
 
 ![Vector Clamp To Size node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/math/LNVectorClampToSizeNode.jpg)
@@ -2559,7 +2310,7 @@ Keeps the vector value inside the given range.
 
 ### Vector Math
 
-Operates vectors. Some operations uses only the first input.
+Use to operate vectors. You must check in the Wiki what each operator does, because some of them uses only the first input.
 
 
 ![Vector Math node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/math/LNVectorMathNode.jpg)
@@ -2568,7 +2319,7 @@ Operates vectors. Some operations uses only the first input.
 
 ### World To Screen Space
 
-Transforms the given world coordinates into screen coordinates.
+Use to convert world coordinates to screen coordinates.
 
 
 ![World To Screen Space node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/math/LNWorldToScreenSpaceNode.jpg)
@@ -2579,25 +2330,16 @@ Transforms the given world coordinates into screen coordinates.
 
 ### Random Boolean
 
-Generates a random boolean.
+Use to generate a random boolean.
 
 
 ![Random Boolean node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/random/LNRandomBooleanNode.jpg)
 
 **Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/random/LN_random_boolean.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/RandomBooleanNode.hx)
 
-### Random Choice
-
-Choose a random value from a given array.
-
-
-![Random Choice node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/random/LNRandomChoiceNode.jpg)
-
-**Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/random/LN_random_choice.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/RandomChoiceNode.hx)
-
 ### Random Color
 
-Generates a random color.
+Use to generate a random color.
 
 
 ![Random Color node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/random/LNRandomColorNode.jpg)
@@ -2606,7 +2348,7 @@ Generates a random color.
 
 ### Random Float
 
-Generates a random float.
+Use to generate a random float.
 
 
 ![Random Float node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/random/LNRandomFloatNode.jpg)
@@ -2615,25 +2357,16 @@ Generates a random float.
 
 ### Random Integer
 
-Generates a random integer.
+Use to generate a random integer.
 
 
 ![Random Integer node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/random/LNRandomIntegerNode.jpg)
 
 **Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/random/LN_random_integer.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/RandomIntegerNode.hx)
 
-### Random Output
-
-Activate a random output when the input is activated.
-
-
-![Random Output node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/random/LNRandomOutputNode.jpg)
-
-**Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/random/LN_random_output.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/RandomOutputNode.hx)
-
 ### Random Vector
 
-Generates a random vector.
+Use to generate a random vector.
 
 
 ![Random Vector node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/random/LNRandomVectorNode.jpg)
@@ -2644,7 +2377,7 @@ Generates a random vector.
 
 ### Concatenate String
 
-Concatenates the given string.
+Use to concatenate a string.
 
 
 ![Concatenate String node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/string/LNConcatenateStringNode.jpg)
@@ -2653,7 +2386,7 @@ Concatenates the given string.
 
 ### Parse Float
 
-Returns the floats that are in the given string.
+Use to get the floats that are in a string.
 
 
 ![Parse Float node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/string/LNParseFloatNode.jpg)
@@ -2662,7 +2395,7 @@ Returns the floats that are in the given string.
 
 ### Split String
 
-Splits the given string.
+Use to split a string.
 
 
 ![Split String node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/string/LNSplitStringNode.jpg)
@@ -2671,7 +2404,7 @@ Splits the given string.
 
 ### String
 
-Stores the given string as a variable.
+Stores a string as a variable.
 
 
 ![String node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/string/LNStringNode.jpg)
@@ -2680,7 +2413,7 @@ Stores the given string as a variable.
 
 ### String Case
 
-Changes the given string case.
+Use to convert a strings case.
 
 
 ![String Case node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/string/LNCaseStringNode.jpg)
@@ -2689,7 +2422,7 @@ Changes the given string case.
 
 ### String Contains
 
-Returns whether the given string contains a given part.
+Use to get if a string contains a specific text.
 
 
 ![String Contains node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/string/LNContainsStringNode.jpg)
@@ -2698,7 +2431,7 @@ Returns whether the given string contains a given part.
 
 ### String Length
 
-Returns the length of the given string.
+Use to get the length of a string.
 
 
 ![String Length node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/string/LNLengthStringNode.jpg)
@@ -2707,7 +2440,7 @@ Returns the length of the given string.
 
 ### Sub String
 
-Returns a part of the given string.
+Use to get a part of a string.
 
 
 ![Sub String node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/string/LNSubStringNode.jpg)
@@ -2718,7 +2451,7 @@ Returns a part of the given string.
 
 ### Boolean
 
-Stores the given boolean as a variable. A boolean value has just two states: `True` and `False`.
+Stores a boolean as a variable. A boolean value has just two states: `true` and `false`.
 
 
 ![Boolean node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/variable/LNBooleanNode.jpg)
@@ -2727,7 +2460,7 @@ Stores the given boolean as a variable. A boolean value has just two states: `Tr
 
 ### Color
 
-Stores the given color as a variable.
+Stores a color as a variable.
 
 
 ![Color node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/variable/LNColorNode.jpg)
@@ -2736,7 +2469,7 @@ Stores the given color as a variable.
 
 ### Dynamic
 
-Stores the given dynamic value (a value with an arbitrary type) as a variable.
+Stores a dynamic value (a value with an arbitrary type) as a variable.
 
 
 ![Dynamic node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/variable/LNDynamicNode.jpg)
@@ -2745,7 +2478,7 @@ Stores the given dynamic value (a value with an arbitrary type) as a variable.
 
 ### Float
 
-Stores the given float as a variable. If the set float value has more than 3 decimal places, the displayed value in the node will be rounded, but when you click on it you can still edit the exact value which will be used in the game as well.
+Stores a float as a variable. If the set float value has more than 3 decimal places, the displayed value in the node will be rounded, but when you click on it you can still edit the exact value which will be used in the game as well.
 
 
 ![Float node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/variable/LNFloatNode.jpg)
@@ -2754,7 +2487,7 @@ Stores the given float as a variable. If the set float value has more than 3 dec
 
 ### Integer
 
-Stores the given integer (a whole number) as a variable.
+Stores an integer (a whole number) as a variable.
 
 
 ![Integer node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/variable/LNIntegerNode.jpg)
@@ -2772,7 +2505,7 @@ TO DO.
 
 ### Set Variable
 
-Sets the value of the given variable.
+Set the value of a given variable.
 
 
 ![Set Variable node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/variable/LNSetVariableNode.jpg)
@@ -2786,7 +2519,7 @@ Sets the value of the given variable.
 
 ### Vector
 
-Stores the given 3D vector as a variable.
+Stores a three-dimensional vector as a variable.
 
 
 ![Vector node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/variable/LNVectorNode.jpg)
@@ -2799,7 +2532,7 @@ Note: To get the canvas, be sure that the node(s) and the canvas (UI) is attache
 
 ### Get Canvas Checkbox
 
-Returns whether the given UI checkbox is checked.
+Use to get if an UI checkbox is checked.
 
 
 ![Get Canvas Checkbox node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/canvas/LNCanvasGetCheckboxNode.jpg)
@@ -2808,7 +2541,7 @@ Returns whether the given UI checkbox is checked.
 
 ### Get Canvas Input Text
 
-Returns the input text of the given UI element.
+Use to get the input text of an UI element.
 
 
 ![Get Canvas Input Text node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/canvas/LNCanvasGetInputTextNode.jpg)
@@ -2817,7 +2550,7 @@ Returns the input text of the given UI element.
 
 ### Get Canvas Location
 
-Returns the location of the given UI element (pixels).
+Use to get the location of an UI element (in pixels).
 
 
 ![Get Canvas Location node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/canvas/LNCanvasGetLocationNode.jpg)
@@ -2835,7 +2568,7 @@ TO DO.
 
 ### Get Canvas Progress Bar
 
-Returns the value of the given UI progress bar.
+Use to get the value of an UI progress bar.
 
 
 ![Get Canvas Progress Bar node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/canvas/LNCanvasGetPBNode.jpg)
@@ -2844,7 +2577,7 @@ Returns the value of the given UI progress bar.
 
 ### Get Canvas Rotation
 
-Returns the rotation of the given UI element.
+Use to get the rotation of an UI element.
 
 
 ![Get Canvas Rotation node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/canvas/LNCanvasGetRotationNode.jpg)
@@ -2853,7 +2586,7 @@ Returns the rotation of the given UI element.
 
 ### Get Canvas Scale
 
-Returns the scale of the given UI element.
+Use to get the scale of an UI element.
 
 
 ![Get Canvas Scale node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/canvas/LNCanvasGetScaleNode.jpg)
@@ -2862,7 +2595,7 @@ Returns the scale of the given UI element.
 
 ### Get Canvas Slider
 
-Returns the value of the given UI slider.
+Use to get the value of an UI slider.
 
 
 ![Get Canvas Slider node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/canvas/LNCanvasGetSliderNode.jpg)
@@ -2871,7 +2604,7 @@ Returns the value of the given UI slider.
 
 ### Get Canvas Visible
 
-Returns whether the given UI element is visible.
+Use to get if an UI element is visible.
 
 
 ![Get Canvas Visible node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/canvas/LNCanvasGetVisibleNode.jpg)
@@ -2880,7 +2613,7 @@ Returns whether the given UI element is visible.
 
 ### On Canvas Element
 
-Activates the output whether an action over the given UI element is done.
+Will run the output if an action over an UI element is done.
 
 
 ![On Canvas Element node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/canvas/LNOnCanvasElementNode.jpg)
@@ -2889,7 +2622,7 @@ Activates the output whether an action over the given UI element is done.
 
 ### Set Canvas Asset
 
-Sets the asset of the given UI element.
+Use to set the asset of an UI element.
 
 
 ![Set Canvas Asset node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/canvas/LNCanvasSetAssetNode.jpg)
@@ -2898,7 +2631,7 @@ Sets the asset of the given UI element.
 
 ### Set Canvas Checkbox
 
-Sets the state of the given UI checkbox.
+Use to set the state of an UI checkbox.
 
 
 ![Set Canvas Checkbox node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/canvas/LNCanvasSetCheckBoxNode.jpg)
@@ -2907,7 +2640,7 @@ Sets the state of the given UI checkbox.
 
 ### Set Canvas Location
 
-Sets the location of the given UI element.
+Use to set the location of an UI element.
 
 
 ![Set Canvas Location node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/canvas/LNCanvasSetLocationNode.jpg)
@@ -2916,7 +2649,7 @@ Sets the location of the given UI element.
 
 ### Set Canvas Progress Bar
 
-Sets the value of the given UI progress bar.
+Use to set the value of an UI progress bar.
 
 
 ![Set Canvas Progress Bar node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/canvas/LNCanvasSetPBNode.jpg)
@@ -2925,7 +2658,7 @@ Sets the value of the given UI progress bar.
 
 ### Set Canvas Rotation
 
-Sets the rotation of the given UI element.
+Use to set the rotation of an UI element.
 
 
 ![Set Canvas Rotation node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/canvas/LNCanvasSetRotationNode.jpg)
@@ -2934,7 +2667,7 @@ Sets the rotation of the given UI element.
 
 ### Set Canvas Scale
 
-Sets the scale of the given UI element.
+Use to set the scale of an UI element.
 
 
 ![Set Canvas Scale node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/canvas/LNCanvasSetScaleNode.jpg)
@@ -2943,7 +2676,7 @@ Sets the scale of the given UI element.
 
 ### Set Canvas Slider
 
-Sets the value of the given UI slider.
+Use to set the value of an UI slider.
 
 
 ![Set Canvas Slider node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/canvas/LNCanvasSetSliderNode.jpg)
@@ -2952,7 +2685,7 @@ Sets the value of the given UI slider.
 
 ### Set Canvas Text
 
-Sets the text of the given UI element.
+Set the text of a element that is given by its name.
 
 
 ![Set Canvas Text node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/canvas/LNCanvasSetTextNode.jpg)
@@ -2961,7 +2694,7 @@ Sets the text of the given UI element.
 
 ### Set Canvas Text Color
 
-Sets the color of the given UI element.
+Use to set an UI text color.
 
 
 ![Set Canvas Text Color node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/canvas/LNCanvasSetTextColorNode.jpg)
@@ -2970,7 +2703,7 @@ Sets the color of the given UI element.
 
 ### Set Canvas Visible
 
-Sets whether the given UI element is visibile.
+Use to set if an UI element is visibile.
 
 
 ![Set Canvas Visible node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/canvas/LNCanvasSetVisibleNode.jpg)
@@ -3053,7 +2786,7 @@ TO DO.
 
 ### Get Bloom Settings
 
-Returns the bloom post-processing settings.
+Use to get the bloom post-processing settings.
 
 
 ![Get Bloom Settings node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/postprocess/LNBloomGetNode.jpg)
@@ -3062,7 +2795,7 @@ Returns the bloom post-processing settings.
 
 ### Get CA Settings
 
-Returns the chromatic aberration post-processing settings.
+Use to get the chromatic aberration post-processing settings.
 
 
 ![Get CA Settings node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/postprocess/LNChromaticAberrationGetNode.jpg)
@@ -3071,7 +2804,7 @@ Returns the chromatic aberration post-processing settings.
 
 ### Get Camera Post Process
 
-Returns the post-processing effects of a camera.
+Use to get the post-processing effects of a camera.
 
 
 ![Get Camera Post Process node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/postprocess/LNCameraGetNode.jpg)
@@ -3080,7 +2813,7 @@ Returns the post-processing effects of a camera.
 
 ### Get Lenstexture Settings
 
-Returns the lens texture settings.
+Use to get the lens texture settings.
 
 
 ![Get Lenstexture Settings node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/postprocess/LNLenstextureGetNode.jpg)
@@ -3089,7 +2822,7 @@ Returns the lens texture settings.
 
 ### Get SSAO Settings
 
-Returns the SSAO post-processing settings.
+Use to get the SSAO post-processing settings.
 
 
 ![Get SSAO Settings node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/postprocess/LNSSAOGetNode.jpg)
@@ -3098,7 +2831,7 @@ Returns the SSAO post-processing settings.
 
 ### Get SSR Settings
 
-Returns the SSR post-processing settings.
+Use to get the SSR post-processing settings.
 
 
 ![Get SSR Settings node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/postprocess/LNSSRGetNode.jpg)
@@ -3107,7 +2840,7 @@ Returns the SSR post-processing settings.
 
 ### Set Bloom Settings
 
-Set the bloom post-processing settings.
+Use to set the bloom post-processing settings.
 
 
 ![Set Bloom Settings node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/postprocess/LNBloomSetNode.jpg)
@@ -3116,7 +2849,7 @@ Set the bloom post-processing settings.
 
 ### Set CA Settings
 
-Set the chromatic aberration post-processing settings.
+Use to set the chromatic aberration post-processing settings.
 
 
 ![Set CA Settings node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/postprocess/LNChromaticAberrationSetNode.jpg)
@@ -3125,7 +2858,7 @@ Set the chromatic aberration post-processing settings.
 
 ### Set Camera Post Process
 
-Set the post-processing effects of a camera.
+User to set the post-processing effects of a camera.
 
 
 ![Set Camera Post Process node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/postprocess/LNCameraSetNode.jpg)
@@ -3134,7 +2867,7 @@ Set the post-processing effects of a camera.
 
 ### Set Lenstexture
 
-Set the lens texture settings.
+Use to set the lens texture settings.
 
 
 ![Set Lenstexture node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/postprocess/LNLenstextureSetNode.jpg)
@@ -3143,7 +2876,7 @@ Set the lens texture settings.
 
 ### Set SSAO Settings
 
-Set the SSAO post-processing settings.
+Use to set the SSAO post-processing settings.
 
 
 ![Set SSAO Settings node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/postprocess/LNSSAOSetNode.jpg)
@@ -3152,7 +2885,7 @@ Set the SSAO post-processing settings.
 
 ### Set SSR Settings
 
-Set the SSR post-processing settings.
+Use to set the SSR post-processing settings.
 
 
 ![Set SSR Settings node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/postprocess/LNSSRSetNode.jpg)
@@ -3163,7 +2896,7 @@ Set the SSR post-processing settings.
 
 ### Set MSAA Quality
 
-Sets the MSAA quality.
+Use to set the MSAA quality.
 
 
 ![Set MSAA Quality node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/renderpath/LNRpMSAANode.jpg)
@@ -3172,7 +2905,7 @@ Sets the MSAA quality.
 
 ### Set Post Process Quality
 
-Sets the post process quality.
+Use to configure renderpath node.
 
 
 ![Set Post Process Quality node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/renderpath/LNRpConfigNode.jpg)
@@ -3181,7 +2914,7 @@ Sets the post process quality.
 
 ### Set SSAA Quality
 
-Sets the supersampling quality.
+Use to set the supersampling quality.
 
 
 ![Set SSAA Quality node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/renderpath/LNRpSuperSampleNode.jpg)
@@ -3190,7 +2923,7 @@ Sets the supersampling quality.
 
 ### Set Shadows Quality
 
-Sets the shadows quality.
+Use to set the shadows quality.
 
 
 ![Set Shadows Quality node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/renderpath/LNRpShadowQualityNode.jpg)
@@ -3201,7 +2934,7 @@ Sets the shadows quality.
 
 ### Pause Speaker
 
-Pauses playback of the given speaker object. The playback will be resumed at the paused position.
+Pauses playback of a speaker object, the playback will be resumed at the paused position.
 
 **See also:**
 
@@ -3215,7 +2948,7 @@ Pauses playback of the given speaker object. The playback will be resumed at the
 
 ### Play Sound
 
-Plays the given sound.
+Plays a sound.
 
 
 ![Play Sound node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/sound/LNPlaySoundRawNode.jpg)
@@ -3243,7 +2976,7 @@ Plays the given sound.
 
 ### Play Speaker
 
-Starts the playback of the given speaker object. If the playback was paused, it is resumed from the paused position.
+Starts the playback of a speaker object. If the playback was paused it is resumed from the paused position.
 
 **See also:**
 
@@ -3257,7 +2990,7 @@ Starts the playback of the given speaker object. If the playback was paused, it 
 
 ### Stop Speaker
 
-Stops playback of the given speaker object. The playback position will be reset to the start.
+Stops playback of a speaker object, the playback position will be reset to the start.
 
 **See also:**
 
@@ -3273,69 +3006,25 @@ Stops playback of the given speaker object. The playback position will be reset 
 
 ### Call Node Group
 
-Calls the given group of nodes.
+Use to call a group of nodes.
 
 
 ![Call Node Group node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/miscellaneous/LNCallGroupNode.jpg)
 
 **Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/miscellaneous/LN_call_group.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/CallGroupNode.hx)
 
-### Default If Null
-
-Returns the value in `Value In` if it is not `null`, otherwise the value in `Default` will be returned.
-
-
-![Default If Null node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/miscellaneous/LNDefaultIfNullNode.jpg)
-
-**Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/miscellaneous/LN_default_if_null.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/DefaultIfNullNode.hx)
-
-### Get Application Time
-
-Returns the application execution time and the delta time.
-
-
-![Get Application Time node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/miscellaneous/LNTimeNode.jpg)
-
-**Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/miscellaneous/LN_get_application_time.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/TimeNode.hx)
-
-### Get Debug Console Settings
-
-Get Debug Console Settings
-
-
-![Get Debug Console Settings node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/miscellaneous/LNGetDebugConsoleSettings.jpg)
-
-**Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/miscellaneous/LN_get_debug_console_settings.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/GetDebugConsoleSettings.hx)
-
 ### Get Display Resolution
 
-Returns the current display resolution.
-
-**See also:**
-
-- *[`Get Window Resolution`](#get-window-resolution)*
+Use to get the display resolution. You may be searching for 'Get Window Resolution' node.
 
 
 ![Get Display Resolution node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/miscellaneous/LNDisplayInfoNode.jpg)
 
 **Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/miscellaneous/LN_get_display_resolution.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/DisplayInfoNode.hx)
 
-### Get Frames Per Second
-
-Get the frames per second count.
-
-
-![Get Frames Per Second node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/miscellaneous/LNGetFPSNode.jpg)
-
-**Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/miscellaneous/LN_get_fps.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/GetFPSNode.hx)
-
 ### Get Window Resolution
 
-Returns the current window resolution.
-
-**See also:**
-
-- *[`Get Display Resolution`](#get-display-resolution)*
+Use to get the window resolution.
 
 
 ![Get Window Resolution node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/miscellaneous/LNWindowInfoNode.jpg)
@@ -3344,25 +3033,16 @@ Returns the current window resolution.
 
 ### Group Nodes
 
-Sets the connected chain of nodes as a group of nodes.
+Use to define a chain of nodes as a group of nodes.
 
 
 ![Group Nodes node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/miscellaneous/LNGroupOutputNode.jpg)
 
 **Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/miscellaneous/LN_group_nodes.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/GroupOutputNode.hx)
 
-### Set Debug Console Settings
-
-Set Debug Console Settings
-
-
-![Set Debug Console Settings node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/miscellaneous/LNSetDebugConsoleSettings.jpg)
-
-**Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/miscellaneous/LN_set_debug_console_settings.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/SetDebugConsoleSettings.hx)
-
 ### Set Time Scale
 
-Sets the global time scale.
+Use to set the global time scale.
 
 
 ![Set Time Scale node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/miscellaneous/LNSetTimeScaleNode.jpg)
@@ -3371,30 +3051,30 @@ Sets the global time scale.
 
 ### Sleep
 
-Waits a specified amount of seconds until passing through the incoming signal.
+Waits a specified amount of time (in seconds) until passing through the incoming signal.
 
 
 ![Sleep node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/miscellaneous/LNSleepNode.jpg)
 
 **Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/miscellaneous/LN_sleep.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/SleepNode.hx)
 
+### Time
+
+Use to get the execution time and the delta time.
+
+
+![Time node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/miscellaneous/LNTimeNode.jpg)
+
+**Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/miscellaneous/LN_time.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/TimeNode.hx)
+
 ### Timer
 
-Creates a timer.
+Timer node. Check the Wiki for more details.
 
 
 ![Timer node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/miscellaneous/LNTimerNode.jpg)
 
 **Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/miscellaneous/LN_timer.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/TimerNode.hx)
-
-### Vector From Boolean
-
-Returns a vector depending on the respective boolean state.
-
-
-![Vector From Boolean node](https://github.com/armory3d/armory_wiki_images/raw/master/logic_nodes/miscellaneous/LNVectorFromBooleanNode.jpg)
-
-**Sources:** [Python](https://github.com/armory3d/armory/blob/master/blender/arm/logicnode/miscellaneous/LN_vector_from_boolean.py) | [Haxe](https://github.com/armory3d/armory/blob/master/Sources/armory/logicnode/VectorFromBooleanNode.hx)
 
 ## Layout
 
