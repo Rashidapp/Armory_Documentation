@@ -75,5 +75,6 @@ For graphics debugging, check out RenderDoc.
 - Install from https://renderdoc.org/
 - Export to `Windows (Krom)`, `Linux (Krom)` or `macOS (Krom)`
 - Press `Publish`
-- Press `Triangle - Open in RenderDoc`
+- Click on the down arrow in the sidebar of the export target list and choose `Open in RenderDoc`:  
+  ![How to open RenderDoc](https://github.com/armory3d/armory_wiki_images/raw/master/essentials/debug/open_renderdoc.jpg)
 - Hit `Launch` in RenderDoc to start debugging!
