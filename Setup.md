@@ -1,18 +1,24 @@
-Armory engine is distributed as a Blender add-on:
-- [Download](https://www.blender.org/download/) Blender 2.83 LTS.
-- [Download](https://armory3d.org/download.html) and unpack Armory SDK.
-- In Blender, Select `Edit - Preferences...` and navigate to the `Add-ons` tab.
-- Click `Install...` button.
-- Select `armory.py` file located in the extracted `ArmorySDK` folder.
-- Enable Armory add-on in Blender: Simply click the checkbox next to `Render: Armory` from within `Preferences: Add-ons`.
-- Pick SDK Directory : (Optional, only in case the `SDK Path` is blank) still in the Armory add-on settings in Blender Preferences: fill the `SDK Path` field by clicking on the folder icon, then navigate to the location you have stored the Armory SDK folder (the SDK folder is the one that contains all the sub-folders: `armory`, `iron`, `Kha`, `Krom`, etc), and then click "Accept".
-- Click the Install & Setup SDK Button and restart Blender.
+## Installation
 
----
+The Armory engine is distributed as a Blender add-on:
+- [Download](https://www.blender.org/download/) Blender 2.83 LTS (using Armory with Blender 2.9 is not officially supported yet and might be unstable).
+- [Download](https://armory3d.org/download.html) and unpack the Armory SDK.
+- In Blender, select `Edit > Preferences...` and navigate to the `Add-ons` tab.
+- Click the `Install...` button.
+- Select the `armory.py` file located in the extracted `ArmorySDK` folder.
+- Enable the Armory add-on in Blender: Simply click the checkbox next to `Render: Armory` from within `Preferences: Add-ons`.
+- To verify that Armory was installed correctly:
+  - Click on the small arrow that's on the left next to the now enabled checkbox in order to open the Armory settings page.
+  - Check whether the `SDK Path` field contains the path to the Armory SDK folder (the SDK folder is the one that contains all the sub-folders: `armory`, `iron`, `Kha`, `Krom`, etc).
+  - In case the `SDK Path` is blank: fill in the `SDK Path` field by clicking on the folder icon, then navigate to the location you have stored the Armory SDK folder and click on `Accept`.
+  - Save your .blend file and hit the `Play` (F5) button, located in the `Properties > Render > Armory Player` panel to test whether the installation was successful. If you don't see any user interface for Armory, check the console for error messages.
 
-- To verify everything is working correctly, save your .blend file and hit `Play` (F5) button, located in the `Properties - Render - Armory Player` panel.
-- Continue to the [Playground tutorial](playground) to learn more.
-- Armory comes with a version of haxe and kha.
+> **If you experience issues installing or using Armory, please look at [Wiki: Troubleshooting](https://github.com/armory3d/armory/wiki/troubleshooting) first. You can also open an issue in the [issue tracker](https://github.com/armory3d/armory/issues) on GitHub.**
+
+> Armory comes with a version of [Haxe](https://haxe.org/) and [Kha](https://kha.tech/), so you don't need to install those components separately.
+
+## Learn more
+Continue to the [Playground tutorial](playground) to learn more.
 
 ## Code Editor
 
