@@ -17,7 +17,7 @@
 - If you have conflicts with data not updating correctly when launching your build, like textures not showing correctly, wrong normal/normal map, meshes not updating properly, etc., try cleaning the build cache by clicking the `Clean` button (see image below) that is next to the `Play` one in `Properties > Render > Armory Player`. If this doesn't solve the issue try disabling `Cache Build` in the `Armory Project` panel and try again.
 
   ![Screenshot: "Clean" button](https://raw.githubusercontent.com/armory3d/armory_wiki_images/master/getting_started/troubleshooting/button_clean_build.jpg)
-- If you have any trouble setting things up, raise a [new issue](https://github.com/armory3d/armory/issues).  
+- If you have any trouble setting things up, open a [new issue](https://github.com/armory3d/armory/issues) or ask a question in the [forum](https://forums.armory3d.org/) or in the [Discord channel](https://discordapp.com/invite/axq6qWV).  
 
 ### Windows
 
