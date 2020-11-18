@@ -107,21 +107,22 @@ The system consists of 5 essential categories:
 
 We will animate the Cylinder procedurally using logic nodes. Switch to `Logic Editor` area and press `New` to create a new node tree.
 
-You can browse all available nodes through `Add` menu item, or simply hit `Shift + A` to start searching.
+You can browse all available nodes through `Add` menu item, or simply hit `Shift + A` to start searching (tip: if you hit the `S` key while the menu is open, a search dialog will show up).
 
-- Search for `On Update` node and place it. This is an action node which gets called each frame.
-- Connect it to the `Set Location` node.
-- Add a `Vector` node and connect it to the `Set Location` node. Each frame, Cylinder location will be set to this vector.
-- For the `X` location, add `Math` node and set it to `Sine`.
-- Add `Time` node to drive the sine node.
-- Add another `Math` node, scaling the sine output.
-- We will keep the `Y` and `Z` location unchanged.
+- Search for the [`On Update`](https://github.com/armory3d/armory/wiki/reference#on-update) node and place it. This node will activate its output each frame.
+- Connect it to the `In` input of the [`Set Object Location`](https://github.com/armory3d/armory/wiki/reference#set-object-location) node. If you keep the `Object` field empty, the object that is executing this logic tree will be used. In our case, this is the cylinder.
+  > Red node sockets (often named `In` and `Out`) are used for the signal flow of the node tree. Red input sockets will activate nodes and the red output sockets are usually activated when the node was executed (if the node doesn't state it otherwise). Other socket types (= other colors) are used to pass data between nodes.
+- Add a [`Vector`](https://github.com/armory3d/armory/wiki/reference#vector) node and connect its output socket to the `Location` input of the `Set Object Location` node. So now, the cylinder location will be set to this vector on each frame.
+- For the `X` location of the vector, add a [`Math`](https://github.com/armory3d/armory/wiki/reference#math-1) node and set it to `Sine`.
+- Add a [`Get Application Time`](https://github.com/armory3d/armory/wiki/reference#get-application-time) node to drive the sine node. This will move the cylinder back and forth.
+- Add another `Math` node to scale the sine output (this will let the cylinder move further on each side).
+- We want to keep the `Y` and `Z` location unchanged, so we need to set it according to the current cylinder position. Add a [`Get Object Location`](https://github.com/armory3d/armory/wiki/reference#get-object-location) node, connect it to a [`Separate XYZ`](https://github.com/armory3d/armory/wiki/reference#get-object-location) node to split the vector into its XYZ values and then connect the Y and Z values to the Y/Z inputs of the `Vector` node that we added earlier.
 
-Each node tree has to be attached to an object. Select Cylinder and create new `Nodes` trait in `Properties - Object - Armory Traits`. Enter our newly created node tree as `Tree` entry.
+Each node tree has to be attached to an object. Select the cylinder and create a new `Nodes` trait in `Properties > Object > Armory Traits`. Enter our newly created node tree as `Tree` entry, or if the node tree is open on your screen you can click on `From Node Editor`.
 
 <a href="https://github.com/armory3d/armory_wiki_images/raw/master/getting_started/playground/9.jpg">![](https://github.com/armory3d/armory_wiki_images/raw/master/getting_started/playground/9.jpg)</a>
 
-Note: To see the output of `Print` node, enable `Armory Project - Flags - Debug Console`.
+**Note:** To see the the output of the [`Print`](https://github.com/armory3d/armory/wiki/reference#print) node, open Blender from a terminal (or on Windows: `Window > Toggle System Console`), or enable `Armory Project > Flags > Debug Console`. The debug console is explained in [Wiki: Debug/Debug Console](https://github.com/armory3d/armory/wiki/debug#debug-console).
 
 ### Haxe Scripts
 
