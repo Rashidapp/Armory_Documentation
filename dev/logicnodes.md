@@ -1,4 +1,4 @@
-# Logic Nodes
+# Logic Node Development
 
 This page shows how to create custom logic nodes in a node package. The same approach is used to edit or add new nodes to Armory itself. In this case, don't create a library as described on this page and use the `blender/arm/logicnode/` folder for Python node definitions and `Sources/armory/logicnode` for the node's Haxe source code.
 
